@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=Mohammadreza%20Zare&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Backend%20Engineer%20%C2%B7%20Database%20Architect%20%C2%B7%20Enterprise%20Systems&descFontSize=16&descAlignY=58&descAlign=50" alt="M-R-Z" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=M-R-Z&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Backend%20Engineer%20%C2%B7%20Database%20Architect%20%C2%B7%20Enterprise%20Systems&descFontSize=16&descAlignY=58&descAlign=50" alt="M-R-Z Header" width="100%" />
 
 <!-- Animated Typist -->
 <a href="https://github.com/mrzroot">
@@ -22,34 +22,12 @@
 
 ---
 
-### 🏆 GitHub Achievements & Unlocked Badges
-
-<p align="center">
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pull-shark-silver.png" width="85" height="85" alt="Pull Shark Silver" title="Pull Shark (Silver) - 16+ Merged Pull Requests" />
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/quickdraw-default.png" width="85" height="85" alt="Quickdraw" title="Quickdraw - Closed Issue/PR within 5 minutes" />
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pair-extraordinaire-default.png" width="85" height="85" alt="Pair Extraordinaire" title="Pair Extraordinaire - Co-authored Merged Pull Requests" />
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/yolo-default.png" width="85" height="85" alt="YOLO" title="YOLO - Merged without code review" />
-  </a>
-</p>
-
----
-
 ### 💻 Engineering Profile & Core Philosophy
 
 ```python
 class SeniorEngineer:
     def __init__(self):
-        self.name = "Mohammadreza Zare"
+        self.name = "M-R-Z"
         self.handle = "mrzroot"
         self.specialization = "Backend Systems, Enterprise Data Governance & ETL"
         self.design_principles = [
@@ -176,6 +154,6 @@ class SeniorEngineer:
 
 <br /><br />
 
-<sub>⚡ Crafted with precision & minimal code · <b>Mohammadreza Zare</b> · Let's engineer scalable systems together.</sub>
+<sub>⚡ Crafted with precision & minimal code · <b>M-R-Z</b> · Let's engineer scalable systems together.</sub>
 
 </div>

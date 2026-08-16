@@ -68,23 +68,10 @@ graph LR
 
 ---
 
-### 🛠️ Technical Arsenal & Core Competencies
-
-<div align="center">
-
-| Domain | Technologies & Frameworks |
-| :--- | :--- |
-| **Backend & Core** | <img src="https://skillicons.dev/icons?i=py,fastapi,js,ts,php,laravel,nodejs&theme=dark" alt="Backend" /> |
-| **Databases & Storage** | <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,sqlite&theme=dark" alt="Databases" /> |
-| **DevOps, CI/CD & Infra** | <img src="https://skillicons.dev/icons?i=docker,git,github,githubactions,jenkins,linux,bash,nginx&theme=dark" alt="DevOps" /> |
-| **Tools & Architecture** | <img src="https://skillicons.dev/icons?i=postman,vscode,regex,markdown,visualstudio&theme=dark" alt="Tools" /> |
-
-</div>
-
-<br />
+### 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,fastapi,postgres,mysql,redis,docker,jenkins,githubactions,linux,bash,ts,laravel,git,nginx&theme=dark" alt="All Skills" />
+  <img src="https://skillicons.dev/icons?i=py,fastapi,sqlite,mysql,git,github,vscode,linux,bash,markdown&theme=dark" alt="Tech Stack" />
 </p>
 
 ---

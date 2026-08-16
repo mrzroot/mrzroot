@@ -1,21 +1,21 @@
 <div align="center">
 
 <!-- Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=M-R-Z&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Backend%20Engineer%20%C2%B7%20Database%20Architect%20%C2%B7%20Enterprise%20Systems&descFontSize=16&descAlignY=58&descAlign=50" alt="M-R-Z Header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=M-R-Z&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Python%20Developer%20%C2%B7%20Open%20Source%20Enthusiast%20%C2%B7%20Automation%20Builder&descFontSize=16&descAlignY=58&descAlign=50" alt="M-R-Z Header" width="100%" />
 
 <!-- Animated Typist -->
 <a href="https://github.com/mrzroot">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00D2FF&center=true&vCenter=true&width=680&lines=Building+High-Throughput+Backend+Systems;Enterprise+Database+Architecture+%26+Query+Tuning;Automated+CI%2FCD+Pipelines+%26+Cloud+Workflows;Data+Governance+%7C+13+Databases+%26+107+Tables+Unified;Minimalist+Engineering+%7C+Ponytail+%26+YAGNI+Philosophy" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00D2FF&center=true&vCenter=true&width=680&lines=Building+Clean+%26+Helpful+Python+Tools;Automating+Workflows+%26+Backend+Scripts;Learning%2C+Experimenting+%26+Open-Sourcing+Daily;Keeping+Code+Simple%2C+Fast+%26+Readable" alt="Typing SVG" />
 </a>
 
 <br />
 
 <!-- Live Status Badges -->
 <p align="center">
-  <img src="https://img.shields.io/badge/GitHub-PRO-6f42c1?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro" />
-  <img src="https://img.shields.io/badge/Status-Active%20Building-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
-  <img src="https://img.shields.io/badge/Focus-Backend%20%26%20Data%20Architecture-38BDF8?style=for-the-badge&logo=postgresql&logoColor=white" alt="Focus" />
-  <img src="https://img.shields.io/badge/Philosophy-Ponytail%20%26%20YAGNI-10B981?style=for-the-badge&logo=codeforces&logoColor=white" alt="Philosophy" />
+  <img src="https://img.shields.io/badge/GitHub-Active%20Builder-6f42c1?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Active" />
+  <img src="https://img.shields.io/badge/Focus-Python%20%26%20Automation-00D2FF?style=for-the-badge&logo=python&logoColor=white" alt="Focus" />
+  <img src="https://img.shields.io/badge/Learning-Backend%20%26%20Data%20Tools-38BDF8?style=for-the-badge&logo=postgresql&logoColor=white" alt="Learning" />
+  <img src="https://img.shields.io/badge/Style-Simple%20%26%20Clean%20Code-10B981?style=for-the-badge&logo=codeforces&logoColor=white" alt="Style" />
   <img src="https://img.shields.io/badge/Location-Mashhad%2C%20Iran-F59E0B?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
 </p>
 
@@ -23,28 +23,22 @@
 
 ---
 
-### 💻 Engineering Profile & Core Philosophy
+### 💻 About Me & What I Build
 
 ```python
-class SeniorEngineer:
+class Developer:
     def __init__(self):
         self.name = "M-R-Z"
         self.handle = "mrzroot"
-        self.specialization = "Backend Systems, Enterprise Data Governance & ETL"
-        self.design_principles = [
-            "YAGNI & Ponytail Minimalist Architecture (Minimum code that works)",
-            "Zero-Tolerance for Architectural Bloat & Premature Optimization",
-            "High-Throughput Concurrency & Strict Data Integrity",
-            "Automated CI/CD Workflows & Declarative Infrastructure"
-        ]
-        self.signature_deliverables = [
-            "Unified 9 Enterprise Systems & 13 Databases into DBML / OpenAPI 3.0",
-            "Custom Silent Local Hardware Printing Agent (PrintBridge)",
-            "Automated Multi-Branch Jenkins CI/CD Groovy Pipelines"
+        self.interests = ["Python Automation", "Backend APIs", "Open Source Tools"]
+        self.learning_mindset = [
+            "Building practical tools that solve everyday problems",
+            "Writing clean, readable, and simple code (Less is more)",
+            "Continuous learning and sharing with the developer community"
         ]
 
-    def build_system(self, domain: str) -> str:
-        return f"Scalable, resilient, and elegant {domain} engineered with mathematical precision."
+    def current_mission(self) -> str:
+        return "Creating lightweight, easy-to-use Python tools for developers!"
 ```
 
 ---

@@ -48,6 +48,31 @@ class SeniorEngineer:
 
 ---
 
+### 📐 Signature System Architecture & Flow
+
+```mermaid
+graph LR
+    classDef client fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    classDef service fill:#0284c7,stroke:#00D2FF,stroke-width:2px,color:#fff;
+    classDef storage fill:#0f766e,stroke:#2dd4bf,stroke-width:2px,color:#fff;
+    classDef devops fill:#334155,stroke:#94a3b8,stroke-width:1px,color:#fff;
+
+    Clients["📱 Web Apps & Clients"]:::client
+    Gateway["⚡ High-Performance API Gateway / FastAPI"]:::service
+    Cache["🚀 In-Memory Redis Cache"]:::service
+    Storage["🗄️ Relational Core (Postgres / MySQL)"]:::storage
+    ETL["🔄 Automated ETL & Data Governance"]:::storage
+    CI["🐳 Automated CI/CD & Docker Engine"]:::devops
+
+    Clients -->|"REST / WebSocket"| Gateway
+    Gateway -->|"Cache Layer"| Cache
+    Gateway -->|"ACID Transactions"| Storage
+    Storage -->|"Batch Pipeline"| ETL
+    CI -.->|"Continuous Delivery"| Gateway
+```
+
+---
+
 ### 🛠️ Technical Arsenal & Core Competencies
 
 <div align="center">

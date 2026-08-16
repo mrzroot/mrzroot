@@ -1,59 +1,169 @@
 <div align="center">
 
-# ⚡(`mrzroot`)
+<!-- Hero Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=Mohammadreza%20Zare&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Backend%20Engineer%20%C2%B7%20Database%20Architect%20%C2%B7%20Enterprise%20Systems&descFontSize=16&descAlignY=58&descAlign=50" alt="Mohammadreza Zare Header" width="100%" />
 
-<p align="center">
-  <b>Software Engineer · Database Architect · Backend Systems</b>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Active%20Building-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
-  <img src="https://img.shields.io/badge/Focus-Backend%20%26%20Database-38BDF8?style=for-the-badge&logo=postgresql&logoColor=white" alt="Focus" />
-  <img src="https://img.shields.io/badge/Location-Mashhad%2C%20Iran-10B981?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
-</p>
+<!-- Animated Typist -->
+<a href="https://github.com/mrzroot">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00D2FF&center=true&vCenter=true&width=680&lines=Building+High-Throughput+Backend+Systems;Enterprise+Database+Architecture+%26+Query+Tuning;Automated+CI%2FCD+Pipelines+%26+Cloud+Workflows;Data+Governance+%7C+13+Databases+%26+107+Tables+Unified;Minimalist+Engineering+%7C+Ponytail+%26+YAGNI+Philosophy" alt="Typing SVG" />
+</a>
 
 <br />
 
-### 🚀 Tech Stack & Core Competencies
-
+<!-- Live Status Badges -->
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,js,ts,mysql,postgres,docker,git,github,githubactions,linux,fastapi,redis,bash,vscode&theme=dark" alt="Tech Stack" />
+  <img src="https://img.shields.io/badge/Status-Active%20Building-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
+  <img src="https://img.shields.io/badge/Focus-Backend%20%26%20Data%20Architecture-38BDF8?style=for-the-badge&logo=postgresql&logoColor=white" alt="Focus" />
+  <img src="https://img.shields.io/badge/Philosophy-Ponytail%20%26%20YAGNI-10B981?style=for-the-badge&logo=codeforces&logoColor=white" alt="Philosophy" />
+  <img src="https://img.shields.io/badge/Location-Mashhad%2C%20Iran-F59E0B?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
 </p>
 
 </div>
 
 ---
 
-### 💼 Engineering Philosophy & Expertise
+### 💻 Engineering Profile & Core Philosophy
 
 ```python
-class SoftwareEngineer:
+class SeniorEngineer:
     def __init__(self):
         self.name = "Mohammadreza Zare"
-        self.role = "Backend Engineer & Database Architect"
-        self.code_principles = [
-            "YAGNI & Ponytail Minimalist Design",
-            "Robust Data Validation & High Performance",
-            "Zero-Tolerance for Architectural Bloat",
-            "Automated CI/CD & Cloud Orchestration"
+        self.handle = "mrzroot"
+        self.specialization = "Backend Systems, Enterprise Data Governance & ETL"
+        self.design_principles = [
+            "YAGNI & Ponytail Minimalist Architecture (Minimum code that works)",
+            "Zero-Tolerance for Architectural Bloat & Premature Optimization",
+            "High-Throughput Concurrency & Strict Data Integrity",
+            "Automated CI/CD Workflows & Declarative Infrastructure"
         ]
-        self.specialties = ["SQL Optimization", "FastAPI / Python", "Data Modeling", "ETL Systems"]
+        self.signature_deliverables = [
+            "Unified 9 Enterprise Systems & 13 Databases into DBML / OpenAPI 3.0",
+            "Custom Silent Local Hardware Printing Agent (PrintBridge)",
+            "Automated Multi-Branch Jenkins CI/CD Groovy Pipelines"
+        ]
 
-    def build_system(self):
-        return "Resilient, scalable, and elegant software that delivers real value."
+    def build_system(self, domain: str) -> str:
+        return f"Scalable, resilient, and elegant {domain} engineered with mathematical precision."
 ```
 
 ---
 
-### 🌟 Featured Repositories
+### 🛠️ Technical Arsenal & Core Competencies
 
-- 🌐 **[Awesome Persian Developer Resources](https://github.com/mrzroot/awesome-persian-developer-resources)** — A curated collection of top developer tools, tutorials, and libraries.
-- ⚡ **[Jenkins Pipeline Master Examples](https://github.com/mrzroot/jenkins)** — Declarative Jenkins CI/CD automation in Groovy.
-- 🖨️ **[PrintBridge](https://github.com/mrzroot/printbridge)** — Silent local printing agent for modern web applications.
-- 🧪 **[Achievement Lab](https://github.com/mrzroot/achievement-lab)** — Automated sandbox for GitHub workflows & CI/CD qualifying triggers.
+<div align="center">
+
+| Domain | Technologies & Frameworks |
+| :--- | :--- |
+| **Backend & Core** | <img src="https://skillicons.dev/icons?i=py,fastapi,js,ts,php,laravel,nodejs&theme=dark" alt="Backend" /> |
+| **Databases & Storage** | <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,sqlite&theme=dark" alt="Databases" /> |
+| **DevOps, CI/CD & Infra** | <img src="https://skillicons.dev/icons?i=docker,git,github,githubactions,jenkins,linux,bash,nginx&theme=dark" alt="DevOps" /> |
+| **Tools & Architecture** | <img src="https://skillicons.dev/icons?i=postman,vscode,regex,markdown,visualstudio&theme=dark" alt="Tools" /> |
+
+</div>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,fastapi,postgres,mysql,redis,docker,jenkins,githubactions,linux,bash,ts,laravel,git,nginx&theme=dark" alt="All Skills" />
+</p>
 
 ---
 
+### 🌟 Featured Engineering Projects
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">🏛️ Enterprise Data Governance</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Architecture-DBML%20%7C%20OpenAPI%203.0-0284C7?style=flat-square" />
+        <img src="https://img.shields.io/badge/Scale-13%20DBs%20%7C%20107%20Tables-0F766E?style=flat-square" />
+      </p>
+      <p>Unification of 9 enterprise systems and 13 databases (MySQL & SQL Server) into a 360-degree data governance architecture with automated ETL, DBML diagrams, and OpenAPI web-services.</p>
+    </td>
+    <td width="50%">
+      <h3 align="center">🖨️ <a href="https://github.com/mrzroot/printbridge">PrintBridge</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Stack-Python%20%7C%20WebSocket%20%7C%20Win32-10B981?style=flat-square" />
+        <img src="https://img.shields.io/badge/Type-Hardware%20Bridge-6366F1?style=flat-square" />
+      </p>
+      <p>Silent, high-speed local printing daemon bridging modern web applications directly to thermal POS and document printers without browser dialog delays.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">🌐 <a href="https://github.com/mrzroot/awesome-persian-developer-resources">Awesome Persian Developer Resources</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Status-Community%20Flagship-EC4899?style=flat-square" />
+        <img src="https://img.shields.io/badge/Category-Curated%20Hub-F59E0B?style=flat-square" />
+      </p>
+      <p>A flagship curated collection of tools, libraries, architectural blueprints, and essential documentation for Persian-speaking software engineers worldwide.</p>
+    </td>
+    <td width="50%">
+      <h3 align="center">⚡ <a href="https://github.com/mrzroot/jenkins">Jenkins Pipeline Master</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/CI%2FCD-Declarative%20Groovy-D97706?style=flat-square" />
+        <img src="https://img.shields.io/badge/Automation-Docker%20Deployments-3B82F6?style=flat-square" />
+      </p>
+      <p>Production-grade declarative Jenkins pipelines demonstrating automated testing, containerized builds, artifact archival, and multi-environment delivery.</p>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 📊 Real-Time GitHub Metrics & Streak
+
 <div align="center">
-  <sub>Designed with precision · <b>Mohammadreza Zare</b> · Let's build scalable systems together.</sub>
+  <a href="https://github.com/mrzroot">
+    <img src="https://github-readme-stats.vercel.app/api?username=mrzroot&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00D2FF&icon_color=38BDF8&text_color=c9d1d9" alt="GitHub Stats" height="165" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=mrzroot&theme=tokyonight&hide_border=true&background=0d1117&ring=00D2FF&fire=38BDF8&currStreakLabel=00D2FF" alt="GitHub Streak" height="165" />
+  </a>
+</div>
+
+<br />
+
+<div align="center">
+  <a href="https://github.com/mrzroot">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrzroot&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00D2FF&text_color=c9d1d9" alt="Top Languages" height="140" />
+    <img src="https://github-profile-trophy.vercel.app/?username=mrzroot&theme=onedark&no-frame=true&no-bg=true&margin_w=8&column=4" alt="GitHub Trophies" height="140" />
+  </a>
+</div>
+
+---
+
+### 🐍 Contribution Activity & Retro Snake
+
+<div align="center">
+
+  <!-- Snake Animation automatically generated by GitHub Actions -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/github-contribution-grid-snake.svg" />
+    <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/mrzroot/mrzroot/output/github-contribution-grid-snake-dark.svg" width="100%" />
+  </picture>
+
+</div>
+
+---
+
+### 📬 Connect & Collaborate
+
+<div align="center">
+
+<a href="https://github.com/mrzroot">
+  <img src="https://img.shields.io/badge/GitHub-mrzroot-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+<a href="mailto:contact@mrzroot.dev">
+  <img src="https://img.shields.io/badge/Email-Direct%20Inquiry-38BDF8?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+<a href="https://linkedin.com/in/mrzroot">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+<a href="https://t.me/mrzroot">
+  <img src="https://img.shields.io/badge/Telegram-Chat-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+</a>
+
+<br /><br />
+
+<sub>⚡ Crafted with precision & minimal code · <b>Mohammadreza Zare</b> · Let's engineer the future.</sub>
+
 </div>

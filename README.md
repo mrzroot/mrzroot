@@ -12,35 +12,15 @@
   <img src="https://img.shields.io/badge/Location-Mashhad%2C%20Iran-10B981?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
 </p>
 
----
-
-### 🏆 GitHub Achievements & Unlocked Badges
-
-<p align="center">
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pull-shark-silver.png" width="90" height="90" alt="Pull Shark Silver" title="Pull Shark (Silver) - 16+ Merged Pull Requests" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/quickdraw-default.png" width="90" height="90" alt="Quickdraw" title="Quickdraw - Closed Issue/PR within 5 minutes" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pair-extraordinaire-default.png" width="90" height="90" alt="Pair Extraordinaire" title="Pair Extraordinaire - Co-authored Merged Pull Requests" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/mrzroot?tab=achievements">
-    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/yolo-default.png" width="90" height="90" alt="YOLO" title="YOLO - Merged without code review" />
-  </a>
-</p>
-
----
+<br />
 
 ### 🚀 Tech Stack & Core Competencies
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=py,js,ts,mysql,postgres,docker,git,github,githubactions,linux,fastapi,redis,bash,vscode&theme=dark" alt="Tech Stack" />
 </p>
+
+</div>
 
 ---
 
@@ -67,15 +47,13 @@ class SoftwareEngineer:
 
 ### 🌟 Featured Repositories
 
-- 🌐 **[Awesome Persian Developer Resources](https://github.com/mrzroot/awesome-persian-developer-resources)** — A curated collection of developer tools and guides.
-- ⚡ **[Jenkins Pipeline Master Examples](https://github.com/mrzroot/jenkins)** — Declarative Jenkins CI/CD automation.
-- 🖨️ **[PrintBridge](https://github.com/mrzroot/printbridge)** — Silent local printing agent for modern web apps.
+- 🌐 **[Awesome Persian Developer Resources](https://github.com/mrzroot/awesome-persian-developer-resources)** — A curated collection of top developer tools, tutorials, and libraries.
+- ⚡ **[Jenkins Pipeline Master Examples](https://github.com/mrzroot/jenkins)** — Declarative Jenkins CI/CD automation in Groovy.
+- 🖨️ **[PrintBridge](https://github.com/mrzroot/printbridge)** — Silent local printing agent for modern web applications.
 - 🧪 **[Achievement Lab](https://github.com/mrzroot/achievement-lab)** — Automated sandbox for GitHub workflows & CI/CD qualifying triggers.
 
 ---
 
-<p align="center">
+<div align="center">
   <sub>Designed with precision · <b>Mohammadreza Zare</b> · Let's build scalable systems together.</sub>
-</p>
-
 </div>

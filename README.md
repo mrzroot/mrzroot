@@ -100,30 +100,30 @@ graph LR
 <table>
   <tr>
     <td width="50%">
-      <h3 align="center">🏛️ Enterprise Data Governance</h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Architecture-DBML%20%7C%20OpenAPI%203.0-0284C7?style=flat-square" />
-        <img src="https://img.shields.io/badge/Scale-13%20DBs%20%7C%20107%20Tables-0F766E?style=flat-square" />
-      </p>
-      <p>Unification of 9 enterprise systems and 13 databases (MySQL & SQL Server) into a 360-degree data governance architecture with automated ETL, DBML diagrams, and OpenAPI web-services.</p>
-    </td>
-    <td width="50%">
-      <h3 align="center">🖨️ <a href="https://github.com/mrzroot/printbridge">PrintBridge</a></h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Stack-Python%20%7C%20WebSocket%20%7C%20Win32-10B981?style=flat-square" />
-        <img src="https://img.shields.io/badge/Type-Hardware%20Bridge-6366F1?style=flat-square" />
-      </p>
-      <p>Silent, high-speed local printing daemon bridging modern web applications directly to thermal POS and document printers without browser dialog delays.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3 align="center">🌐 <a href="https://github.com/mrzroot/awesome-persian-developer-resources">Awesome Persian Developer Resources</a></h3>
+      <h3 align="center">🌐 <a href="https://github.com/mrzroot/awesome-persian-developer-resources">Awesome Persian Dev Resources</a></h3>
       <p align="center">
         <img src="https://img.shields.io/badge/Status-Community%20Flagship-EC4899?style=flat-square" />
         <img src="https://img.shields.io/badge/Category-Curated%20Hub-F59E0B?style=flat-square" />
       </p>
-      <p>A flagship curated collection of tools, libraries, architectural blueprints, and essential documentation for Persian-speaking software engineers worldwide.</p>
+      <p>Curated flagship collection of anti-sanction DNS tools, free Iranian public APIs, fonts, Python/Backend packages, and AI/NLP models for developers.</p>
+    </td>
+    <td width="50%">
+      <h3 align="center">⚡ <a href="https://github.com/mrzroot/universal-video-downloader">Universal Video Downloader</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Manifest-V3%20Extension-00D2FF?style=flat-square" />
+        <img src="https://img.shields.io/badge/Streams-HLS%20%7C%20M3U8%20%7C%20MP4-10B981?style=flat-square" />
+      </p>
+      <p>High-speed Chrome/Edge browser extension to sniff, extract, and download live video streams, m3u8 playlists, and MP4 media with zero watermark.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">🖨️ <a href="https://github.com/mrzroot/printbridge">PrintBridge</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Stack-Python%20%7C%20WebSocket-10B981?style=flat-square" />
+        <img src="https://img.shields.io/badge/Type-Hardware%20Bridge-6366F1?style=flat-square" />
+      </p>
+      <p>Silent, high-speed local printing daemon bridging modern web applications directly to thermal POS and document printers without browser dialog delays.</p>
     </td>
     <td width="50%">
       <h3 align="center">⚡ <a href="https://github.com/mrzroot/jenkins">Jenkins Pipeline Master</a></h3>
@@ -132,6 +132,17 @@ graph LR
         <img src="https://img.shields.io/badge/Automation-Docker%20Deployments-3B82F6?style=flat-square" />
       </p>
       <p>Production-grade declarative Jenkins pipelines demonstrating automated testing, containerized builds, artifact archival, and multi-environment delivery.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <h3>🏛️ Enterprise Data Governance & 360° Architecture (MCCIMA)</h3>
+      <p>
+        <img src="https://img.shields.io/badge/Architecture-DBML%20%7C%20OpenAPI%203.0-0284C7?style=flat-square" />
+        <img src="https://img.shields.io/badge/Scale-13%20DBs%20%7C%20107%20Tables-0F766E?style=flat-square" />
+        <img src="https://img.shields.io/badge/Integration-9%20Enterprise%20Systems-38BDF8?style=flat-square" />
+      </p>
+      <p>Enterprise data unification framework transforming 9 disparate systems and 13 databases into unified DBML models, OpenAPI standard web services, and automated ETL pipelines.</p>
     </td>
   </tr>
 </table>

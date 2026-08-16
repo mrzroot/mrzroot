@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=Mohammadreza%20Zare&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Backend%20Engineer%20%C2%B7%20Database%20Architect%20%C2%B7%20Enterprise%20Systems&descFontSize=16&descAlignY=58&descAlign=50" alt="Mohammadreza Zare Header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=Mohammadreza%20Zare&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Backend%20Engineer%20%C2%B7%20Database%20Architect%20%C2%B7%20Enterprise%20Systems&descFontSize=16&descAlignY=58&descAlign=50" alt="M-R-Z" width="100%" />
 
 <!-- Animated Typist -->
 <a href="https://github.com/mrzroot">

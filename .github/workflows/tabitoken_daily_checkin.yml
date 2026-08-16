@@ -1,0 +1,28 @@
+name: TabiToken 24/7 Daily Cloud Check-in
+
+on:
+  schedule:
+    # اجرا هر روز ساعت 05:00 UTC (معادل ۸:۳۰ صبح به وقت ایران)
+    - cron: '0 5 * * *'
+  workflow_dispatch: # امکان اجرای دستی در هر لحظه از پنل گیت‌هاب
+
+jobs:
+  daily-checkin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run TabiToken Cloud Check-in
+        env:
+          TABITOKEN_AUTH_TOKEN: ${{ secrets.TABITOKEN_AUTH_TOKEN }}
+          TABITOKEN_COOKIE: ${{ secrets.TABITOKEN_COOKIE }}
+        run: |
+          python tabitoken_cloud_checkin.py

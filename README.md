@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ Mohammadreza Zare (`mrzroot`)
+# ⚡(`mrzroot`)
 
 <p align="center">
   <b>Software Engineer · Database Architect · Backend Systems</b>

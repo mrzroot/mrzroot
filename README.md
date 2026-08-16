@@ -12,6 +12,7 @@
 
 <!-- Live Status Badges -->
 <p align="center">
+  <img src="https://img.shields.io/badge/GitHub-PRO-6f42c1?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro" />
   <img src="https://img.shields.io/badge/Status-Active%20Building-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
   <img src="https://img.shields.io/badge/Focus-Backend%20%26%20Data%20Architecture-38BDF8?style=for-the-badge&logo=postgresql&logoColor=white" alt="Focus" />
   <img src="https://img.shields.io/badge/Philosophy-Ponytail%20%26%20YAGNI-10B981?style=for-the-badge&logo=codeforces&logoColor=white" alt="Philosophy" />

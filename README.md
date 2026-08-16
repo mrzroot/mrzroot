@@ -2,72 +2,80 @@
 
 # ⚡ Mohammadreza Zare (`mrzroot`)
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D2FF&center=true&vCenter=true&width=650&lines=Software+Engineer+%7C+Database+Architect;Backend+Systems+%26+Performance+Tuning;Git%2C+GitHub+Actions+%26+Cloud+Automation;Clean+Architecture+%7C+Scalable+Solutions" alt="Typing SVG" />
-</a>
+<p align="center">
+  <b>Software Engineer · Database Architect · Backend Systems</b>
+</p>
 
 <p align="center">
-  <a href="https://github.com/mrzroot"><img src="https://img.shields.io/github/followers/mrzroot?label=Followers&logo=github&style=for-the-badge&color=238636" alt="Followers" /></a>
-  <a href="https://github.com/mrzroot?tab=repositories"><img src="https://img.shields.io/github/stars/mrzroot?label=Stars&logo=github&style=for-the-badge&color=D29922" alt="Stars" /></a>
-  <a href="https://github.com/mrzroot"><img src="https://komarev.com/ghpvc/?username=mrzroot&label=Profile%20Views&color=0e75b6&style=for-the-badge" alt="Profile Views" /></a>
+  <img src="https://img.shields.io/badge/Status-Active%20Building-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
+  <img src="https://img.shields.io/badge/Focus-Backend%20%26%20Database-38BDF8?style=for-the-badge&logo=postgresql&logoColor=white" alt="Focus" />
+  <img src="https://img.shields.io/badge/Location-Mashhad%2C%20Iran-10B981?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
 </p>
 
 ---
 
-### 🏆 GitHub Achievements & Trophies
+### 🏆 GitHub Achievements & Unlocked Badges
 
-<a href="https://github.com/mrzroot?tab=achievements">
-  <img src="https://github-profile-trophy.vercel.app/?username=mrzroot&theme=onedark&no-frame=false&no-bg=true&margin-w=4&margin-h=4" alt="GitHub Trophies" />
-</a>
-
-</div>
-
-<br />
-
-### 🚀 Tech Stack & Tooling
-
-<div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,js,ts,mysql,postgres,docker,git,github,githubactions,linux,fastapi,redis,bash,vscode&theme=dark" alt="Skill Icons" />
+<p align="center">
+  <a href="https://github.com/mrzroot?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pull-shark-silver.png" width="90" height="90" alt="Pull Shark Silver" title="Pull Shark (Silver) - 16+ Merged Pull Requests" />
   </a>
-</div>
-
-<br />
-
----
-
-### 📊 GitHub Activity & Statistics
-
-<div align="center">
-  <table border="0">
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=mrzroot&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="180" />
-      </td>
-      <td>
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=mrzroot&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="180" />
-      </td>
-    </tr>
-  </table>
-  
-  <br />
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrzroot&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</div>
-
-<br />
+  &nbsp;&nbsp;
+  <a href="https://github.com/mrzroot?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/quickdraw-default.png" width="90" height="90" alt="Quickdraw" title="Quickdraw - Closed Issue/PR within 5 minutes" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/mrzroot?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pair-extraordinaire-default.png" width="90" height="90" alt="Pair Extraordinaire" title="Pair Extraordinaire - Co-authored Merged Pull Requests" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/mrzroot?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/yolo-default.png" width="90" height="90" alt="YOLO" title="YOLO - Merged without code review" />
+  </a>
+</p>
 
 ---
 
-### 🌟 Featured Projects
+### 🚀 Tech Stack & Core Competencies
 
-- 🌐 **[Awesome Persian Developer Resources](https://github.com/mrzroot/awesome-persian-developer-resources)** — A curated collection of top developer tools, tutorials, and libraries.
-- ⚡ **[Jenkins Pipeline Master Examples](https://github.com/mrzroot/jenkins)** — Declarative Jenkins CI/CD automation in Groovy.
-- 🖨️ **[PrintBridge](https://github.com/mrzroot/printbridge)** — Silent local printing agent for modern web applications.
-- 🤖 **[Cloud Automation Workflows](https://github.com/mrzroot)** — Automated 24/7 background tasks using GitHub Actions & Python.
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,js,ts,mysql,postgres,docker,git,github,githubactions,linux,fastapi,redis,bash,vscode&theme=dark" alt="Tech Stack" />
+</p>
 
 ---
 
-<div align="center">
-  <sub>Designed with precision · Mohammadreza Zare · Let's build scalable systems together.</sub>
+### 💼 Engineering Philosophy & Expertise
+
+```python
+class SoftwareEngineer:
+    def __init__(self):
+        self.name = "Mohammadreza Zare"
+        self.role = "Backend Engineer & Database Architect"
+        self.code_principles = [
+            "YAGNI & Ponytail Minimalist Design",
+            "Robust Data Validation & High Performance",
+            "Zero-Tolerance for Architectural Bloat",
+            "Automated CI/CD & Cloud Orchestration"
+        ]
+        self.specialties = ["SQL Optimization", "FastAPI / Python", "Data Modeling", "ETL Systems"]
+
+    def build_system(self):
+        return "Resilient, scalable, and elegant software that delivers real value."
+```
+
+---
+
+### 🌟 Featured Repositories
+
+- 🌐 **[Awesome Persian Developer Resources](https://github.com/mrzroot/awesome-persian-developer-resources)** — A curated collection of developer tools and guides.
+- ⚡ **[Jenkins Pipeline Master Examples](https://github.com/mrzroot/jenkins)** — Declarative Jenkins CI/CD automation.
+- 🖨️ **[PrintBridge](https://github.com/mrzroot/printbridge)** — Silent local printing agent for modern web apps.
+- 🧪 **[Achievement Lab](https://github.com/mrzroot/achievement-lab)** — Automated sandbox for GitHub workflows & CI/CD qualifying triggers.
+
+---
+
+<p align="center">
+  <sub>Designed with precision · <b>Mohammadreza Zare</b> · Let's build scalable systems together.</sub>
+</p>
+
 </div>

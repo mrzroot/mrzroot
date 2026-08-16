@@ -146,17 +146,6 @@ graph LR
   <img src="https://img.shields.io/badge/CI%2FCD-PASSING-00D2FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD" />
 </p>
 
----
-
-### 🧊 3D Isometric Contribution Graph
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-green-animate.svg" />
-    <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Calendar" width="100%" />
-  </picture>
-</div>
 
 ---
 

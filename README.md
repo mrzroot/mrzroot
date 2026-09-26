@@ -71,12 +71,67 @@ graph LR
 ### 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,fastapi,sqlite,mysql,git,github,vscode,linux,bash,markdown&theme=dark" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=py,flask,django,laravel,vue,react,ts,mysql,sqlite,git,github&theme=dark" alt="Tech Stack" />
 </p>
 
 ---
 
-### 🌟 Featured Engineering Projects
+### 🌐 Selected Website Projects
+
+<p align="center"><sub>Anonymized project summaries. Production source and operational data are private; walkthroughs are available on request.</sub></p>
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">📩 SMS Management Dashboard</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Stack-Python%20%7C%20Flask-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python and Flask" />
+        <img src="https://img.shields.io/badge/Features-Reports%20%7C%20Audit-0F766E?style=flat-square" alt="Reports and audit logs" />
+      </p>
+      <p>Role-based operations portal for SMS intake, follow-up, account tracking, Excel imports, audit logs, and financial reports.</p>
+    </td>
+    <td width="50%">
+      <h3 align="center">📊 Operational Budgeting Platform</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Stack-Laravel%20%7C%20Vue%203-42B883?style=flat-square&logo=vuedotjs&logoColor=white" alt="Laravel and Vue 3" />
+        <img src="https://img.shields.io/badge/Language-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+      </p>
+      <p>Budget cycles, allocations, approval workflows, unit tasks, and monthly reporting in a Persian RTL business application.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">🍽️ Food Operations & Inventory</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Stack-React%2019%20%7C%20Laravel%2012-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React and Laravel" />
+        <img src="https://img.shields.io/badge/Features-Stock%20%7C%20Meal%20Planning-F59E0B?style=flat-square" alt="Inventory and meal planning" />
+      </p>
+      <p>Inventory, recipes, stocktakes, purchasing, meal reservations, daily planning, and usage reports for food-service operations.</p>
+    </td>
+    <td width="50%">
+      <h3 align="center">⚖️ Arbitration Services Portal</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Frontend-Vue%203-42B883?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue 3" />
+        <img src="https://img.shields.io/badge/Backend-Django%20REST-092E20?style=flat-square&logo=django&logoColor=white" alt="Django REST" />
+      </p>
+      <p>Public information, a fee calculator, arbitration and mediation requests, case-status tracking, and staff work queues.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <h3>🏛️ Business Organization Portal Redesign</h3>
+      <p>
+        <img src="https://img.shields.io/badge/Stack-TanStack%20Start%20%7C%20TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TanStack Start and TypeScript" />
+        <img src="https://img.shields.io/badge/Backend-Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase" />
+      </p>
+      <p>Responsive Persian RTL portal concept with service directories, searchable content, authentication, and admin-managed pages.</p>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🌟 Open Source Projects
 
 <table>
   <tr>

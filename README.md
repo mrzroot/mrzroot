@@ -78,7 +78,8 @@ graph LR
 
 ### 🌐 Selected Website Projects
 
-<p align="center"><sub>Anonymized project summaries. Production source and operational data are private; walkthroughs are available on request.</sub></p>
+<p align="center"><a href="https://mrzroot.github.io/website-portfolio-demos/"><strong>▶ Open five interactive website demos</strong></a></p>
+<p align="center"><sub>All demos use fictional data and run separately from the private production systems and source code.</sub></p>
 
 <table>
   <tr>

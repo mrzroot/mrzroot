@@ -117,13 +117,13 @@ graph LR
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <h3>🏛️ Enterprise Data Governance & 360° Architecture (MCCIMA)</h3>
+      <h3>⚡ <a href="https://github.com/mrzroot/agentforge">AgentForge</a></h3>
       <p>
-        <img src="https://img.shields.io/badge/Architecture-DBML%20%7C%20OpenAPI%203.0-0284C7?style=flat-square" />
-        <img src="https://img.shields.io/badge/Scale-13%20DBs%20%7C%20107%20Tables-0F766E?style=flat-square" />
-        <img src="https://img.shields.io/badge/Integration-9%20Enterprise%20Systems-38BDF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/Runtime-Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+        <img src="https://img.shields.io/badge/Language-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Tools-Sync%20%7C%20Pack%20%7C%20Lint-8B5CF6?style=flat-square" alt="Sync, pack, and lint tools" />
       </p>
-      <p>Enterprise data unification framework transforming 9 disparate systems and 13 databases into unified DBML models, OpenAPI standard web services, and automated ETL pipelines.</p>
+      <p>Open-source toolkit for keeping AI coding-agent instructions in sync, compressing code context with AST analysis, and checking rules for security issues and conflicts.</p>
     </td>
   </tr>
 </table>

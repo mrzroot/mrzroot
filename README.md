@@ -149,14 +149,11 @@ graph LR
 <a href="https://github.com/mrzroot">
   <img src="https://img.shields.io/badge/GitHub-mrzroot-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </a>
-<a href="mailto:contact@mrzroot.dev">
-  <img src="https://img.shields.io/badge/Email-Direct%20Inquiry-38BDF8?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+<a href="https://t.me/mrzroot">
+  <img src="https://img.shields.io/badge/Telegram-Chat-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
 </a>
 <a href="https://linkedin.com/in/mrzroot">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-</a>
-<a href="https://t.me/mrzroot">
-  <img src="https://img.shields.io/badge/Telegram-Chat-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
 </a>
 
 <br /><br />

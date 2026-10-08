@@ -1,163 +1,79 @@
-<div align="center">
-
-<!-- Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,25,45&height=220&section=header&text=M-R-Z&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=%E2%9A%A1%20Python%20Developer%20%C2%B7%20Open%20Source%20Enthusiast%20%C2%B7%20Automation%20Builder&descFontSize=16&descAlignY=58&descAlign=50" alt="M-R-Z Header" width="100%" />
-
-<!-- Animated Typist -->
-<a href="https://github.com/mrzroot">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00D2FF&center=true&vCenter=true&width=680&lines=Building+Clean+%26+Helpful+Python+Tools;Automating+Workflows+%26+Backend+Scripts;Learning%2C+Experimenting+%26+Open-Sourcing+Daily;Keeping+Code+Simple%2C+Fast+%26+Readable" alt="Typing SVG" />
+<a href="https://mrzroot.github.io/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg">
+    <img alt="M-R-Z · Mohammadreza Zare, Python developer: automation, backend services and open-source tools" src="./assets/header-dark.svg" width="100%">
+  </picture>
 </a>
 
-<br />
-
-<!-- Live Status Badges -->
 <p align="center">
-  <img src="https://img.shields.io/badge/GitHub-Active%20Builder-6f42c1?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Active" />
-  <img src="https://img.shields.io/badge/Focus-Python%20%26%20Automation-00D2FF?style=for-the-badge&logo=python&logoColor=white" alt="Focus" />
-  <img src="https://img.shields.io/badge/Learning-Backend%20%26%20Data%20Tools-38BDF8?style=for-the-badge&logo=postgresql&logoColor=white" alt="Learning" />
-  <img src="https://img.shields.io/badge/Style-Simple%20%26%20Clean%20Code-10B981?style=for-the-badge&logo=codeforces&logoColor=white" alt="Style" />
-  <img src="https://img.shields.io/badge/Location-Mashhad%2C%20Iran-F59E0B?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+  <a href="https://mrzroot.github.io/"><img alt="Portfolio: mrzroot.github.io" src="https://img.shields.io/badge/Portfolio-mrzroot.github.io-2ad4a4?style=flat-square&logo=githubpages&logoColor=white"></a>
+  <a href="https://t.me/mrzroot"><img alt="Telegram: @mrzroot" src="https://img.shields.io/badge/Telegram-@mrzroot-229ED9?style=flat-square&logo=telegram&logoColor=white"></a>
+  <a href="https://linkedin.com/in/mrzroot"><img alt="LinkedIn: mrzroot" src="https://img.shields.io/badge/LinkedIn-mrzroot-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
 </p>
 
-</div>
+### Hi, I'm Mohammadreza Zare (M-R-Z)
 
----
+I'm a Python developer in Mashhad, Iran. I work where automation meets the backend: scripts that remove repetitive tasks, small services and APIs, and the tooling that keeps them running. My recent work spans browser extensions, CI pipelines and tools that keep AI coding agents consistent.
 
-### 💻 About Me & What I Build
+How I work: solve the real problem, keep the code small and readable, and make setup take minutes, not hours.
 
-```python
-class Developer:
-    def __init__(self):
-        self.name = "M-R-Z"
-        self.handle = "mrzroot"
-        self.interests = ["Python Automation", "Backend APIs", "Open Source Tools"]
-        self.learning_mindset = [
-            "Building practical tools that solve everyday problems",
-            "Writing clean, readable, and simple code (Less is more)",
-            "Continuous learning and sharing with the developer community"
-        ]
+**→ See my work and get in touch at [mrzroot.github.io](https://mrzroot.github.io/)** (also in [Persian](https://mrzroot.github.io/?lang=fa)).
 
-    def current_mission(self) -> str:
-        return "Creating lightweight, easy-to-use Python tools for developers!"
-```
-
----
-
-### 📐 Signature System Architecture & Flow
-
-```mermaid
-graph LR
-    classDef client fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
-    classDef service fill:#0284c7,stroke:#00D2FF,stroke-width:2px,color:#fff;
-    classDef storage fill:#0f766e,stroke:#2dd4bf,stroke-width:2px,color:#fff;
-    classDef devops fill:#334155,stroke:#94a3b8,stroke-width:1px,color:#fff;
-
-    Clients["📱 Web Apps & Clients"]:::client
-    Gateway["⚡ High-Performance API Gateway / FastAPI"]:::service
-    Cache["🚀 In-Memory Redis Cache"]:::service
-    Storage["🗄️ Relational Core (Postgres / MySQL)"]:::storage
-    ETL["🔄 Automated ETL & Data Governance"]:::storage
-    CI["🐳 Automated CI/CD & Docker Engine"]:::devops
-
-    Clients -->|"REST / WebSocket"| Gateway
-    Gateway -->|"Cache Layer"| Cache
-    Gateway -->|"ACID Transactions"| Storage
-    Storage -->|"Batch Pipeline"| ETL
-    CI -.->|"Continuous Delivery"| Gateway
-```
-
----
-
-### 🛠️ Tech Stack & Tools
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=py,flask,django,laravel,vue,react,ts,mysql,sqlite,git,github&theme=dark" alt="Tech Stack" />
-</p>
-
----
-
-### 🌟 Open Source Projects
+### Featured projects
 
 <table>
   <tr>
-    <td width="50%">
-      <h3 align="center">🌐 <a href="https://github.com/mrzroot/awesome-persian-developer-resources">Awesome Persian Dev Resources</a></h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Status-Community%20Flagship-EC4899?style=flat-square" />
-        <img src="https://img.shields.io/badge/Category-Curated%20Hub-F59E0B?style=flat-square" />
-      </p>
-      <p>Curated flagship collection of anti-sanction DNS tools, free Iranian public APIs, fonts, Python/Backend packages, and AI/NLP models for developers.</p>
+    <td width="50%" valign="top">
+      <a href="https://github.com/mrzroot/agentforge"><b>AgentForge</b></a> · <sub>TypeScript · Node.js</sub><br>
+      <sub>Keeps one source of AI coding-agent rules in sync across tools (Cursor, Claude Code, Windsurf, Copilot, Roo, Aider), compresses code context with AST analysis, and lints rules for security issues and conflicts.</sub>
     </td>
-    <td width="50%">
-      <h3 align="center">⚡ <a href="https://github.com/mrzroot/universal-video-downloader">Universal Video Downloader</a></h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Manifest-V3%20Extension-00D2FF?style=flat-square" />
-        <img src="https://img.shields.io/badge/Streams-HLS%20%7C%20M3U8%20%7C%20MP4-10B981?style=flat-square" />
-      </p>
-      <p>High-speed Chrome/Edge browser extension to sniff, extract, and download live video streams, m3u8 playlists, and MP4 media with zero watermark.</p>
+    <td width="50%" valign="top">
+      <a href="https://github.com/mrzroot/awesome-persian-developer-resources"><b>Awesome Persian Developer Resources</b></a> · <sub>Curated list</sub><br>
+      <sub>One categorized hub for tools Iranian developers rely on: anti-sanction DNS and tools, free Iranian APIs, Persian fonts, Python packages and AI/NLP resources.</sub>
     </td>
   </tr>
   <tr>
-    <td width="50%">
-      <h3 align="center">🖨️ <a href="https://github.com/mrzroot/printbridge">PrintBridge</a></h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Stack-Python%20%7C%20WebSocket-10B981?style=flat-square" />
-        <img src="https://img.shields.io/badge/Type-Hardware%20Bridge-6366F1?style=flat-square" />
-      </p>
-      <p>Silent, high-speed local printing daemon bridging modern web applications directly to thermal POS and document printers without browser dialog delays.</p>
+    <td width="50%" valign="top">
+      <a href="https://github.com/mrzroot/universal-video-downloader"><b>Universal Video Downloader</b></a> · <sub>JavaScript · Manifest V3</sub><br>
+      <sub>A Chrome and Edge extension that detects HLS (M3U8) and MP4 streams on a page and saves them, entirely client-side.</sub>
     </td>
-    <td width="50%">
-      <h3 align="center">⚡ <a href="https://github.com/mrzroot/jenkins">Jenkins Pipeline Master</a></h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/CI%2FCD-Declarative%20Groovy-D97706?style=flat-square" />
-        <img src="https://img.shields.io/badge/Automation-Docker%20Deployments-3B82F6?style=flat-square" />
-      </p>
-      <p>Production-grade declarative Jenkins pipelines demonstrating automated testing, containerized builds, artifact archival, and multi-environment delivery.</p>
+    <td width="50%" valign="top">
+      <a href="https://github.com/mrzroot/page-smash"><b>Page Smash</b></a> · <sub>JavaScript · browser extension</sub><br>
+      <sub>An original physics toy for Chrome, Edge and Firefox: fly a jetpack character over any webpage and smash its text and images apart.</sub>
     </td>
   </tr>
   <tr>
-    <td colspan="2" align="center">
-      <h3>⚡ <a href="https://github.com/mrzroot/agentforge">AgentForge</a></h3>
-      <p>
-        <img src="https://img.shields.io/badge/Runtime-Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
-        <img src="https://img.shields.io/badge/Language-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Tools-Sync%20%7C%20Pack%20%7C%20Lint-8B5CF6?style=flat-square" alt="Sync, pack, and lint tools" />
-      </p>
-      <p>Open-source toolkit for keeping AI coding-agent instructions in sync, compressing code context with AST analysis, and checking rules for security issues and conflicts.</p>
+    <td width="50%" valign="top">
+      <a href="https://github.com/mrzroot/jenkins"><b>Jenkins Pipeline Examples</b></a> · <sub>Groovy · Jenkinsfile</sub><br>
+      <sub>Small, readable declarative Jenkins pipelines with staged builds, plus a variant with SCM polling.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/mrzroot/printbridge"><b>PrintBridge</b></a> · <sub>Fork of <a href="https://github.com/AnouarSbia/printbridge">AnouarSbia/printbridge</a></sub><br>
+      <sub>A local agent that takes print jobs from web apps and prints PDFs and thermal labels without a dialog. Forked from AnouarSbia's original project; credit to the original author.</sub>
     </td>
   </tr>
 </table>
 
----
+### Tech stack
 
-### 📈 Real-Time GitHub Intelligence & Metrics
+| Area | Tools |
+| --- | --- |
+| Core & backend | Python · Django · Flask · FastAPI · PHP / Laravel · REST & WebSocket |
+| Data | PostgreSQL · MySQL · SQLite · Redis · SQL |
+| Web & browser | TypeScript · JavaScript · Node.js · React · Vue · Chrome extensions (MV3) |
+| Ops & tooling | Git & GitHub · Jenkins · Docker · Cursor · Claude Code · Copilot |
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mrzroot&color=00D2FF&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
-  <img src="https://img.shields.io/github/stars/mrzroot?style=for-the-badge&logo=github&color=38BDF8&label=TOTAL%20STARS" alt="Total Stars" />
-  <img src="https://img.shields.io/github/followers/mrzroot?style=for-the-badge&logo=github&color=10B981&label=FOLLOWERS" alt="Followers" />
-  <img src="https://img.shields.io/badge/CI%2FCD-PASSING-00D2FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD" />
-</p>
+### Activity
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green.svg">
+  <img alt="3D contribution calendar for mrzroot" src="./profile-3d-contrib/profile-night-green.svg" width="100%">
+</picture>
 
----
+<sub>Generated daily in this repository by <a href="https://github.com/yoshi389111/github-profile-3d-contrib">github-profile-3d-contrib</a>.</sub>
 
-### 📬 Connect & Collaborate
+### Get in touch
 
-<div align="center">
-
-<a href="https://github.com/mrzroot">
-  <img src="https://img.shields.io/badge/GitHub-mrzroot-00D2FF?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-</a>
-<a href="https://t.me/mrzroot">
-  <img src="https://img.shields.io/badge/Telegram-Chat-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
-</a>
-<a href="https://linkedin.com/in/mrzroot">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-</a>
-
-<br /><br />
-
-<sub>⚡ Crafted with precision & minimal code · <b>M-R-Z</b> · Let's engineer scalable systems together.</sub>
-
-</div>
+The fastest way to reach me is **Telegram: [@mrzroot](https://t.me/mrzroot)**. You can also find me on [LinkedIn](https://linkedin.com/in/mrzroot), or open an issue on any of my repositories here on GitHub.

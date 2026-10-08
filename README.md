@@ -14,13 +14,40 @@
 
 ### Hi, I'm Mohammadreza Zare (M-R-Z)
 
-I'm a Python developer in Mashhad, Iran. I work where automation meets the backend: scripts that remove repetitive tasks, small services and APIs, and the tooling that keeps them running. My recent work spans browser extensions, CI pipelines and tools that keep AI coding agents consistent.
+I'm a Python developer in Mashhad, Iran. I work where automation meets the backend: scripts that remove repetitive tasks, small services and APIs, and the tooling that keeps them running. My recent work spans a Persian text linter, a network doctor for developers in Iran, a self-hosted workflow engine, browser extensions and CI pipelines.
 
 How I work: solve the real problem, keep the code small and readable, and make setup take minutes, not hours.
 
 **→ See my work and get in touch at [mrzroot.github.io](https://mrzroot.github.io/)** (also in [Persian](https://mrzroot.github.io/?lang=fa)).
 
 ### Featured projects
+
+**Flagship tools** · each with a v0.1.0 release, CI and a live page
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://github.com/mrzroot/paknevis"><b>paknevis · پاک‌نویس</b></a><br>
+      <sub>Python · CLI · pre-commit · GitHub Action</sub><br><br>
+      <sub>A Persian text linter and auto-fixer, like Prettier/ESLint for Persian writing: ZWNJ (half-space), Arabic characters, punctuation and digits, with 25 rules. It never touches code, URLs, markup or math in Markdown, HTML and LaTeX.</sub><br><br>
+      <a href="https://mrzroot.github.io/paknevis/">Playground</a> · <a href="https://github.com/mrzroot/paknevis">Repository</a> · <a href="https://github.com/mrzroot/paknevis/releases/latest">Release</a>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/mrzroot/netdoctor-ir"><b>netdoctor-ir</b></a><br>
+      <sub>Python · asyncio · dnspython · Textual</sub><br><br>
+      <sub>A connectivity doctor and mirror switcher for developers in Iran. It scans 38 developer services for filtering and sanctions, ranks 13 DNS resolvers, and tests and configures 37 PyPI, npm, Docker, Go and Maven mirrors, with backups and restore.</sub><br><br>
+      <a href="https://mrzroot.github.io/netdoctor-ir/">Website</a> · <a href="https://github.com/mrzroot/netdoctor-ir">Repository</a> · <a href="https://github.com/mrzroot/netdoctor-ir/releases/latest">Release</a>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/mrzroot/flowpilot"><b>flowpilot</b></a><br>
+      <sub>Python · FastAPI · SQLite · Telegram</sub><br><br>
+      <sub>A self-hosted, code-first workflow automation engine (a tiny n8n in a Git repo): YAML workflows, cron, webhook, file and RSS triggers, Telegram-first steps, a live dashboard, plugins and Jalali date filters.</sub><br><br>
+      <a href="https://mrzroot.github.io/flowpilot/">Website</a> · <a href="https://github.com/mrzroot/flowpilot">Repository</a> · <a href="https://github.com/mrzroot/flowpilot/releases/latest">Release</a>
+    </td>
+  </tr>
+</table>
+
+**More projects**
 
 <table>
   <tr>

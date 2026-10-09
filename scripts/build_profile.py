@@ -30,6 +30,8 @@ FLAGSHIPS = [
      "Local cloud for Iranian payment and SMS APIs: Zarinpal, Zibal, Kavenegar and SMS.ir with failure scenarios, chaos mode and record/replay."),
     ("dibs", "dibs", "", "AI CODING-AGENT SAFETY",
      "Stops Claude Code, Codex, Cursor, Gemini CLI, Copilot and aider from reverting the edits you make by hand. Zero dependencies."),
+    ("hamyad", "hamyad", "هم‌یاد", "SHARED MEMORY FOR CLAUDE",
+     "One project brain for Claude Code, Claude.ai chat, Claude Desktop and GitHub: git-backed .brain/ over MCP, stdio and remote."),
     ("dokhaneh", "dokhaneh", "دوخانه", "RELEASE DISTRIBUTION",
      "Publishes every release to GitHub and Iranian hosts with an Ed25519-signed manifest and a verifying fallback installer."),
     ("paknevis", "paknevis", "پاک‌نویس", "PERSIAN TEXT TOOLING",
@@ -261,7 +263,7 @@ def card(i, spec, info, t, theme):
         body.append(f'<path d="M{cx} {cy+12*sy}V{cy}H{cx+12*sx}" fill="none" stroke="{a}" stroke-width="1.5" stroke-opacity=".8"/>')
     x = 312
     body.append(f'<g class="fu" style="--d:.15s">' + T("mono6", f"{i+1:02d}", 11, x, 48, a, ls=1.2)
-                + T("mono", f"/ 06 · {cat}", 11, x + 22, 48, t["text3"], ls=1.2) + "</g>")
+                + T("mono", f"/ {len(FLAGSHIPS):02d} · {cat}", 11, x + 22, 48, t["text3"], ls=1.2) + "</g>")
     body.append(f'<g class="fu" style="--d:.3s">' + T("serif", name, 46, x - 2, 102, t["text"]) + "</g>")
     if fa:
         body.append(f'<g class="fu" style="--d:.4s">' + T("fa8", fa, 18, 612, 98, t["text3"], "end") + "</g>")
@@ -341,7 +343,7 @@ def terminal(data, t, theme):
         ("cmd", "whoami"),
         ("out", "Mohammadreza Zare (M-R-Z) · Python & TypeScript · Mashhad, Iran"),
         ("cmd", "ls ~/flagships"),
-        ("acc", "mihanstack  dibs  dokhaneh  paknevis  netdoctor-ir  flowpilot"),
+        ("acc", "mihanstack  dibs  hamyad  dokhaneh  paknevis  netdoctor-ir  flowpilot"),
         ("cmd", "dibs status --oneline"),
         ("out", f"dibs: 0 reverted · your edits are safe · {stars} star{'' if stars == 1 else 's'} across flagships"),
         ("cmd", "echo $SALAM"),

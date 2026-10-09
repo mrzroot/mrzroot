@@ -343,7 +343,7 @@ def terminal(data, t, theme):
         ("cmd", "ls ~/flagships"),
         ("acc", "mihanstack  dibs  dokhaneh  paknevis  netdoctor-ir  flowpilot"),
         ("cmd", "dibs status --oneline"),
-        ("out", f"dibs: 0 reverted · your edits are safe · {stars} stars across flagships"),
+        ("out", f"dibs: 0 reverted · your edits are safe · {stars} star{'' if stars == 1 else 's'} across flagships"),
         ("cmd", "echo $SALAM"),
         ("fa", "سلام، خوش آمدید؛ برای همکاری در تلگرام پیام بدهید"),
     ]

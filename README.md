@@ -46,9 +46,9 @@ I build **open-source developer tools** in Python and TypeScript, mostly for **A
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-teal-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-teal-light.svg">
-  <img alt="Contribution graph being eaten by a teal snake" src="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-teal-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-turquoise-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-turquoise-light.svg">
+  <img alt="Contribution graph being eaten by a golden snake on Persian-turquoise tiles" src="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-turquoise-dark.svg" width="100%">
 </picture>
 
 <details>

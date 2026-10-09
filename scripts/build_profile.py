@@ -43,10 +43,14 @@ FLAGSHIPS = [
 ]
 
 THEMES = {
-    "dark": dict(bg="#07080a", surface="#0d0f13", line="#1d2127", line2="#2a2f37", text="#ededef", text2="#a1a7b3",
-                 text3="#6f7884", accent="#4ae8bd", hot="#ffffff", glow="#4ae8bd", glowA=0.13, dot="#ffffff", dotA=0.06),
-    "light": dict(bg="#f5f5f2", surface="#ffffff", line="#e2e3df", line2="#d3d5d0", text="#0c0e12", text2="#434a54",
-                  text3="#6b737d", accent="#078a68", hot="#03241b", glow="#2ad4a4", glowA=0.16, dot="#0c0e12", dotA=0.07),
+    # Persian turquoise (Sheikh Lotfollah tile) + amber gold on midnight indigo
+    "dark": dict(bg="#070b1a", surface="#0e1428", line="#1a2240", line2="#28325a", text="#eceff7", text2="#a9b1cc",
+                 text3="#8089a8", accent="#3fd0c9", gold="#e8b04b", hot="#f0be5e", glow="#3fd0c9", glowA=0.13,
+                 dot="#c9d3ff", dotA=0.06),
+    # ivory paper + deep turquoise + burnished gold (all text >= 4.5:1)
+    "light": dict(bg="#f7f5ef", surface="#ffffff", line="#e6e2d6", line2="#d6d1c2", text="#0b1230", text2="#3a4363",
+                  text3="#5b6383", accent="#0a7671", gold="#8a5c0c", hot="#b7801f", glow="#1fb5ad", glowA=0.16,
+                  dot="#0b1230", dotA=0.07),
 }
 LANG_COLORS = {"Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a", "Groovy": "#4298b8",
                "HTML": "#e34c26", "Shell": "#89e051", "CSS": "#563d7c", "PHP": "#4F5D95"}
@@ -200,7 +204,7 @@ def particles(pts, x, y, w, h, t, rng, rmin=1.1, rmax=2.4, spread=260, d0=0.0, d
     for i, (nx, ny) in enumerate(pts):
         px, py = x + nx * w, y + ny * h
         r = rmin + rng.random() * (rmax - rmin)
-        hot = rng.random() < 0.08
+        hot = rng.random() < 0.12
         dx, dy = (rng.random() - 0.5) * spread * 2, (rng.random() - 0.5) * spread * 1.4
         d = d0 + rng.random() * dspan
         cls = "p h" if hot else "p"
@@ -260,9 +264,9 @@ def card(i, spec, info, t, theme):
     body = [f'<rect x="16" y="16" width="268" height="268" rx="16" fill="{t["glow"]}" fill-opacity="{t["glowA"]*0.5:.3f}" stroke="{t["line"]}"/>',
             f'<g class="gl">{particles(PARTICLES[slug], 40, 40, 220, 220, t, rng, 1.0, 2.2, 180, 0, 1.0)}</g>']
     for (cx, cy, sx, sy) in [(26, 26, 1, 1), (274, 26, -1, 1), (26, 274, 1, -1), (274, 274, -1, -1)]:
-        body.append(f'<path d="M{cx} {cy+12*sy}V{cy}H{cx+12*sx}" fill="none" stroke="{a}" stroke-width="1.5" stroke-opacity=".8"/>')
+        body.append(f'<path d="M{cx} {cy+12*sy}V{cy}H{cx+12*sx}" fill="none" stroke="{t['gold']}" stroke-width="1.5" stroke-opacity=".8"/>')
     x = 312
-    body.append(f'<g class="fu" style="--d:.15s">' + T("mono6", f"{i+1:02d}", 11, x, 48, a, ls=1.2)
+    body.append(f'<g class="fu" style="--d:.15s">' + T("mono6", f"{i+1:02d}", 11, x, 48, t["gold"], ls=1.2)
                 + T("mono", f"/ {len(FLAGSHIPS):02d} · {cat}", 11, x + 22, 48, t["text3"], ls=1.2) + "</g>")
     body.append(f'<g class="fu" style="--d:.3s">' + T("serif", name, 46, x - 2, 102, t["text"]) + "</g>")
     if fa:
@@ -271,7 +275,7 @@ def card(i, spec, info, t, theme):
         body.append(f'<g class="fu" style="--d:{.45 + k*.06:.2f}s">' + T("inter", line, 14.5, x, 138 + k * 22, t["text2"]) + "</g>")
     # footer chips
     y, cxp = 252, x
-    chips = [("star", a), (info["tag"] or "release", t["text2"]), (info["lang"] or "", t["text2"])]
+    chips = [("star", t["text"]), (info["tag"] or "release", t["text2"]), (info["lang"] or "", t["text2"])]
     for txt, col in chips:
         if not txt:
             continue
@@ -279,7 +283,7 @@ def card(i, spec, info, t, theme):
         w = F["mono"].width(label, 12, .3) + (34 if txt in ("star", info["lang"]) else 22)
         body.append(f'<rect x="{cxp}" y="{y-17}" width="{w:.0f}" height="26" rx="13" fill="{t["dot"]}" fill-opacity=".05" stroke="{t["line2"]}"/>')
         if txt == "star":
-            body.append(star_path(cxp + 14, y - 4, 5.5, a))
+            body.append(star_path(cxp + 14, y - 4, 5.5, t["gold"]))
             body.append(T("mono6", label, 12, cxp + 24, y, col, ls=.3))
         elif txt == info["lang"]:
             body.append(f'<circle cx="{cxp+14}" cy="{y-4}" r="4" fill="{LANG_COLORS.get(txt, a)}"/>')
@@ -302,7 +306,7 @@ def stats(data, t, theme):
              (str(len(own)), "original repositories", "مخزن اصلی"),
              (f"{rel}/6", "with releases", "شاخص با نسخه"),
              (str(allstars), "stars, all repos", "همه‌ی ستاره‌ها")]
-    body = [T("mono", "LIVE FROM GITHUB", 11, 48, 52, a, ls=1.6),
+    body = [T("mono", "LIVE FROM GITHUB", 11, 48, 52, t["gold"], ls=1.6),
             T("mono", f"updated {dt.date.today().isoformat()} · self-hosted SVG, built daily by a GitHub Action", 11, 196, 52, t["text3"], ls=.4),
             T("fa", "به‌روزرسانی خودکار روزانه", 12, 1232, 52, t["text3"], "end")]
     cw = (W - 96) / 4

@@ -61,8 +61,10 @@ Every project has its own website (live demo, features, quick start, FAQ) in Eng
       <a href="https://mrzroot.github.io/mihanstack/">Website</a> · <a href="https://github.com/mrzroot/mihanstack">Repository</a> · <a href="https://github.com/mrzroot/mihanstack/releases/latest">Release</a>
     </td>
     <td width="33%" valign="top">
-      <a href="https://mrzroot.github.io/projects/"><b>All projects →</b></a><br><br>
-      <sub>Features, install steps and quick starts for every project, in English and Persian.</sub>
+      <a href="https://github.com/mrzroot/dibs"><b>dibs</b></a><br>
+      <sub>Python · CLI · agent hooks · MCP</sub><br><br>
+      <sub>Call dibs on your edits: stops AI coding agents (Claude Code, Codex, Cursor, Gemini CLI, Copilot, Aider) from reverting what you changed by hand. Attribution journal, per-turn briefs, a revert guard with restore, and uncommitted/unpushed warnings.</sub><br><br>
+      <a href="https://mrzroot.github.io/dibs/">Website</a> · <a href="https://github.com/mrzroot/dibs">Repository</a> · <a href="https://github.com/mrzroot/dibs/releases/latest">Release</a>
     </td>
   </tr>
 </table>

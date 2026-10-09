@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg">
-    <img alt="M-R-Z · Mohammadreza Zare, Python developer: automation, backend services and open-source tools" src="./assets/header-dark.svg" width="100%">
+    <img alt="M-R-Z · Mohammadreza Zare: open-source developer tools for AI coding agents and developers in Iran" src="./assets/header-dark.svg" width="100%">
   </picture>
 </a>
 
@@ -12,64 +12,26 @@
   <a href="https://linkedin.com/in/mrzroot"><img alt="LinkedIn: mrzroot" src="https://img.shields.io/badge/LinkedIn-mrzroot-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
 </p>
 
-### Hi, I'm Mohammadreza Zare (M-R-Z)
+### Mohammadreza Zare (M-R-Z)
 
-I'm a Python developer in Mashhad, Iran. I work where automation meets the backend: scripts that remove repetitive tasks, small services and APIs, and the tooling that keeps them running. My recent work spans a Persian text linter, a network doctor for developers in Iran, a self-hosted workflow engine, a release mirroring tool for domestic hosts, a local emulator for Iranian payment and SMS APIs, browser extensions and CI pipelines.
+I build open-source developer tools in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**. Small, well-tested tools with releases, docs and a website each. Based in Mashhad, Iran.
 
-How I work: solve the real problem, keep the code small and readable, and make setup take minutes, not hours.
+**[mrzroot.github.io](https://mrzroot.github.io/)** · [فارسی](https://mrzroot.github.io/?lang=fa) · Telegram [@mrzroot](https://t.me/mrzroot)
 
-**→ See my work and get in touch at [mrzroot.github.io](https://mrzroot.github.io/)** (also in [Persian](https://mrzroot.github.io/?lang=fa)).
+### Flagship projects
 
-### Featured projects
+| Project | What it does | Status |
+| --- | --- | --- |
+| **[MihanStack · میهن‌استک](https://github.com/mrzroot/mihanstack)** <br><sub>TypeScript · [website](https://mrzroot.github.io/mihanstack/)</sub> | Local cloud for Iranian payment and SMS APIs: emulates Zarinpal, Zibal, Kavenegar and SMS.ir with failure scenarios, chaos mode, webhooks and record/replay. | <a href="https://github.com/mrzroot/mihanstack/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/mrzroot/mihanstack?style=flat-square&label=&color=2ad4a4"></a> <a href="https://github.com/mrzroot/mihanstack/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/mrzroot/mihanstack?style=flat-square&label=%E2%98%85&color=555"></a> <a href="https://github.com/mrzroot/mihanstack/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/mrzroot/mihanstack/ci.yml?style=flat-square&label=CI"></a> |
+| **[dibs](https://github.com/mrzroot/dibs)** <br><sub>Python · [website](https://mrzroot.github.io/dibs/)</sub> | Stops AI coding agents (Claude Code, Codex, Cursor, Gemini CLI, Copilot, aider) from reverting your hand edits. Zero dependencies. | <a href="https://github.com/mrzroot/dibs/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/mrzroot/dibs?style=flat-square&label=&color=2ad4a4"></a> <a href="https://github.com/mrzroot/dibs/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/mrzroot/dibs?style=flat-square&label=%E2%98%85&color=555"></a> <a href="https://github.com/mrzroot/dibs/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/mrzroot/dibs/ci.yml?style=flat-square&label=CI"></a> |
+| **[dokhaneh · دوخانه](https://github.com/mrzroot/dokhaneh)** <br><sub>Python · [website](https://mrzroot.github.io/dokhaneh/)</sub> | Publishes each release to GitHub and Iranian hosts (ArvanCloud, Liara, Gitea) with an Ed25519-signed manifest and a verifying install.sh. | <a href="https://github.com/mrzroot/dokhaneh/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/mrzroot/dokhaneh?style=flat-square&label=&color=2ad4a4"></a> <a href="https://github.com/mrzroot/dokhaneh/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/mrzroot/dokhaneh?style=flat-square&label=%E2%98%85&color=555"></a> <a href="https://github.com/mrzroot/dokhaneh/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/mrzroot/dokhaneh/ci.yml?style=flat-square&label=CI"></a> |
+| **[paknevis · پاک‌نویس](https://github.com/mrzroot/paknevis)** <br><sub>Python · [website](https://mrzroot.github.io/paknevis/)</sub> | Persian text linter and fixer (ZWNJ, Arabic letters, punctuation, digits) for Markdown, HTML and LaTeX. CLI, pre-commit and GitHub Action. | <a href="https://github.com/mrzroot/paknevis/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/mrzroot/paknevis?style=flat-square&label=&color=2ad4a4"></a> <a href="https://github.com/mrzroot/paknevis/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/mrzroot/paknevis?style=flat-square&label=%E2%98%85&color=555"></a> <a href="https://github.com/mrzroot/paknevis/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/mrzroot/paknevis/ci.yml?style=flat-square&label=CI"></a> |
+| **[netdoctor-ir](https://github.com/mrzroot/netdoctor-ir)** <br><sub>Python · [website](https://mrzroot.github.io/netdoctor-ir/)</sub> | Connectivity doctor for developers in Iran: checks 38 dev services, ranks DNS resolvers and switches PyPI, npm, Docker, Go and Maven mirrors. | <a href="https://github.com/mrzroot/netdoctor-ir/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/mrzroot/netdoctor-ir?style=flat-square&label=&color=2ad4a4"></a> <a href="https://github.com/mrzroot/netdoctor-ir/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/mrzroot/netdoctor-ir?style=flat-square&label=%E2%98%85&color=555"></a> <a href="https://github.com/mrzroot/netdoctor-ir/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/mrzroot/netdoctor-ir/ci.yml?style=flat-square&label=CI"></a> |
+| **[flowpilot](https://github.com/mrzroot/flowpilot)** <br><sub>Python · [website](https://mrzroot.github.io/flowpilot/)</sub> | Self-hosted, code-first workflow automation: YAML workflows, cron/webhook/RSS triggers, Telegram steps, dashboard and Jalali dates. | <a href="https://github.com/mrzroot/flowpilot/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/mrzroot/flowpilot?style=flat-square&label=&color=2ad4a4"></a> <a href="https://github.com/mrzroot/flowpilot/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/mrzroot/flowpilot?style=flat-square&label=%E2%98%85&color=555"></a> <a href="https://github.com/mrzroot/flowpilot/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/mrzroot/flowpilot/ci.yml?style=flat-square&label=CI"></a> |
 
-Every project has its own website (live demo, features, quick start, FAQ) in English and Persian: **[all projects](https://mrzroot.github.io/projects/)**.
+Want to help? Each repo has issues labelled [**good first issue**](https://github.com/search?q=user%3Amrzroot+label%3A%22good+first+issue%22+state%3Aopen&type=issues).
 
-**Flagship tools** · each with a release, CI and a product page
-
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <a href="https://github.com/mrzroot/paknevis"><b>paknevis · پاک‌نویس</b></a><br>
-      <sub>Python · CLI · pre-commit · GitHub Action</sub><br><br>
-      <sub>A Persian text linter and auto-fixer, like Prettier/ESLint for Persian writing: ZWNJ (half-space), Arabic characters, punctuation and digits, with 25 rules. It never touches code, URLs, markup or math in Markdown, HTML and LaTeX.</sub><br><br>
-      <a href="https://mrzroot.github.io/paknevis/">Website &amp; playground</a> · <a href="https://github.com/mrzroot/paknevis">Repository</a> · <a href="https://github.com/mrzroot/paknevis/releases/latest">Release</a>
-    </td>
-    <td width="33%" valign="top">
-      <a href="https://github.com/mrzroot/netdoctor-ir"><b>netdoctor-ir</b></a><br>
-      <sub>Python · asyncio · dnspython · Textual</sub><br><br>
-      <sub>A connectivity doctor and mirror switcher for developers in Iran. It scans 38 developer services for filtering and sanctions, ranks 13 DNS resolvers, and tests and configures 37 PyPI, npm, Docker, Go and Maven mirrors, with backups and restore.</sub><br><br>
-      <a href="https://mrzroot.github.io/netdoctor-ir/">Website</a> · <a href="https://github.com/mrzroot/netdoctor-ir">Repository</a> · <a href="https://github.com/mrzroot/netdoctor-ir/releases/latest">Release</a>
-    </td>
-    <td width="33%" valign="top">
-      <a href="https://github.com/mrzroot/flowpilot"><b>flowpilot</b></a><br>
-      <sub>Python · FastAPI · SQLite · Telegram</sub><br><br>
-      <sub>A self-hosted, code-first workflow automation engine (a tiny n8n in a Git repo): YAML workflows, cron, webhook, file and RSS triggers, Telegram-first steps, a live dashboard, plugins and Jalali date filters.</sub><br><br>
-      <a href="https://mrzroot.github.io/flowpilot/">Website</a> · <a href="https://github.com/mrzroot/flowpilot">Repository</a> · <a href="https://github.com/mrzroot/flowpilot/releases/latest">Release</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="33%" valign="top">
-      <a href="https://github.com/mrzroot/dokhaneh"><b>dokhaneh · دوخانه</b></a><br>
-      <sub>Python · Typer · boto3 · PyNaCl · GitHub Action</sub><br><br>
-      <sub>Publishes every release to GitHub and Iranian domestic hosts (ArvanCloud, Liara, Gitea) in one step, with an Ed25519-signed manifest, a fallback install.sh that verifies signatures and hashes, and status/verify commands.</sub><br><br>
-      <a href="https://mrzroot.github.io/dokhaneh/">Website</a> · <a href="https://github.com/mrzroot/dokhaneh">Repository</a> · <a href="https://github.com/mrzroot/dokhaneh/releases/latest">Release</a>
-    </td>
-    <td width="33%" valign="top">
-      <a href="https://github.com/mrzroot/mihanstack"><b>MihanStack · میهن‌استک</b></a><br>
-      <sub>TypeScript · Node.js · Docker · GitHub Action</sub><br><br>
-      <sub>The local development cloud for Iranian services: emulates Zarinpal, Zibal, Kavenegar and SMS.ir with switchable failure scenarios, chaos mode, a webhook playground, record/replay with redaction and an RTL-aware dashboard.</sub><br><br>
-      <a href="https://mrzroot.github.io/mihanstack/">Website</a> · <a href="https://github.com/mrzroot/mihanstack">Repository</a> · <a href="https://github.com/mrzroot/mihanstack/releases/latest">Release</a>
-    </td>
-    <td width="33%" valign="top">
-      <a href="https://github.com/mrzroot/dibs"><b>dibs</b></a><br>
-      <sub>Python · CLI · agent hooks · MCP</sub><br><br>
-      <sub>Call dibs on your edits: stops AI coding agents (Claude Code, Codex, Cursor, Gemini CLI, Copilot, Aider) from reverting what you changed by hand. Attribution journal, per-turn briefs, a revert guard with restore, and uncommitted/unpushed warnings.</sub><br><br>
-      <a href="https://mrzroot.github.io/dibs/">Website</a> · <a href="https://github.com/mrzroot/dibs">Repository</a> · <a href="https://github.com/mrzroot/dibs/releases/latest">Release</a>
-    </td>
-  </tr>
-</table>
-
-**More projects**
+### More projects
 
 <table>
   <tr>
@@ -111,23 +73,8 @@ Every project has its own website (live demo, features, quick start, FAQ) in Eng
 
 ### Tech stack
 
-| Area | Tools |
-| --- | --- |
-| Core & backend | Python · Django · Flask · FastAPI · PHP / Laravel · REST & WebSocket |
-| Data | PostgreSQL · MySQL · SQLite · Redis · SQL |
-| Web & browser | TypeScript · JavaScript · Node.js · React · Vue · Chrome extensions (MV3) |
-| Ops & tooling | Git & GitHub · Jenkins · Docker · Cursor · Claude Code · Copilot |
+Python (FastAPI, Django, Flask) · TypeScript / Node.js · PHP / Laravel · PostgreSQL, SQLite, Redis · Docker · GitHub Actions · Jenkins
 
-### Activity
+### Contact
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green.svg">
-  <img alt="3D contribution calendar for mrzroot" src="./profile-3d-contrib/profile-night-green.svg" width="100%">
-</picture>
-
-<sub>Generated daily in this repository by <a href="https://github.com/yoshi389111/github-profile-3d-contrib">github-profile-3d-contrib</a>.</sub>
-
-### Get in touch
-
-The fastest way to reach me is **Telegram: [@mrzroot](https://t.me/mrzroot)**. You can also find me on [LinkedIn](https://linkedin.com/in/mrzroot), or open an issue on any of my repositories here on GitHub.
+Telegram **[@mrzroot](https://t.me/mrzroot)** (fastest) · [LinkedIn](https://linkedin.com/in/mrzroot) · or open an issue on any repo.

@@ -27,6 +27,8 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
             dist/github-contribution-grid-snake-custom.svg?color_snake=#00D2FF&color_dots=#0d1117,#013a63,#014f86,#2a6f97,#00D2FF
+            dist/snake-teal-dark.svg?color_snake=#4ae8bd&color_dots=#161b22,#0e3b30,#11604b,#1f9c78,#4ae8bd&color_background=#0d1117
+            dist/snake-teal-light.svg?color_snake=#078a68&color_dots=#ebedf0,#c5f2e4,#8be3c9,#3cc79d,#078a68&color_background=#ffffff
 
       - name: Deploy SVGs to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0

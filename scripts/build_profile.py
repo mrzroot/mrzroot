@@ -40,6 +40,10 @@ FLAGSHIPS = [
      "Connectivity doctor for developers in Iran: scans 38 dev services, ranks DNS resolvers, switches pip, npm and Docker mirrors."),
     ("flowpilot", "flowpilot", "", "WORKFLOW AUTOMATION",
      "Self-hosted, code-first workflow engine: YAML in Git, cron, webhook and RSS triggers, Telegram steps, Jalali dates."),
+    ("sabr", "sabr", "صبر", "RESUMABLE DOWNLOADS",
+     "Resumable git clone, docker pull and downloads for links that keep dropping: a drop costs one step, not the whole transfer."),
+    ("marz", "marz", "مرز", "GEO-BLOCK & SANCTIONS CHECK",
+     "Will your app work in Iran, China and Russia? Scans code for blocked and sanctioned services, with OONI data and fixes."),
 ]
 
 THEMES = {
@@ -52,7 +56,7 @@ THEMES = {
                   text3="#5b6383", accent="#0a7671", gold="#8a5c0c", hot="#b7801f", glow="#1fb5ad", glowA=0.16,
                   dot="#0b1230", dotA=0.07),
 }
-LANG_COLORS = {"Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a", "Groovy": "#4298b8",
+LANG_COLORS = {"Go": "#00ADD8", "Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a", "Groovy": "#4298b8",
                "HTML": "#e34c26", "Shell": "#89e051", "CSS": "#563d7c", "PHP": "#4F5D95"}
 
 
@@ -347,7 +351,7 @@ def terminal(data, t, theme):
         ("cmd", "whoami"),
         ("out", "Mohammadreza Zare (M-R-Z) · Python & TypeScript · Mashhad, Iran"),
         ("cmd", "ls ~/flagships"),
-        ("acc", "mihanstack  dibs  hamyad  dokhaneh  paknevis  netdoctor-ir  flowpilot"),
+        ("acc", "mihanstack  dibs  hamyad  dokhaneh  paknevis  netdoctor-ir  flowpilot  sabr  marz"),
         ("cmd", "dibs status --oneline"),
         ("out", f"dibs: 0 reverted · your edits are safe · {stars} star{'' if stars == 1 else 's'} across flagships"),
         ("cmd", "echo $SALAM"),

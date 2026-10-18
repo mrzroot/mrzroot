@@ -7,17 +7,17 @@
 </a>
 
 <p align="center">
-  <a href="https://mrzroot.github.io/"><b>mrzroot.github.io</b></a> ·
-  <a href="https://mrzroot.github.io/?lang=fa">فارسی</a> ·
-  <a href="https://t.me/mrzroot">Telegram</a> ·
-  <a href="https://linkedin.com/in/mrzroot">LinkedIn</a>
+<a href="https://mrzroot.github.io/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/badge-portfolio-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/badge-portfolio-light.svg"><img alt="Portfolio: mrzroot.github.io" src="./assets/gen/badge-portfolio-dark.svg" height="36"></picture></a>
+<a href="https://mrzroot.github.io/?lang=fa"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/badge-persian-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/badge-persian-light.svg"><img alt="فارسی" src="./assets/gen/badge-persian-dark.svg" height="36"></picture></a>
+<a href="https://t.me/mrzroot"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/badge-telegram-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/badge-telegram-light.svg"><img alt="Telegram" src="./assets/gen/badge-telegram-dark.svg" height="36"></picture></a>
+<a href="https://linkedin.com/in/mrzroot"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/badge-linkedin-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/badge-linkedin-light.svg"><img alt="LinkedIn" src="./assets/gen/badge-linkedin-dark.svg" height="36"></picture></a>
 </p>
 
 I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**. Small, well-tested tools, each with a release, docs and its own website.
 
 <p dir="rtl">ابزارهای متن‌باز توسعه می‌دهم، بیشتر برای <b>ایجنت‌های کدنویسی هوش مصنوعی</b> و <b>برنامه‌نویس‌های ایرانی</b>؛ ابزارهای کوچک و تست‌شده، هر کدام با نسخهٔ منتشرشده، مستندات و وب‌سایت.</p>
 
-### Flagship projects
+### Flagship projects · پروژه‌های شاخص
 
 <p>
 <a href="https://github.com/mrzroot/mihanstack"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/card-mihanstack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/card-mihanstack-light.svg"><img alt="MihanStack: local cloud for Iranian payment and SMS APIs" src="./assets/gen/card-mihanstack-dark.svg" width="49%"></picture></a>
@@ -29,9 +29,23 @@ I build **open-source developer tools** in Python and TypeScript, mostly for **A
 <a href="https://github.com/mrzroot/flowpilot"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/card-flowpilot-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/card-flowpilot-light.svg"><img alt="flowpilot: self-hosted, code-first workflow automation" src="./assets/gen/card-flowpilot-dark.svg" width="49%"></picture></a>
 <a href="https://github.com/mrzroot/sabr"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/card-sabr-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/card-sabr-light.svg"><img alt="sabr: resumable git clone, docker pull and downloads for connections that keep dropping" src="./assets/gen/card-sabr-dark.svg" width="49%"></picture></a>
 <a href="https://github.com/mrzroot/marz"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/card-marz-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/card-marz-light.svg"><img alt="marz: will your app work in Iran, China and Russia? Scans code for blocked and sanctioned services" src="./assets/gen/card-marz-dark.svg" width="49%"></picture></a>
+<a href="https://mrzroot.github.io/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/card-site-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/card-site-light.svg"><img alt="Portfolio: projects, résumé and an interactive shell at mrzroot.github.io" src="./assets/gen/card-site-dark.svg" width="49%"></picture></a>
 </p>
 
 <sub>Want to contribute? Every flagship has issues labelled <a href="https://github.com/search?q=user%3Amrzroot+label%3A%22good+first+issue%22+state%3Aopen&type=issues"><b>good first issue</b></a>.</sub>
+
+<p dir="rtl"><sub>می‌خواهید مشارکت کنید؟ هر پروژهٔ شاخص issue با برچسب <b>good first issue</b> دارد.</sub></p>
+
+### More projects · پروژه‌های بیشتر
+
+<p>
+<a href="https://github.com/mrzroot/agentforge"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/mini-agentforge-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/mini-agentforge-light.svg"><img alt="AgentForge: one source of AI coding-agent rules, synced across Cursor, Claude Code, Windsurf, Copilot, Roo and Aider" src="./assets/gen/mini-agentforge-dark.svg" width="49%"></picture></a>
+<a href="https://github.com/mrzroot/awesome-persian-developer-resources"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/mini-awesome-persian-developer-resources-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/mini-awesome-persian-developer-resources-light.svg"><img alt="Awesome Persian Developer Resources: curated list of tools, APIs and learning platforms" src="./assets/gen/mini-awesome-persian-developer-resources-dark.svg" width="49%"></picture></a>
+<a href="https://github.com/mrzroot/universal-video-downloader"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/mini-universal-video-downloader-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/mini-universal-video-downloader-light.svg"><img alt="Universal Video Downloader: web video and HLS stream sniffer extension for Chrome and Edge" src="./assets/gen/mini-universal-video-downloader-dark.svg" width="49%"></picture></a>
+<a href="https://github.com/mrzroot/page-smash"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/mini-page-smash-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/mini-page-smash-light.svg"><img alt="Page Smash: browser extension to smash any webpage" src="./assets/gen/mini-page-smash-dark.svg" width="49%"></picture></a>
+<a href="https://github.com/mrzroot/jenkins"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/mini-jenkins-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/mini-jenkins-light.svg"><img alt="Jenkins Pipeline Examples: declarative pipelines in Groovy with SCM polling" src="./assets/gen/mini-jenkins-dark.svg" width="49%"></picture></a>
+<a href="https://github.com/mrzroot/printbridge"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/mini-printbridge-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/mini-printbridge-light.svg"><img alt="printbridge: fork of AnouarSbia/printbridge, silent local printing agent for PDF and label printing" src="./assets/gen/mini-printbridge-dark.svg" width="49%"></picture></a>
+</p>
 
 ### Live from GitHub
 
@@ -48,21 +62,19 @@ I build **open-source developer tools** in Python and TypeScript, mostly for **A
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/gen/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/gen/activity-light.svg">
+  <img alt="Contribution calendar for the recent weeks, commit, pull request and issue counts, and the latest releases, all from the GitHub API" src="./assets/gen/activity-dark.svg" width="100%">
+</picture>
+
+<details>
+<summary><b>Contribution snake</b> · just for fun</summary>
+<br>
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-turquoise-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-turquoise-light.svg">
   <img alt="Contribution graph being eaten by a golden snake on Persian-turquoise tiles" src="https://raw.githubusercontent.com/mrzroot/mrzroot/output/snake-turquoise-dark.svg" width="100%">
 </picture>
-
-<details>
-<summary><b>More projects</b></summary>
-
-- [**AgentForge**](https://github.com/mrzroot/agentforge) · one source of AI coding-agent rules, synced to Cursor, Claude Code, Windsurf, Copilot, Roo and Aider.
-- [**Awesome Persian Developer Resources**](https://github.com/mrzroot/awesome-persian-developer-resources) · curated hub of tools Iranian developers rely on.
-- [**Universal Video Downloader**](https://github.com/mrzroot/universal-video-downloader) · Chrome/Edge extension that saves HLS and MP4 streams, client-side.
-- [**Page Smash**](https://github.com/mrzroot/page-smash) · jetpack physics toy that smashes any webpage.
-- [**Jenkins Pipeline Examples**](https://github.com/mrzroot/jenkins) · small, readable declarative pipelines.
-- [**PrintBridge**](https://github.com/mrzroot/printbridge) · fork of [AnouarSbia/printbridge](https://github.com/AnouarSbia/printbridge), a local agent for silent PDF and label printing.
-
 </details>
 
-<sub>Cards, stats and terminal are self-hosted SVGs, rebuilt daily by <a href="./.github/workflows/profile-cards.yml">a GitHub Action</a> from <a href="./scripts/build_profile.py">scripts/build_profile.py</a>. Text is outlined with HarfBuzz, so Persian renders the same everywhere.</sub>
+<sub>Cards, stats, activity and terminal are self-hosted SVGs, rebuilt daily by <a href="./.github/workflows/profile-cards.yml">a GitHub Action</a> from <a href="./scripts/build_profile.py">scripts/build_profile.py</a>. Project descriptions, languages, releases and contribution counts come straight from the GitHub API, nothing is hand-entered. Text is outlined with HarfBuzz, so Persian renders the same everywhere.</sub>

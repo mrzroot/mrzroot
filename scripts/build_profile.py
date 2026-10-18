@@ -12,8 +12,10 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import math
 import random
 import urllib.request
+import zlib
 from pathlib import Path
 
 import uharfbuzz as hb
@@ -46,15 +48,19 @@ FLAGSHIPS = [
      "Will your app work in Iran, China and Russia? Scans code for blocked and sanctioned services, with OONI data and fixes."),
 ]
 
+# Other public repositories: name, description, language, homepage and fork status all come from the API.
+MORE = ["agentforge", "awesome-persian-developer-resources", "universal-video-downloader", "page-smash", "jenkins", "printbridge"]
+FORK_OF = {"printbridge": "AnouarSbia/printbridge"}   # parent shown on the card; the API list endpoint does not return it
+
 THEMES = {
     # Persian turquoise (Sheikh Lotfollah tile) + amber gold on midnight indigo
     "dark": dict(bg="#070b1a", surface="#0e1428", line="#1a2240", line2="#28325a", text="#eceff7", text2="#a9b1cc",
                  text3="#8089a8", accent="#3fd0c9", gold="#e8b04b", hot="#f0be5e", glow="#3fd0c9", glowA=0.13,
-                 dot="#c9d3ff", dotA=0.06),
+                 dot="#c9d3ff", dotA=0.06, heat=["#121a33", "#0f4a4f", "#16807d", "#25b3ab", "#3fd0c9"]),
     # ivory paper + deep turquoise + burnished gold (all text >= 4.5:1)
     "light": dict(bg="#f7f5ef", surface="#ffffff", line="#e6e2d6", line2="#d6d1c2", text="#0b1230", text2="#3a4363",
                   text3="#5b6383", accent="#0a7671", gold="#8a5c0c", hot="#b7801f", glow="#1fb5ad", glowA=0.16,
-                  dot="#0b1230", dotA=0.07),
+                  dot="#0b1230", dotA=0.07, heat=["#ece8dc", "#bfe9e5", "#7fd6cf", "#2fb8af", "#0a7671"]),
 }
 LANG_COLORS = {"Go": "#00ADD8", "Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a", "Groovy": "#4298b8",
                "HTML": "#e34c26", "Shell": "#89e051", "CSS": "#563d7c", "PHP": "#4F5D95"}
@@ -154,6 +160,28 @@ def gh(path: str):
         return None
 
 
+def contributions():
+    """Real contribution calendar (GraphQL). Returns None on any failure so nothing is ever invented."""
+    tok = os.environ.get("GITHUB_TOKEN")
+    if not tok:
+        return None
+    q = ("query($u:String!){user(login:$u){contributionsCollection{totalCommitContributions totalIssueContributions "
+         "totalPullRequestContributions totalPullRequestReviewContributions contributionCalendar{totalContributions "
+         "weeks{contributionDays{date contributionCount contributionLevel weekday}}}}}}")
+    req = urllib.request.Request("https://api.github.com/graphql", data=json.dumps({"query": q, "variables": {"u": USER}}).encode(),
+                                 headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json", "User-Agent": USER})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            c = json.load(r)["data"]["user"]["contributionsCollection"]
+        cal = c["contributionCalendar"]
+        return dict(total=cal["totalContributions"], weeks=[w["contributionDays"] for w in cal["weeks"]],
+                    commits=c["totalCommitContributions"], prs=c["totalPullRequestContributions"],
+                    issues=c["totalIssueContributions"], reviews=c["totalPullRequestReviewContributions"])
+    except Exception as e:   # noqa: BLE001
+        print("contributions unavailable:", e)
+        return None
+
+
 def fetch():
     user = gh(f"/users/{USER}") or {}
     repos = gh(f"/users/{USER}/repos?per_page=100&type=owner") or []
@@ -162,13 +190,25 @@ def fetch():
         r = next((x for x in repos if x["name"] == slug), None) or gh(f"/repos/{USER}/{slug}") or {}
         rel = gh(f"/repos/{USER}/{slug}/releases/latest") or {}
         info[slug] = dict(stars=r.get("stargazers_count", 0), forks=r.get("forks_count", 0),
-                          lang=r.get("language") or "", tag=rel.get("tag_name", ""))
+                          lang=r.get("language") or "", tag=rel.get("tag_name", ""),
+                          date=(rel.get("published_at") or "")[:10])
     own = [r for r in repos if not r.get("fork")]
     langs = {}
     for r in own:
         if r.get("language"):
             langs[r["language"]] = langs.get(r["language"], 0) + 1
-    return dict(user=user, repos=repos, own=own, info=info, langs=langs)
+    more = {}
+    for slug in MORE:
+        r = next((x for x in repos if x["name"] == slug), None) or gh(f"/repos/{USER}/{slug}")
+        if not r:
+            continue
+        lang = r.get("language") or ""
+        if not lang:   # fall back to the top language by bytes, if GitHub detected any
+            ls = gh(f"/repos/{USER}/{slug}/languages") or {}
+            lang = max(ls, key=ls.get) if ls else ""
+        more[slug] = dict(desc=r.get("description") or "", lang=lang, home=r.get("homepage") or "", fork=bool(r.get("fork")))
+    site = next((x for x in repos if x["name"] == f"{USER}.github.io"), {})
+    return dict(user=user, repos=repos, own=own, info=info, langs=langs, more=more, cal=contributions(), site=site)
 
 
 # --------------------------------------------------------------------------- shared SVG bits
@@ -260,7 +300,7 @@ def header(t, theme):
 # --------------------------------------------------------------------------- cards
 def card(i, spec, info, t, theme):
     slug, name, fa, cat, pitch = spec
-    rng = random.Random(hash(slug) % 10000 + (0 if theme == "dark" else 7))
+    rng = random.Random(zlib.crc32(slug.encode()) % 10000 + (0 if theme == "dark" else 7))
     W, H = 640, 300
     a = t["accent"]
     css = (".gl{animation:br 6s ease-in-out 2.6s infinite alternate;transform-origin:150px 150px}"
@@ -308,7 +348,7 @@ def stats(data, t, theme):
     rel = sum(1 for v in info.values() if v["tag"])
     cells = [(str(fstars), "flagship stars", "ستاره‌ی پروژه‌های شاخص"),
              (str(len(own)), "original repositories", "مخزن اصلی"),
-             (f"{rel}/6", "with releases", "شاخص با نسخه"),
+             (f"{rel}/{len(FLAGSHIPS)}", "with releases", "شاخص با نسخه"),
              (str(allstars), "stars, all repos", "همه‌ی ستاره‌ها")]
     body = [T("mono", "LIVE FROM GITHUB", 11, 48, 52, t["gold"], ls=1.6),
             T("mono", f"updated {dt.date.today().isoformat()} · self-hosted SVG, built daily by a GitHub Action", 11, 196, 52, t["text3"], ls=.4),
@@ -393,6 +433,190 @@ def terminal(data, t, theme):
     return frame(W, H, t, "<defs>" + "".join(defs) + "</defs>\n" + "\n".join(body), "", rx=16, glow=(0.85, 1.0))
 
 
+# --------------------------------------------------------------------------- shared helpers (new)
+def clean(s: str, font: str = "inter") -> str:
+    """Drop emoji/symbols the outlined font has no glyph for, collapse whitespace."""
+    cmap = F[font].tt.getBestCmap()
+    return " ".join("".join(ch for ch in s if ord(ch) in cmap).split())
+
+
+def nice_date(iso: str) -> str:
+    try:
+        d = dt.date.fromisoformat(iso)
+        return f"{d.day} {d.strftime('%b')} {d.year}"
+    except ValueError:
+        return ""
+
+
+def chip(body, x, y, label, t, font="mono", color=None, dot=None, star=False):
+    """Pill used in card footers; returns the next x."""
+    w = F[font].width(label, 12, .3) + (34 if (dot or star) else 22)
+    body.append(f'<rect x="{x}" y="{y-17}" width="{w:.0f}" height="26" rx="13" fill="{t["dot"]}" fill-opacity=".05" stroke="{t["line2"]}"/>')
+    off = 11
+    if dot:
+        body.append(f'<circle cx="{x+14}" cy="{y-4}" r="4" fill="{dot}"/>')
+        off = 24
+    if star:
+        body.append(star_path(x + 14, y - 4, 5.5, t["gold"]))
+        off = 24
+    body.append(T(font, label, 12, x + off, y, color or t["text2"], ls=.3))
+    return x + w + 8
+
+
+# --------------------------------------------------------------------------- activity (replaces the sparse snake grid)
+def activity(data, t, theme):
+    c = data.get("cal")
+    if not c:
+        return None
+    W, H = 1280, 404
+    a, heat = t["accent"], t["heat"]
+    weeks = [w for w in c["weeks"] if w]
+    first = next((i for i, w in enumerate(weeks) if any(d["contributionCount"] for d in w)), len(weeks) - 12)
+    n = max(20, min(26, len(weeks) - first))          # zoom on the period that has data; never pad with fake days
+    win = weeks[-n:]
+    pitch = min(30.0, 600.0 / n)
+    cell = pitch - 5
+    gx, gy = 48 + 40, 142
+    LV = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
+    total_win = sum(d["contributionCount"] for w in win for d in w)
+    d0, d1 = win[0][0]["date"], win[-1][-1]["date"]
+    body = [T("mono", "ACTIVITY", 11, 48, 52, t["gold"], ls=1.6),
+            T("mono", f"real GitHub data · self-hosted SVG · updated {dt.date.today().isoformat()}", 11, 128, 52, t["text3"], ls=.4),
+            T("fa", "فعالیت واقعی از گیت‌هاب", 12, 1232, 52, t["text3"], "end")]
+    body.append(T("inter6", str(c["total"]), 46, 46, 112, t["text"], ls=-1.5))
+    bw = F["inter6"].width(str(c["total"]), 46, -1.5)
+    body.append(T("inter", "contributions in the last 12 months", 14, 46 + bw + 14, 112, t["text2"]))
+    # weekday labels (GitHub weeks start on Sunday)
+    for r, lab in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
+        body.append(T("mono", lab, 10, gx - 10, gy + r * pitch + cell * .72, t["text3"], "end"))
+    last_month = None
+    for i, w in enumerate(win):
+        x = gx + i * pitch
+        m = w[0]["date"][:7]
+        if m != last_month and (i == 0 or w[0]["date"][8:10] <= "14" or i == 0):
+            if last_month is not None or i == 0:
+                body.append(T("mono", dt.date.fromisoformat(w[0]["date"]).strftime("%b"), 10, x, gy - 12, t["text3"]))
+            last_month = m
+        col = []
+        for d in w:
+            r = d["weekday"]
+            lv = LV.get(d["contributionLevel"], 0)
+            cx, cy = x, gy + r * pitch
+            extra = f' stroke="{t["gold"]}" stroke-width="1.6"' if d["date"] == dt.date.today().isoformat() else ""
+            col.append(f'<rect x="{cx:.1f}" y="{cy:.1f}" width="{cell:.1f}" height="{cell:.1f}" rx="{cell*.22:.1f}" fill="{heat[lv]}"{extra}>'
+                       f'<title>{d["date"]}: {d["contributionCount"]}</title></rect>')
+        body.append(f'<g class="fu" style="--d:{.05 + i*.035:.2f}s">' + "".join(col) + "</g>")
+    ly = gy + 7 * pitch + 16
+    body.append(T("mono", f"last {n} weeks · {nice_date(d0)} to {nice_date(d1)}", 11, 48, ly + 9, t["text3"], ls=.2))
+    # legend, right-aligned to the end of the grid
+    lx = gx + n * pitch - 5 * 16 - 38
+    body.append(T("mono", "less", 10, lx - 8, ly + 9, t["text3"], "end"))
+    for k in range(5):
+        body.append(f'<rect x="{lx + k*16}" y="{ly}" width="11" height="11" rx="2.5" fill="{heat[k]}"/>')
+    body.append(T("mono", "more", 10, lx + 5 * 16 + 4, ly + 9, t["text3"]))
+
+    # right column: breakdown + latest releases
+    rx, rw = 720, 512
+    tiles = [(c["commits"], "commits"), (c["prs"], "pull requests"), (c["issues"], "issues")]
+    tw = (rw - 2 * 12) / 3
+    for k, (v, lab) in enumerate(tiles):
+        x = rx + k * (tw + 12)
+        body.append(f'<g class="fu" style="--d:{.1 + k*.1:.2f}s"><rect x="{x:.0f}" y="82" width="{tw:.0f}" height="72" rx="14" fill="{t["dot"]}" fill-opacity=".03" stroke="{t["line"]}"/>'
+                    + T("inter6", str(v), 30, x + 18, 124, t["text"], ls=-1) + T("inter", lab, 12.5, x + 18, 143, t["text2"]) + "</g>")
+    body.append(T("mono", "LATEST RELEASES", 11, rx, 192, t["gold"], ls=1.6))
+    body.append(T("mono", "from the Releases API", 10.5, rx + rw, 192, t["text3"], "end", .3))
+    rels = sorted(((v["date"], k, v["tag"]) for k, v in data["info"].items() if v["tag"] and v["date"]), reverse=True)[:5]
+    y = 224
+    if rels:
+        body.append(f'<rect x="{rx+5.5}" y="{y-6}" width="1" height="{(len(rels)-1)*30+2}" fill="{t["line2"]}"/>')
+    for k, (date, slug, tag) in enumerate(rels):
+        yy = y + k * 30
+        body.append(f'<g class="fu" style="--d:{.3 + k*.08:.2f}s"><circle cx="{rx+6}" cy="{yy-5}" r="{5 if k == 0 else 4}" fill="{t["gold"] if k == 0 else a}"/>'
+                    + T("inter6", slug, 14.5, rx + 24, yy, t["text"])
+                    + T("mono", tag, 12, rx + 24 + F["inter6"].width(slug, 14.5) + 12, yy, a, ls=.3)
+                    + T("mono", nice_date(date), 12, rx + rw, yy, t["text3"], "end") + "</g>")
+    return frame(W, H, t, "\n".join(body), "", glow=(0.85, 0.1))
+
+
+# --------------------------------------------------------------------------- portfolio card (10th tile)
+def star_points(n_edge=14):
+    pts = []
+    v = [(0.5 + 0.44 * math.sin(k * math.pi / 4), 0.5 - 0.44 * math.cos(k * math.pi / 4)) for k in range(8)]
+    for k in range(8):
+        (x0, y0), (x1, y1) = v[k], v[(k + 3) % 8]
+        pts += [(x0 + (x1 - x0) * i / n_edge, y0 + (y1 - y0) * i / n_edge) for i in range(n_edge)]
+    for k in range(32):
+        pts.append((0.5 + 0.1 * math.cos(k * math.pi / 16), 0.5 + 0.1 * math.sin(k * math.pi / 16)))
+    return pts
+
+
+def site_card(data, t, theme):
+    rng = random.Random(1405 + (0 if theme == "dark" else 7))
+    W, H = 640, 300
+    a = t["accent"]
+    css = (".gl{animation:br 6s ease-in-out 2.6s infinite alternate;transform-origin:150px 150px}"
+           "@keyframes br{to{transform:scale(1.035)}}")
+    body = [f'<rect x="16" y="16" width="268" height="268" rx="16" fill="{t["glow"]}" fill-opacity="{t["glowA"]*0.5:.3f}" stroke="{t["line"]}"/>',
+            f'<g class="gl">{particles(star_points(), 40, 40, 220, 220, t, rng, 1.0, 2.2, 180, 0, 1.0)}</g>']
+    for (cx, cy, sx, sy) in [(26, 26, 1, 1), (274, 26, -1, 1), (26, 274, 1, -1), (274, 274, -1, -1)]:
+        body.append(f'<path d="M{cx} {cy+12*sy}V{cy}H{cx+12*sx}" fill="none" stroke="{t["gold"]}" stroke-width="1.5" stroke-opacity=".8"/>')
+    x = 312
+    body.append('<g class="fu" style="--d:.15s">' + T("mono6", "++", 11, x, 48, t["gold"], ls=1.2) + T("mono", "/ PORTFOLIO SITE", 11, x + 22, 48, t["text3"], ls=1.2) + "</g>")
+    body.append('<g class="fu" style="--d:.3s">' + T("serif", "Portfolio", 46, x - 2, 102, t["text"]) + "</g>")
+    body.append('<g class="fu" style="--d:.4s">' + T("fa8", "نمونه‌کارها", 18, 612, 98, t["text3"], "end") + "</g>")
+    pitch = "Projects, résumé and an interactive shell, in English and Persian. Every project has its own page with docs and releases."
+    for k, line in enumerate(wrap("inter", clean(pitch), 14.5, 296)[:4]):
+        body.append(f'<g class="fu" style="--d:{.45 + k*.06:.2f}s">' + T("inter", line, 14.5, x, 138 + k * 22, t["text2"]) + "</g>")
+    cx = chip(body, x, 252, "mrzroot.github.io", t)
+    lang = data["site"].get("language") or ""
+    if lang:
+        chip(body, cx, 252, lang, t, dot=LANG_COLORS.get(lang, a))
+    return frame(W, H, t, "\n".join(body), css, rx=18, glow=(0.2, 0.5))
+
+
+# --------------------------------------------------------------------------- mini cards (other public repos)
+def mini_card(i, slug, m, t, theme):
+    W, H = 640, 208
+    a = t["accent"]
+    body = [f'<path d="M18 30V18H30" fill="none" stroke="{t["gold"]}" stroke-width="1.5" stroke-opacity=".8"/>',
+            f'<path d="M{W-18} {H-30}V{H-18}H{W-30}" fill="none" stroke="{t["gold"]}" stroke-width="1.5" stroke-opacity=".8"/>']
+    x = 40
+    tag = f"FORK OF {FORK_OF[slug].upper()}" if m["fork"] and slug in FORK_OF else "OPEN SOURCE"
+    body.append('<g class="fu" style="--d:.1s">' + T("mono6", f"{i+1:02d}", 11, x, 44, t["gold"], ls=1.2)
+                + T("mono", f"/ {len(MORE):02d} · {tag}", 11, x + 22, 44, t["text3"], ls=1.2) + "</g>")
+    name = clean(slug)
+    size = 30 if F["serif"].width(name, 30) <= W - 2 * x else 30 * (W - 2 * x) / F["serif"].width(name, 30)
+    body.append('<g class="fu" style="--d:.2s">' + T("serif", name, size, x - 1, 84, t["text"]) + "</g>")
+    desc = clean(m["desc"])
+    lines = wrap("inter", desc, 14, W - 2 * x)
+    if len(lines) > 3:
+        lines = lines[:3]
+        while F["inter"].width(lines[-1] + "…", 14) > W - 2 * x:
+            lines[-1] = lines[-1].rsplit(" ", 1)[0]
+        lines[-1] += "…"
+    for k, line in enumerate(lines):
+        body.append(f'<g class="fu" style="--d:{.3 + k*.06:.2f}s">' + T("inter", line, 14, x, 112 + k * 20, t["text2"]) + "</g>")
+    cx = x
+    if m["lang"]:
+        cx = chip(body, cx, 186, m["lang"], t, dot=LANG_COLORS.get(m["lang"], a))
+    home = m["home"].replace("https://", "").rstrip("/")
+    if home:
+        body.append(T("mono", home, 11, W - x, 186 - 5, t["text3"], "end", .2))
+    return frame(W, H, t, "\n".join(body), "", rx=18, glow=(0.15, 0.4))
+
+
+# --------------------------------------------------------------------------- link badges
+BADGES = [("portfolio", "mrzroot.github.io", "inter6"), ("persian", "فارسی", "fa8"), ("telegram", "Telegram", "inter6"),
+          ("linkedin", "LinkedIn", "inter6")]
+
+
+def badge(label, font, t):
+    w = F[font].width(label, 14) + 48
+    h = 36
+    body = [f'<circle cx="19" cy="{h/2}" r="4" fill="{t["gold"]}"/>', T(font, label, 14, 33, h / 2 + 5, t["text"])]
+    return frame(round(w), h, t, "\n".join(body), "", rx=18, glow=(0.2, 0.5))
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     data = fetch()
@@ -402,6 +626,14 @@ def main():
             (OUT / f"card-{spec[0]}-{theme}.svg").write_text(card(i, spec, data["info"][spec[0]], t, theme))
         (OUT / f"stats-{theme}.svg").write_text(stats(data, t, theme))
         (OUT / f"terminal-{theme}.svg").write_text(terminal(data, t, theme))
+        (OUT / f"card-site-{theme}.svg").write_text(site_card(data, t, theme))
+        for i, (slug, m) in enumerate(data["more"].items()):
+            (OUT / f"mini-{slug}-{theme}.svg").write_text(mini_card(i, slug, m, t, theme))
+        for name, label, font in BADGES:
+            (OUT / f"badge-{name}-{theme}.svg").write_text(badge(label, font, t))
+        act = activity(data, t, theme)
+        if act:   # if the API is unavailable keep the previous file rather than publish anything made up
+            (OUT / f"activity-{theme}.svg").write_text(act)
     print("wrote", sorted(p.name for p in OUT.iterdir()))
 
 

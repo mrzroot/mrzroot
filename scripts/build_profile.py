@@ -46,6 +46,12 @@ FLAGSHIPS = [
      "Resumable git clone, docker pull and downloads for links that keep dropping: a drop costs one step, not the whole transfer."),
     ("marz", "marz", "مرز", "GEO-BLOCK & SANCTIONS CHECK",
      "Will your app work in Iran, China and Russia? Scans code for blocked and sanctioned services, with OONI data and fixes."),
+    ("whystuck", "whystuck", "", "WHY IS IT HANGING?",
+     "Runs any command with an idle watchdog. When it hangs, says why (pager, editor, y/N prompt, password, lock, stalled connect) and prints the non-interactive fix."),
+    ("shellparity", "shellparity", "", "AGENT SHELL vs YOUR SHELL",
+     "Diffs your terminal shell against an AI agent's shell (PATH, versions, proxies, UTF-8, SSH, git signing) and prints the exact rc-file fix."),
+    ("whystale", "whystale", "", "WHAT IS STALE?",
+     "Changed the code but it behaves the old way? Finds servers started before .env changed, old builds, old deps and old generated code, and prints the fix."),
 ]
 
 # Other public repositories: name, description, language, homepage and fork status all come from the API.
@@ -391,7 +397,7 @@ def terminal(data, t, theme):
         ("cmd", "whoami"),
         ("out", "Mohammadreza Zare (M-R-Z) · Python & TypeScript · Mashhad, Iran"),
         ("cmd", "ls ~/flagships"),
-        ("acc", "mihanstack  dibs  hamyad  dokhaneh  paknevis  netdoctor-ir  flowpilot  sabr  marz"),
+        ("acc", "mihanstack  dibs  hamyad  dokhaneh  paknevis  netdoctor-ir  flowpilot  sabr  marz  whystuck  shellparity  whystale"),
         ("cmd", "dibs status --oneline"),
         ("out", f"dibs: 0 reverted · your edits are safe · {stars} star{'' if stars == 1 else 's'} across flagships"),
         ("cmd", "echo $SALAM"),

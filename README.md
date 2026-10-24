@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/tagline-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/tagline-light.svg"><img alt="mrzroot: Software Engineer, Python and TypeScript, AI coding agents, Persian-first tools" src="./assets/gen/tagline-light.svg" width="100%"></picture>
+<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/tagline-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/tagline-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/tagline-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/tagline-light.svg"><img alt="mrzroot: Software Engineer, Python and TypeScript, AI coding agents, Persian-first tools" src="./assets/gen/tagline-light.svg" width="100%"></picture>
 </p>
 
 <h1 align="center">Mohammadreza Zare · محمدرضا زارع</h1>
@@ -21,7 +21,7 @@ Software that <i>explains why</i> · نرم‌افزاری که می‌گوید 
 </p>
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/status-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/status-light.svg"><img alt="Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · Khorasan Razavi Chamber of Commerce" src="./assets/gen/status-light.svg" width="100%"></picture>
+<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/status-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/status-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/status-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/status-light.svg"><img alt="Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · Khorasan Razavi Chamber of Commerce" src="./assets/gen/status-light.svg" width="100%"></picture>
 </p>
 
 I'm a software engineer in Mashhad, Iran. I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**: small, well-tested tools that tell you *why* something broke. Each one has a release, docs and its own website.
@@ -165,21 +165,21 @@ Changed the env variable and nothing changed? Shows which source (shell, .env fi
 ### Stack · ابزارها
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/stack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/stack-light.svg"><img alt="Python, TypeScript, Go, FastAPI, Node.js, SQLite, Docker, GitHub Actions, pytest, WebGL, MCP, Git, Linux" src="./assets/gen/stack-light.svg" width="100%"></picture>
+<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/stack-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/stack-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/stack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/stack-light.svg"><img alt="Python, TypeScript, Go, FastAPI, Node.js, SQLite, Docker, GitHub Actions, pytest, WebGL, MCP, Git, Linux" src="./assets/gen/stack-light.svg" width="100%"></picture>
 </p>
 
 ### Live from GitHub · زنده از گیت‌هاب
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/dashboard-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/dashboard-light.svg"><img alt="Live GitHub numbers for mrzroot: repositories, releases, contributions, pull requests, streaks, stars and language mix" src="./assets/gen/dashboard-light.svg" width="100%"></picture>
+<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/dashboard-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/dashboard-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/dashboard-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/dashboard-light.svg"><img alt="Live GitHub numbers for mrzroot: repositories, releases, contributions, pull requests, streaks, stars and language mix" src="./assets/gen/dashboard-light.svg" width="100%"></picture>
 </p>
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/heatmap-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/heatmap-light.svg"><img alt="Contribution heat map for the last 52 weeks" src="./assets/gen/heatmap-light.svg" width="100%"></picture>
+<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/heatmap-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/heatmap-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/heatmap-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/heatmap-light.svg"><img alt="Contribution heat map for the last 52 weeks" src="./assets/gen/heatmap-light.svg" width="100%"></picture>
 </p>
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/feed-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/feed-light.svg"><img alt="Latest releases and recent commits" src="./assets/gen/feed-light.svg" width="100%"></picture>
+<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/feed-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/feed-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/feed-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/feed-light.svg"><img alt="Latest releases and recent commits" src="./assets/gen/feed-light.svg" width="100%"></picture>
 </p>
 
 ### More projects · پروژه‌های بیشتر

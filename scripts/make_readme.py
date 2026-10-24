@@ -17,8 +17,12 @@ G = "./assets/gen"
 SITE = "https://mrzroot.github.io"
 
 
-def pic(name, alt, extra=""):
-    return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="{G}/{name}-dark.svg">'
+def pic(name, alt, extra="", mobile=False):
+    ms = ""
+    if mobile:      # phones get a narrow re-layout instead of a 31%-scaled desktop card
+        ms = (f'<source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="{G}/{name}-m-dark.svg">'
+              f'<source media="(max-width: 700px)" srcset="{G}/{name}-m-light.svg">')
+    return (f'<picture>{ms}<source media="(prefers-color-scheme: dark)" srcset="{G}/{name}-dark.svg">'
             f'<source media="(prefers-color-scheme: light)" srcset="{G}/{name}-light.svg">'
             f'<img alt="{html.escape(alt)}" src="{G}/{name}-light.svg"{extra}></picture>')
 
@@ -64,7 +68,7 @@ readme = f'''<p align="center">
 </p>
 
 <p align="center">
-{pic("tagline", "mrzroot: Software Engineer, Python and TypeScript, AI coding agents, Persian-first tools", ' width="100%"')}
+{pic("tagline", "mrzroot: Software Engineer, Python and TypeScript, AI coding agents, Persian-first tools", ' width="100%"', mobile=True)}
 </p>
 
 <h1 align="center">Mohammadreza Zare · محمدرضا زارع</h1>
@@ -78,7 +82,7 @@ Software that <i>explains why</i> · نرم‌افزاری که می‌گوید 
 </p>
 
 <p align="center">
-{pic("status", "Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · Khorasan Razavi Chamber of Commerce", ' width="100%"')}
+{pic("status", "Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · Khorasan Razavi Chamber of Commerce", ' width="100%"', mobile=True)}
 </p>
 
 I'm a software engineer in Mashhad, Iran. I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**: small, well-tested tools that tell you *why* something broke. Each one has a release, docs and its own website.
@@ -118,21 +122,21 @@ Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="{SITE}/
 ### Stack · ابزارها
 
 <p align="center">
-{pic("stack", "Python, TypeScript, Go, FastAPI, Node.js, SQLite, Docker, GitHub Actions, pytest, WebGL, MCP, Git, Linux", ' width="100%"')}
+{pic("stack", "Python, TypeScript, Go, FastAPI, Node.js, SQLite, Docker, GitHub Actions, pytest, WebGL, MCP, Git, Linux", ' width="100%"', mobile=True)}
 </p>
 
 ### Live from GitHub · زنده از گیت‌هاب
 
 <p align="center">
-{pic("dashboard", "Live GitHub numbers for mrzroot: repositories, releases, contributions, pull requests, streaks, stars and language mix", ' width="100%"')}
+{pic("dashboard", "Live GitHub numbers for mrzroot: repositories, releases, contributions, pull requests, streaks, stars and language mix", ' width="100%"', mobile=True)}
 </p>
 
 <p align="center">
-{pic("heatmap", "Contribution heat map for the last 52 weeks", ' width="100%"')}
+{pic("heatmap", "Contribution heat map for the last 52 weeks", ' width="100%"', mobile=True)}
 </p>
 
 <p align="center">
-{pic("feed", "Latest releases and recent commits", ' width="100%"')}
+{pic("feed", "Latest releases and recent commits", ' width="100%"', mobile=True)}
 </p>
 
 ### More projects · پروژه‌های بیشتر

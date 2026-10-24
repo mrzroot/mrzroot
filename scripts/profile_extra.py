@@ -78,10 +78,17 @@ def build(bp, data):
         return frame(W, H, t, body, css, rx=rx, glow=glow or (0.5, 0.0))
 
     # =================================================================== tagline typer
-    def tagline(t, theme):
-        W, H = 1000, 72
-        tx = 196
-        rw = [F["inter6"].width(r, 30) for r in ROLES]
+    def unframe(svg, W, H, t):
+        for a in (f'<rect width="{W}" height="{H}" fill="{t["bg"]}"/>', f'<rect width="{W}" height="{H}" fill="url(#dots)"/>',
+                  f'<rect width="{W}" height="{H}" fill="url(#g)"/>', f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="0" fill="none" stroke="{t["line2"]}"/>'):
+            svg = svg.replace(a, "")
+        return svg
+
+    def tagline(t, theme, m=False):
+        W, H = (420, 60) if m else (1000, 72)
+        tx = 150 if m else 196
+        FS = 23 if m else 30
+        rw = [F["inter6"].width(r, FS) for r in ROLES]
         maxw = max(rw) + 40
         n = len(ROLES)
         cyc = n * 3.8
@@ -101,26 +108,42 @@ def build(bp, data):
                        f"{ft(a)}{{transform:translateX(0)}}{ft(ty)}{{transform:translateX({run:.0f}px)}}100%{{transform:translateX({run:.0f}px)}}") + "}")
             groups.append(
                 f'<g class="r{i}" opacity="{1 if first else 0}">'
-                + T("inter6", r, 30, tx, 46, t["text"])
-                + f'<rect class="c{i}" x="{tx}" y="10" width="{maxw:.0f}" height="52" fill="{t["surface"]}" transform="translate({run:.0f} 0)"/>'
-                + f'<g class="k{i}" transform="translate({run:.0f} 0)"><rect class="bl" x="{tx + 2}" y="14" width="3" height="40" rx="1.5" fill="{t["hot"]}"/></g>'
+                + T("inter6", r, FS, tx, 39 if m else 46, t["text"])
+                + f'<rect class="c{i}" x="{tx}" y="8" width="{maxw:.0f}" height="{H-16}" fill="{t["surface"]}" transform="translate({run:.0f} 0)"/>'
+                + f'<g class="k{i}" transform="translate({run:.0f} 0)"><rect class="bl" x="{tx + 2}" y="{H/2-FS*.62:.0f}" width="3" height="{FS*1.25:.0f}" rx="1.5" fill="{t["hot"]}"/></g>'
                 + "</g>")
         css = "".join(f".r{i}{{animation:v{i} {cyc}s linear infinite}}.c{i},.k{i}{{animation:t{i} {cyc}s linear infinite}}" for i in range(n))
         css += "".join(kf) + ".bl{animation:bl .9s steps(1) infinite}"
-        prompt = T("mono6", "mrzroot", 17, 34, 43, t["hot"]) + T("mono", "~ $", 17, 124, 43, t["text3"]) + T("mono", "whoami", 0.1, 0, 0, t["bg"])
+        pf, py = (13, 36) if m else (17, 43)
+        prompt = T("mono6", "mrzroot", pf, 20 if m else 34, py, t["hot"]) + T("mono", "~ $", pf, 20 + 7.8 * pf * .62 + 8 if m else 124, py, t["text3"]) + T("mono", "whoami", 0.1, 0, 0, t["bg"])
         deco = "".join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{t["hot"]}" fill-opacity=".5" class="fu" style="--d:{d}s"/>'
-                       for x, y, r, d in [(930, 22, 2.4, .2), (952, 46, 1.6, .5), (968, 28, 2, .8), (982, 50, 1.4, 1.1), (914, 48, 1.2, 1.3)])
+                       for x, y, r, d in [(W - 70, 22, 2.4, .2), (W - 48, 44, 1.6, .5), (W - 32, 28, 2, .8), (W - 18, 48, 1.4, 1.1), (W - 86, 46, 1.2, 1.3)])
         body = (f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="{t["surface"]}"/>' + prompt + "".join(groups) + deco)
         css += f".fu{{animation:fu 1.1s cubic-bezier(.22,1,.36,1) var(--d,0s) both}}"
         return bare(W, H, t, body, css, rx=14)
 
     # =================================================================== status chips (open to collaboration etc.)
-    def chip_row(items, y, t, h=36, size=15, font="inter", gap=12, pulse_first=False):
+    def chip_row(items, y, t, h=36, size=15, font="inter", gap=12, pulse_first=False, W=1000):
+        """centred chips; wraps onto further rows when they do not fit W. returns (svg, bottom y)"""
         widths = [F[font].width(s, size) + (46 if pulse_first and k == 0 else 32) for k, s in enumerate(items)]
-        tot = sum(widths) + gap * (len(items) - 1)
-        x = (1000 - tot) / 2
+        rows, cur, cw = [], [], 0
+        for k, w in enumerate(widths):
+            if cur and cw + gap + w > W - 24:
+                rows.append(cur); cur, cw = [], 0
+            cur.append(k); cw += w + (gap if len(cur) > 1 else 0)
+        rows.append(cur)
         out = []
-        for k, (s, w) in enumerate(zip(items, widths)):
+        for ri, row_ in enumerate(rows):
+            tot = sum(widths[k] for k in row_) + gap * (len(row_) - 1)
+            x = (W - tot) / 2
+            yy = y + ri * (h + 8)
+            out.append(_chips(items, widths, row_, x, yy, t, h, size, font, gap, pulse_first))
+        return "".join(out), y + len(rows) * (h + 8) - 8
+
+    def _chips(items, widths, idx, x, y, t, h, size, font, gap, pulse_first):
+        out = []
+        for k in idx:
+            s, w = items[k], widths[k]
             fill = t["hot"] if (pulse_first and k == 0) else t["text2"]
             out.append(f'<g class="fu" style="--d:{.15 + k * .1:.2f}s"><rect x="{x:.0f}" y="{y}" width="{w:.0f}" height="{h}" rx="{h/2:.0f}" fill="{t["surface"]}" stroke="{t["hot"] if (pulse_first and k == 0) else t["line2"]}"/>')
             tx = x + 16
@@ -131,15 +154,16 @@ def build(bp, data):
             x += w + gap
         return "".join(out)
 
-    def status(t, theme):
-        W, H = 1000, 108
+    def status(t, theme, m=False):
+        W = 420 if m else 1000
         en = ["Open to collaboration", "Mashhad, Iran", "M.Sc. Computer Engineering", "Khorasan Razavi Chamber of Commerce"]
         fa = ["آماده‌ی همکاری", "مشهد، ایران", "کارشناسی ارشد مهندسی کامپیوتر", "اتاق بازرگانی خراسان رضوی"]
-        body = chip_row(en, 8, t, pulse_first=True) + chip_row(fa, 58, t, size=15, font="fa", pulse_first=True)
+        size = 14 if m else 15
+        b1, y1 = chip_row(en, 8, t, size=size, pulse_first=True, W=W)
+        b2, y2 = chip_row(fa, y1 + 14, t, size=size, font="fa", pulse_first=True, W=W)
+        body, H = b1 + b2, y2 + 6
         css = ".pulse{transform-box:fill-box;transform-origin:center;animation:pl 2.2s ease-out infinite}@keyframes pl{0%{transform:scale(.5);opacity:.9}100%{transform:scale(1.6);opacity:0}}"
-        return bare(W, H, t, body, css, rx=0, glow=(.5, .5)).replace('<rect width="1000" height="108" fill="' + t["bg"] + '"/>', "").replace(
-            f'<rect width="{W}" height="{H}" fill="url(#dots)"/>', "").replace(f'<rect width="{W}" height="{H}" fill="url(#g)"/>', "").replace(
-            f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="0" fill="none" stroke="{t["line2"]}"/>', "")
+        return unframe(bare(W, H, t, body, css, rx=0, glow=(.5, .5)), W, H, t)
 
     # =================================================================== link pills
     PILLS = [("portfolio", "Portfolio", "پورتفولیو", True), ("fa", "فارسی", "", False), ("resume", "Resume", "رزومه", False),
@@ -170,8 +194,10 @@ def build(bp, data):
                 f'<defs>{defs}</defs>' + "".join(parts) + "</svg>")
 
     # =================================================================== dashboard
-    def dashboard(t, theme):
-        W = 1000
+    def dashboard(t, theme, m=False):
+        W = 420 if m else 1000
+        M = 20 if m else 36              # side margin
+        R = W - M                         # right edge
         info, own, langs = data["info"], data["own"], data["langs"]
         stars = sum(r.get("stars", 0) for r in data["repos"])
         tiles = [
@@ -184,31 +210,34 @@ def build(bp, data):
             (f"{longest}", "Longest streak (days)", "بلندترین رشته، به روز"),
             (str(stars), "Stars across repos", "ستاره‌ها"),
         ]
-        body = [T("mono6", "STATS", 13, 36, 44, t["gold"], ls=2),
-                T("mono", f"live from the GitHub API · {data['updated']}", 13, 100, 44, t["text3"], ls=.3),
-                T("fa", "آمار زنده از گیت‌هاب", 15, 964, 44, t["text3"], "end")]
-        tw, th, gx, gy, x0, y0 = 218, 116, 16, 16, 36, 66
+        body = [T("mono6", "STATS", 13, M, 44, t["gold"], ls=2),
+                T("mono", "live from GitHub" if m else f"live from the GitHub API · {data['updated']}", 13, M + 64, 44, t["text3"], ls=.3),
+                T("fa", "آمار زنده از گیت‌هاب", 15, R, 44, t["text3"], "end")] if not m else [
+                T("mono6", "STATS", 13, M, 40, t["gold"], ls=2), T("mono", "live from GitHub", 13, M + 64, 40, t["text3"], ls=.3)]
+        ncol = 2 if m else 4
+        tw = int((W - 2 * M - 16 * (ncol - 1)) / ncol)
+        th, gx, gy, x0, y0 = 116, 16, 16, M, 62 if m else 66
         for k, (v, en, fa) in enumerate(tiles):
-            c, r = k % 4, k // 4
+            c, r = k % ncol, k // ncol
             x, y = x0 + c * (tw + gx), y0 + r * (th + gy)
             body.append(
                 f'<g class="fu" style="--d:{.1 + k * .09:.2f}s"><rect x="{x}" y="{y}" width="{tw}" height="{th}" rx="14" fill="{t["dot"]}" fill-opacity=".035" stroke="{t["line"]}"/>'
                 f'<rect x="{x}" y="{y+22}" width="3" height="30" rx="1.5" fill="{t["hot"]}"/>'
                 + T("inter6", v, 44, x + 18, y + 54, t["text"], ls=-1.2)
-                + T("inter", en, 14.5, x + 18, y + 80, t["text2"])
+                + T("inter", en, 13 if m else 14.5, x + 18, y + 80, t["text2"])
                 + T("fa", fa, 14, x + tw - 16, y + 102, t["text3"], "end") + "</g>")
         # languages by bytes
-        y = y0 + 2 * (th + gy) + 18
+        y = y0 + (len(tiles) // ncol) * (th + gy) + 18
         total = sum(langs.values()) or 1
         items = sorted(langs.items(), key=lambda kv: -kv[1])
         top = items[:6]
         rest = sum(v for _, v in items[6:])
         if rest:
             top.append(("Other", rest))
-        body.append(T("mono6", "LANGUAGES", 13, 36, y + 6, t["gold"], ls=2))
-        body.append(T("mono", f"by bytes · {len(own) - len(bp.GENERATED_REPOS & {r['name'] for r in own})} repos", 13, 144, y + 6, t["text3"], ls=.3))
-        body.append(T("fa", "زبان‌ها بر اساس حجم کد", 15, 964, y + 6, t["text3"], "end"))
-        bx, bw, by = 36, 928, y + 24
+        body.append(T("mono6", "LANGUAGES", 13, M, y + 6, t["gold"], ls=2))
+        body.append(T("mono", "by bytes" if m else f"by bytes · {len(own) - len(bp.GENERATED_REPOS & {r['name'] for r in own})} repos", 13, M + 108, y + 6, t["text3"], ls=.3))
+        body.append(T("fa", "زبان‌ها بر اساس حجم کد", 15, R, y + 6, t["text3"], "end"))
+        bx, bw, by = M, W - 2 * M, y + 24
         body.append(f'<clipPath id="lb"><rect x="{bx}" y="{by}" width="{bw}" height="12" rx="6"/></clipPath><rect x="{bx}" y="{by}" width="{bw}" height="12" rx="6" fill="{t["line"]}"/><g clip-path="url(#lb)">')
         cx, cols = bx, []
         for k, (lang, n) in enumerate(top):
@@ -220,13 +249,13 @@ def build(bp, data):
             body.append(f'<rect class="lg" style="--d:{.3 + k * .12:.2f}s;transform-origin:{cx:.0f}px 0" x="{cx:.1f}" y="{by}" width="{max(w - 2, 1.5):.1f}" height="12"  fill="{col}"/>')
             cx += w
         body.append("</g>")
-        lx, ly = 36, by + 40
+        lx, ly = M, by + 40
         for (lang, n), col in zip(top, cols):
             pct = 100 * n / total
             label = f"{lang} {pct:.1f}%"
             wl = F["mono"].width(label, 13)
-            if lx + wl + 30 > 964:
-                lx, ly = 36, ly + 26
+            if lx + wl + 30 > R:
+                lx, ly = M, ly + 26
             body.append(f'<circle cx="{lx+5}" cy="{ly-4}" r="5" fill="{col}"/>' + T("mono", label, 13, lx + 16, ly, t["text2"]))
             lx += wl + 44
         H = ly + 28
@@ -234,8 +263,8 @@ def build(bp, data):
         return bare(W, H, t, "".join(body), css)
 
     # =================================================================== heat map
-    def heatmap(t, theme):
-        W = 1000
+    def heatmap(t, theme, m=False):
+        W = 420 if m else 1000
         lv = {"light": ["#eadfc6", "#f4d9a0", "#eeb250", "#dc7d12", "#b8400a"],
               "dark": ["#2a2118", "#5c3a12", "#a9651a", "#ec962f", "#ffd05a"]}[theme]
         if not ds:
@@ -249,16 +278,22 @@ def build(bp, data):
                 return 0
             q = [nz[int(len(nz) * f)] for f in (.25, .5, .75)] if nz else [1, 1, 1]
             return 1 if c <= q[0] else 2 if c <= q[1] else 3 if c <= q[2] else 4
-        first = dt.date.fromisoformat(ds[0][0])
-        cell, gap, lx, ly = 14, 3, 66, 96
+        dsx = ds
+        if m:     # phone: only the most recent 26 weeks, drawn at the same scale as the rest of the card
+            ld = dt.date.fromisoformat(ds[-1][0])
+            cut = ld - dt.timedelta(days=(ld.weekday() + 1) % 7 + 25 * 7)
+            dsx = [x for x in ds if x[0] >= cut.isoformat()]
+        first = dt.date.fromisoformat(dsx[0][0])
+        cell, gap, lx, ly = (11, 2, 48, 80) if m else (14, 3, 66, 96)
         weeks = {}
-        for d, c in ds:
+        for d, c in dsx:
             dd = dt.date.fromisoformat(d)
             wk = (dd - first).days // 7
             weeks.setdefault(wk, []).append((dd, c))
-        body = ['<defs><rect id="c" width="14" height="14" rx="3.5"/></defs>', T("mono6", "CONTRIBUTIONS", 13, 36, 44, t["gold"], ls=2),
+        body = [f'<defs><rect id="c" width="{cell}" height="{cell}" rx="{cell*.25:.1f}"/></defs>', T("mono6", "CONTRIBUTIONS", 13, 16 if m else 36, 44, t["gold"], ls=2)] + ([
+                T("mono", f"{cal.get('total', 0)} in 12 months · {active} active days", 12, 160, 44, t["text3"], ls=.2)] if m else [
                 T("mono", f"{cal.get('total', 0)} in the last year · best day {best} · {active} active days", 13, 190, 44, t["text3"], ls=.3),
-                T("fa", "نقشه‌ی مشارکت‌های یک سال اخیر", 15, 964, 44, t["text3"], "end")]
+                T("fa", "نقشه‌ی مشارکت‌های یک سال اخیر", 15, 964, 44, t["text3"], "end")])
         lastm = None
         for wk in sorted(weeks):
             x = lx + wk * (cell + gap)
@@ -266,7 +301,7 @@ def build(bp, data):
             if d0.month != lastm:
                 lastm = d0.month
                 if not (wk == 0 and d0.day > 14):      # a partial first month would collide with the next label
-                    body.append(T("inter", MONTHS[d0.month - 1], 13, x, ly - 10, t["text3"]))
+                    body.append(T("inter", MONTHS[d0.month - 1], 12 if m else 13, x, ly - 8 if m else ly - 10, t["text3"]))
             col = []
             for dd, c in weeks[wk]:
                 row = (dd.weekday() + 1) % 7      # Sunday on top like github
@@ -277,15 +312,18 @@ def build(bp, data):
                     col.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="3.5" fill="none" stroke="{t["hot"]}" stroke-width="1.5"/>')
             body.append(f'<g class="w" style="--i:{wk}">' + "".join(col) + "</g>")
         for r, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
-            body.append(T("inter", name, 12, 36, ly + r * (cell + gap) + 12, t["text3"]))
+            body.append(T("inter", name, 11 if m else 12, 14 if m else 36, ly + r * (cell + gap) + (10 if m else 12), t["text3"]))
         gy = ly + 7 * (cell + gap) + 16
-        lgx = 964 - (5 * (cell + 4)) - 80
+        lgx = (W - 16) - (5 * (cell + 4)) - 80
         body.append(T("inter", "Less", 12.5, lgx, gy + 11, t["text3"], "end") if False else T("inter", "Less", 12.5, lgx, gy + 11, t["text3"]))
         for k in range(5):
             body.append(f'<use href="#c" class="l{k}" x="{lgx + 38 + k * (cell + 4)}" y="{gy}"/>')
         body.append(T("inter", "More", 12.5, lgx + 38 + 5 * (cell + 4) + 4, gy + 11, t["text3"]))
-        body.append(T("mono", "private contributions are not counted · source: GitHub contribution calendar", 12, 36, gy + 11, t["text3"], ls=.2))
-        H = gy + 34
+        if m:
+            body.append(T("mono", "last 26 weeks · public contributions only", 11, 16, gy + 38, t["text3"], ls=.1))
+        else:
+            body.append(T("mono", "private contributions are not counted · source: GitHub contribution calendar", 12, 36, gy + 11, t["text3"], ls=.2))
+        H = gy + (56 if m else 34)
         css = "".join(f".l{k}{{fill:{c}}}" for k, c in enumerate(lv))
         css += ".w{animation:wv .9s cubic-bezier(.22,1,.36,1) calc(var(--i)*22ms) backwards}@keyframes wv{from{opacity:0;transform:translateY(8px)}}"
         # gentle shimmer on the busiest cells
@@ -296,14 +334,15 @@ def build(bp, data):
     STACK = [("Python", "Py"), ("TypeScript", "TS"), ("Go", "Go"), ("FastAPI", "API"), ("Node.js", "JS"), ("SQLite", "SQL"),
              ("Docker", "Dk"), ("GitHub Actions", "CI"), ("pytest", "pt"), ("WebGL", "GL"), ("MCP", "MCP"), ("Git", "Git"), ("Linux", "Lx")]
 
-    def stack(t, theme):
-        W = 1000
-        x, y, rowh, h = 36, 20, 52, 42
+    def stack(t, theme, m=False):
+        W = 420 if m else 1000
+        mg = 14 if m else 36
+        x, y, rowh, h = mg, 14 if m else 20, 52, 42
         out = []
         for k, (name, mono) in enumerate(STACK):
             w = int(F["inter6"].width(name, 16) + 64)
-            if x + w > W - 36:
-                x, y = 36, y + rowh
+            if x + w > W - mg:
+                x, y = mg, y + rowh
             col = WARM[k % len(WARM)] if theme == "light" else ["#f2b84b", "#ff9a3c", "#ffd98a", "#e59a1f", "#ff7a2a", "#ffc857"][k % 6]
             fg = "#fff8ec" if theme == "light" else "#1a1008"
             out.append(f'<g class="b" style="--d:{k * .37:.2f}s"><g transform="translate({x} {y})">'
@@ -315,33 +354,35 @@ def build(bp, data):
         H = y + h + 20
         css = ".b{animation:bob 4.2s ease-in-out var(--d) infinite alternate}@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-3px)}}"
         css += ".fu{animation:fu 1.1s cubic-bezier(.22,1,.36,1) both}"
-        return bare(W, H, t, "".join(out), css, rx=0).replace(f'<rect width="{W}" height="{H}" fill="{t["bg"]}"/>', "").replace(
-            f'<rect width="{W}" height="{H}" fill="url(#dots)"/>', "").replace(f'<rect width="{W}" height="{H}" fill="url(#g)"/>', "").replace(
-            f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="0" fill="none" stroke="{t["line2"]}"/>', "")
+        return unframe(bare(W, H, t, "".join(out), css, rx=0), W, H, t)
 
     # =================================================================== releases + commits
-    def feed(t, theme):
-        W = 1000
+    def feed(t, theme, m=False):
+        W = 420 if m else 1000
         rels = data["releases"][:6]
-        rec = data["recent"][:6]
-        colw, rh, y0 = 464, 58, 76
-        body = [T("mono6", "LATEST RELEASES", 13, 36, 44, t["gold"], ls=2), T("mono6", "RECENT COMMITS", 13, 520, 44, t["gold"], ls=2),
-                T("fa", "آخرین نسخه‌ها", 15, 36 + colw - 12, 44, t["text3"], "end"), T("fa", "آخرین کامیت‌ها", 15, 964, 44, t["text3"], "end")]
+        rec = data["recent"][:5 if m else 6]
+        colw, rh, y0 = (W - 32 if m else 464), 58, 76
+        cx2, cy2 = (16, y0 + len(rels) * rh + 52) if m else (520, y0)     # origin of the commits column
+        L = 16 if m else 36
+        body = [T("mono6", "LATEST RELEASES", 13, L, 44, t["gold"], ls=2), T("mono6", "RECENT COMMITS", 13, cx2, cy2 - 32, t["gold"], ls=2)]
+        if not m:
+            body += [T("fa", "آخرین نسخه‌ها", 15, 36 + colw - 12, 44, t["text3"], "end"), T("fa", "آخرین کامیت‌ها", 15, 964, 44, t["text3"], "end")]
         for k, (d, slug, tag) in enumerate(rels):
             y = y0 + k * rh
-            body.append(f'<g class="fu" style="--d:{.1 + k * .08:.2f}s"><rect x="36" y="{y}" width="{colw}" height="{rh-8}" rx="12" fill="{t["dot"]}" fill-opacity=".035" stroke="{t["line"]}"/>'
-                        f'<circle cx="58" cy="{y+25}" r="5" fill="{t["hot"]}"/>' + T("inter6", slug, 17, 76, y + 22, t["text"])
-                        + T("inter", f"{d} · {rel(d)}", 13.5, 76, y + 41, t["text3"])
-                        + f'<rect x="{36 + colw - 18 - F["mono6"].width(tag, 13.5) - 18:.0f}" y="{y+11}" width="{F["mono6"].width(tag, 13.5) + 18:.0f}" height="26" rx="13" fill="{t["hot"]}" fill-opacity=".14"/>'
-                        + T("mono6", tag, 13.5, 36 + colw - 18 - F["mono6"].width(tag, 13.5) - 9, y + 29, t["hot"]) + "</g>")
+            body.append(f'<g class="fu" style="--d:{.1 + k * .08:.2f}s"><rect x="{L}" y="{y}" width="{colw}" height="{rh-8}" rx="12" fill="{t["dot"]}" fill-opacity=".035" stroke="{t["line"]}"/>'
+                        f'<circle cx="{L + 22}" cy="{y+25}" r="5" fill="{t["hot"]}"/>' + T("inter6", slug, 17, L + 40, y + 22, t["text"])
+                        + T("inter", f"{d} · {rel(d)}", 13.5, L + 40, y + 41, t["text3"])
+                        + f'<rect x="{L + colw - 18 - F["mono6"].width(tag, 13.5) - 18:.0f}" y="{y+11}" width="{F["mono6"].width(tag, 13.5) + 18:.0f}" height="26" rx="13" fill="{t["hot"]}" fill-opacity=".14"/>'
+                        + T("mono6", tag, 13.5, L + colw - 18 - F["mono6"].width(tag, 13.5) - 9, y + 29, t["hot"]) + "</g>")
         for k, c in enumerate(rec):
-            y = y0 + k * rh
-            msg = ascii_clean(c["msg"], 52)
-            body.append(f'<g class="fu" style="--d:{.2 + k * .08:.2f}s"><rect x="520" y="{y}" width="{colw}" height="{rh-8}" rx="12" fill="{t["dot"]}" fill-opacity=".035" stroke="{t["line"]}"/>'
-                        f'<circle cx="542" cy="{y+25}" r="5" fill="none" stroke="{t["hot"]}" stroke-width="2"/>'
-                        + T("mono6", (c["repo"] if len(c["repo"]) <= 24 else c["repo"][:22] + ".."), 14.5, 560, y + 22, t["hot"]) + T("inter", rel(c["date"]), 12.5, 520 + colw - 16, y + 22, t["text3"], "end")
-                        + T("inter", msg, 14, 560, y + 42, t["text2"]) + "</g>")
-        H = y0 + max(len(rels), len(rec), 1) * rh + 14
+            y = cy2 + k * rh
+            msg = ascii_clean(c["msg"], 40 if m else 52)
+            X = cx2
+            body.append(f'<g class="fu" style="--d:{.2 + k * .08:.2f}s"><rect x="{X}" y="{y}" width="{colw}" height="{rh-8}" rx="12" fill="{t["dot"]}" fill-opacity=".035" stroke="{t["line"]}"/>'
+                        f'<circle cx="{X + 22}" cy="{y+25}" r="5" fill="none" stroke="{t["hot"]}" stroke-width="2"/>'
+                        + T("mono6", (c["repo"] if len(c["repo"]) <= (18 if m else 24) else c["repo"][:(16 if m else 22)] + ".."), 14.5, X + 40, y + 22, t["hot"]) + T("inter", rel(c["date"]), 12.5, X + colw - 16, y + 22, t["text3"], "end")
+                        + T("inter", msg, 14, X + 40, y + 42, t["text2"]) + "</g>")
+        H = (cy2 + len(rec) * rh + 6) if m else (y0 + max(len(rels), len(rec), 1) * rh + 14)
         return bare(W, H, t, "".join(body))
 
     # =================================================================== per-project meta chip
@@ -381,9 +422,7 @@ def build(bp, data):
             body.append(f'<path class="wv" style="--d:{-k * .11:.2f}s" d="{path}" stroke="{cols[k]}" stroke-opacity="{.45 + .5 * ((k * 5) % 7) / 6:.2f}" stroke-width="{r*2:.1f}" stroke-linecap="round" fill="none"/>')
         body.append(T("mono", "move along · it's particles all the way down", 13, W / 2, 112, t["text3"], "middle", 1.4))
         css = ".wv{animation:fw 3.6s ease-in-out var(--d) infinite alternate}@keyframes fw{from{transform:translateY(-7px)}to{transform:translateY(7px)}}"
-        return bare(W, H, t, "".join(body), css, rx=0).replace(f'<rect width="{W}" height="{H}" fill="{t["bg"]}"/>', "").replace(
-            f'<rect width="{W}" height="{H}" fill="url(#dots)"/>', "").replace(f'<rect width="{W}" height="{H}" fill="url(#g)"/>', "").replace(
-            f'<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="0" fill="none" stroke="{t["line2"]}"/>', "")
+        return unframe(bare(W, H, t, "".join(body), css, rx=0), W, H, t)
 
     for theme, t in THEMES.items():
         doc("tagline", theme, tagline(t, theme))
@@ -395,5 +434,7 @@ def build(bp, data):
         doc("stack", theme, stack(t, theme))
         doc("feed", theme, feed(t, theme))
         doc("footer", theme, footer(t, theme))
+        for nm, fn in (("tagline", tagline), ("status", status), ("dashboard", dashboard), ("heatmap", heatmap), ("stack", stack), ("feed", feed)):
+            doc(nm + "-m", theme, fn(t, theme, True))
         for spec in bp.PROJECTS:
             doc("meta-" + spec[0], theme, meta(spec[0], data["info"][spec[0]], t, theme))

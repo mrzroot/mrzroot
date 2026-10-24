@@ -16,6 +16,7 @@ import os
 import math
 import random
 import urllib.request
+import re
 import zlib
 from pathlib import Path
 
@@ -34,19 +35,19 @@ PARTICLES = json.loads((HERE / "particles.json").read_text())
 PROJECTS = [
     ("mihanstack", "MihanStack", "میهن‌استک",
      "Local cloud for Iranian payment and SMS APIs: Zarinpal, Zibal, Kavenegar and SMS.ir with failure scenarios, chaos mode and record/replay.",
-     "ابر محلی برای API های پرداخت و پیامک ایرانی: زرین‌پال، زیبال، کاوه‌نگار و SMS.ir، با سناریوی خطا، حالت آشوب و ضبط/بازپخش.",
+     "ابرِ محلی برای API‌های پرداخت و پیامک ایران: زرین‌پال، زیبال، کاوه‌نگار و SMS.ir، همراه با سناریوهای خطا، حالت آشوب و ضبط و بازپخش.",
      ("#c2540a", "#f08a3c")),
     ("dibs", "dibs", "",
      "Stops Claude Code, Codex, Cursor, Gemini CLI, Copilot and aider from reverting the edits you make by hand.",
-     "جلوی ایجنت‌های کدنویسی هوش مصنوعی را می‌گیرد تا ویرایش‌های دستی شما را برنگردانند.",
+     "نمی‌گذارد ایجنت‌های کدنویسی هوش مصنوعی (Claude Code، Codex، Cursor، Gemini CLI، Copilot و aider) ویرایش‌های دستی شما را برگردانند.",
      ("#cf8a0c", "#f5b942")),
     ("hamyad", "hamyad", "هم‌یاد",
      "One shared project brain for ChatGPT, Claude, Codex, Gemini, Grok, Cursor, Copilot and more: sessions, decisions and diffs, over MCP and REST.",
-     "یک مغز مشترک پروژه برای همهٔ ابزارهای هوش مصنوعی: نشست‌ها، تصمیم‌ها و تغییرات، از راه MCP و REST.",
+     "یک حافظهٔ مشترک پروژه برای ChatGPT، Claude، Codex، Gemini، Grok، Cursor، Copilot و بقیه: نشست‌ها، تصمیم‌ها و تغییرات، از طریق MCP و REST.",
      ("#b8553a", "#e8856a")),
     ("dokhaneh", "dokhaneh", "دوخانه",
      "Publishes every release to GitHub and Iranian hosts with an Ed25519-signed manifest and a verifying fallback installer.",
-     "هر نسخه را هم روی گیت‌هاب و هم روی میزبان‌های ایرانی منتشر می‌کند، با مانیفست امضاشدهٔ Ed25519 و نصب‌کنندهٔ جایگزینِ اعتبارسنج.",
+     "هر نسخه را هم روی گیت‌هاب و هم روی میزبان‌های ایرانی منتشر می‌کند، با مانیفست امضاشده با Ed25519 و نصب‌کنندهٔ جایگزینی که صحت فایل را بررسی می‌کند.",
      ("#a8760f", "#dba83a")),
     ("paknevis", "paknevis", "پاک‌نویس",
      "Persian text linter and auto-fixer: half-spaces, Arabic letters, punctuation, digits. CLI, pre-commit and GitHub Action.",
@@ -54,31 +55,31 @@ PROJECTS = [
      ("#e09a12", "#ffc857")),
     ("netdoctor-ir", "netdoctor-ir", "",
      "Connectivity doctor for developers in Iran: scans dev services, ranks DNS resolvers, switches pip, npm and Docker mirrors.",
-     "پزشک اتصال برای برنامه‌نویس‌های ایران: سرویس‌های توسعه را می‌سنجد، DNS ها را رتبه‌بندی می‌کند و آینه‌های pip و npm و Docker را عوض می‌کند.",
+     "پزشکِ اتصال برای برنامه‌نویس‌های ایران: سرویس‌های توسعه را می‌سنجد، DNSها را رتبه‌بندی می‌کند و آینه‌های pip و npm و Docker را عوض می‌کند.",
      ("#c9400f", "#f26a3a")),
     ("flowpilot", "flowpilot", "",
      "Self-hosted, code-first workflow engine: YAML in Git, cron, webhook and RSS triggers, Telegram steps, Jalali dates.",
-     "موتور گردش‌کار خودمیزبان و کد-محور: YAML در Git، محرک‌های cron و webhook و RSS، گام‌های تلگرام و تاریخ جلالی.",
+     "موتور گردش‌کار خودمیزبان و کدمحور: YAML در Git، محرک‌های cron و webhook و RSS، گام‌های تلگرام و تقویم جلالی.",
      ("#b0642a", "#e29a62")),
     ("sabr", "sabr", "صبر",
      "Resumable git clone, docker pull and downloads for links that keep dropping: a drop costs one step, not the whole transfer.",
-     "git clone و docker pull و دانلود ازسرگرفتنی برای اتصال‌های ناپایدار: قطع شدن فقط یک گام را از بین می‌برد، نه کل انتقال را.",
+     "git clone، docker pull و دانلودِ ازسرگرفتنی برای اتصال‌های ناپایدار: قطع شدن فقط یک گام را از بین می‌برد، نه کل انتقال را.",
      ("#c98a1b", "#efc064")),
     ("marz", "marz", "مرز",
      "Will your app work in Iran, China and Russia? Scans code for blocked and sanctioned services, with OONI data and fixes.",
-     "برنامه‌ات در ایران، چین و روسیه کار می‌کند؟ کد را از نظر سرویس‌های مسدود و تحریمی می‌سنجد، با داده‌های OONI و راه‌حل.",
+     "برنامه‌ات در ایران، چین و روسیه کار می‌کند؟ کد را از نظر سرویس‌های مسدود و تحریمی بررسی می‌کند، با داده‌های OONI و پیشنهاد راه‌حل.",
      ("#a8432a", "#e0735a")),
     ("whystuck", "whystuck", "",
      "Runs any command with an idle watchdog. When it hangs, says why (pager, editor, y/N prompt, password, lock) and prints the non-interactive fix.",
-     "هر فرمانی را با نگهبان بی‌کاری اجرا می‌کند. وقتی گیر کند می‌گوید چرا (pager، ویرایشگر، پرسش y/N، رمز عبور، قفل) و راه‌حل غیرتعاملی را چاپ می‌کند.",
+     "هر فرمانی را با یک نگهبانِ بی‌حرکتی اجرا می‌کند. وقتی گیر کند می‌گوید چرا (pager، ویرایشگر، پرسش y/N، رمز عبور، قفل) و راه‌حل غیرتعاملی را چاپ می‌کند.",
      ("#b58a10", "#f0cc5a")),
     ("shellparity", "shellparity", "",
      "Diffs your terminal shell against an AI agent's shell (PATH, versions, proxies, UTF-8, SSH, git signing) and prints the rc-file fix.",
-     "شل ترمینال شما را با شل ایجنت هوش مصنوعی مقایسه می‌کند (PATH، نسخه‌ها، پروکسی، UTF-8، SSH، امضای git) و اصلاح فایل rc را چاپ می‌کند.",
+     "شل ترمینال شما را با شل ایجنت هوش مصنوعی مقایسه می‌کند (PATH، نسخه‌ها، پروکسی، UTF-8، SSH، امضای git) و اصلاح لازم برای فایل rc را چاپ می‌کند.",
      ("#d9772a", "#f5a45c")),
     ("whystale", "whystale", "",
      "Changed the code but it behaves the old way? Finds servers started before .env changed, old builds, deps and generated code.",
-     "کد را عوض کردی ولی هنوز مثل قبل کار می‌کند؟ سرورهای شروع‌شده پیش از تغییر .env، بیلدها، وابستگی‌ها و کدهای تولیدشدهٔ کهنه را پیدا می‌کند.",
+     "کد را عوض کردی ولی هنوز مثل قبل کار می‌کند؟ سرورهایی را که پیش از تغییر .env راه افتاده‌اند، و بیلدها، وابستگی‌ها و کدهای تولیدشدهٔ کهنه را پیدا می‌کند.",
      ("#9c4a1a", "#d98a50")),
     ("whycached", "whycached", "",
      "Deployed but still seeing the old version? Finds which cache layer (CDN, browser, service worker, filename) serves it, with proof and the fix.",
@@ -86,7 +87,7 @@ PROJECTS = [
      ("#dfa21c", "#ffcf5a")),
     ("persianprobe", "persianprobe", "",
      "Does your language handle Persian text the way you think? Runs the same probes through Python, Node, Perl, SQLite, Go and shows where they disagree.",
-     "زبان برنامه‌نویسی‌ات متن فارسی را همان‌طور که فکر می‌کنی پردازش می‌کند؟ همین آزمون‌ها را در Python و Node و Perl و SQLite و Go اجرا می‌کند و اختلاف‌ها را نشان می‌دهد.",
+     "زبان برنامه‌نویسی‌ات متن فارسی را همان‌طور که فکر می‌کنی پردازش می‌کند؟ همین آزمون‌ها را در Python، Node، Perl، SQLite و Go اجرا می‌کند و اختلاف‌ها را نشان می‌دهد.",
      ("#96502a", "#d4895c")),
     ("whyenv", "whyenv", "",
      "Changed the env variable and nothing changed? Shows which source (shell, .env files, compose) wins in Vite, Next, dotenv and Compose, and which edit is ignored.",
@@ -114,6 +115,47 @@ LANG_COLORS = {"Python": "#d98a0f", "TypeScript": "#b8470a", "JavaScript": "#e8a
 # --------------------------------------------------------------------------- text → outlines
 GLYPHS: dict = {}   # (font id, glyph name) -> (svg id, path in font units); reset per SVG
 F_IDS: list = []
+
+
+def compact(d: str) -> str:
+    """Rewrite an absolute integer SVG path (M L H V Q C Z) as relative commands with minimal separators."""
+    toks = re.findall(r"[MLHVQCZ]|-?\d+", d)
+    out, i, x, y, sx, sy, prev, cmd = [], 0, 0, 0, 0, 0, "", ""
+    nargs = {"M": 2, "L": 2, "H": 1, "V": 1, "Q": 4, "C": 6, "Z": 0}
+
+    def fmt(nums):
+        r = ""
+        for n in nums:
+            t = str(n)
+            r += t if (not r or t[0] == "-") else " " + t
+        return r
+    while i < len(toks):
+        if toks[i] in nargs:
+            c = toks[i]
+            i += 1
+        else:                        # implicit repeat of the previous command (after M it means L)
+            c = "L" if cmd == "M" else cmd
+        cmd = c
+        n = nargs[c]
+        a = [int(v) for v in toks[i:i + n]]
+        i += n
+        if c == "Z":
+            out.append("z")
+            x, y, prev = sx, sy, "z"
+            continue
+        if c == "H":
+            rel = [a[0] - x]; x = a[0]
+        elif c == "V":
+            rel = [a[0] - y]; y = a[0]
+        else:
+            rel = [v - (x if k % 2 == 0 else y) for k, v in enumerate(a)]
+            x, y = a[-2], a[-1]
+        if c == "M":
+            sx, sy = x, y
+        lc = c.lower()
+        out.append(lc + fmt(rel))
+        prev = lc
+    return "".join(out)
 class Font:
     def __init__(self, file: str):
         data = (HERE / "fonts" / file).read_bytes()
@@ -121,6 +163,7 @@ class Font:
         self.gs = self.tt.getGlyphSet()
         self.order = self.tt.getGlyphOrder()
         self.upem = self.tt["head"].unitsPerEm
+        self.q = 360 / self.upem          # outlines are stored on a 360-unit em: plenty for text <= 40px, far smaller files
         self.hb = hb.Font(hb.Face(hb.Blob(data)))
         self.id = "abcdefghij"[len(F_IDS)]
         F_IDS.append(self.id)
@@ -139,14 +182,14 @@ class Font:
     def glyph(self, name: str) -> str:
         key = (self.id, name)
         if key not in GLYPHS:
-            pen = SVGPathPen(self.gs, ntos=lambda v: str(round(v)))
+            pen = SVGPathPen(self.gs, ntos=lambda v, q=self.q: str(round(v * q)))
             self.gs[name].draw(pen)
-            GLYPHS[key] = (f"{self.id}{len(GLYPHS)}", pen.getCommands())
+            GLYPHS[key] = (f"{self.id}{len(GLYPHS)}", compact(pen.getCommands()))
         return GLYPHS[key][0]
 
     def use(self, s: str, size: float, x: float, y: float, anchor: str = "start", ls: float = 0) -> str:
         infos, pos = self.shape(s)
-        k = size / self.upem
+        k = size / 360
         w = self.width(s, size, ls)
         x0 = x - (w if anchor == "end" else w / 2 if anchor == "middle" else 0)
         parts, cx = [], 0.0
@@ -154,12 +197,12 @@ class Font:
             name = self.order[info.codepoint]
             if self.gs[name].width and name not in ("space", "uni200C", "uni00A0"):
                 gid = self.glyph(name)
-                oy = f' y="{-p.y_offset}"' if p.y_offset else ""
-                parts.append(f'<use href="#{gid}" x="{round(cx + p.x_offset)}"{oy}/>')
+                oy = f' y="{round(-p.y_offset * self.q)}"' if p.y_offset else ""
+                parts.append(f'<use href="#{gid}" x="{round((cx + p.x_offset) * self.q)}"{oy}/>')
             elif name not in ("space", "uni200C", "uni00A0"):
                 gid = self.glyph(name)
-                parts.append(f'<use href="#{gid}" x="{round(cx + p.x_offset)}"/>')
-            cx += p.x_advance + ls / k
+                parts.append(f'<use href="#{gid}" x="{round((cx + p.x_offset) * self.q)}"/>')
+            cx += p.x_advance + ls / (k * self.q)
         return f'<g transform="translate({x0:.1f} {y:.1f}) scale({k:.5f} {-k:.5f})">' + "".join(parts) + "</g>"
 
 
@@ -207,23 +250,106 @@ def gh(path: str):
 
 
 
+def gql(query: str):
+    tok = os.environ.get("GITHUB_TOKEN")
+    if not tok:
+        return None
+    req = urllib.request.Request("https://api.github.com/graphql", data=json.dumps({"query": query}).encode(),
+                                 headers={"Authorization": f"Bearer {tok}", "User-Agent": USER, "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r).get("data")
+    except Exception:
+        return None
+
+
+CACHE = OUT / "data.json"
+GENERATED_REPOS = {"mrzroot.github.io", "mrzroot"}   # build output / the profile repo itself: not "my work" for language stats
+
+
+def calendar():
+    """Last-12-months contribution calendar (GraphQL; needs a token, the Action's GITHUB_TOKEN is enough)."""
+    q = ('query{user(login:"%s"){contributionsCollection{totalCommitContributions totalIssueContributions '
+         'totalPullRequestContributions totalPullRequestReviewContributions contributionCalendar{totalContributions '
+         'weeks{contributionDays{date contributionCount}}}}}}' % USER)
+    d = gql(q)
+    try:
+        c = d["user"]["contributionsCollection"]
+        cal = c["contributionCalendar"]
+        days = [(x["date"], x["contributionCount"]) for w in cal["weeks"] for x in w["contributionDays"]]
+        return dict(total=cal["totalContributions"], commits=c["totalCommitContributions"], prs=c["totalPullRequestContributions"],
+                    issues=c["totalIssueContributions"], reviews=c["totalPullRequestReviewContributions"], days=days)
+    except Exception:
+        return None
+
+
 def fetch():
-    user = gh(f"/users/{USER}") or {}
-    repos = gh(f"/users/{USER}/repos?per_page=100&type=owner") or []
-    info = {}
+    """Everything the cards show comes from the GitHub API; if a call fails the last good value from
+    assets/gen/data.json is kept, so a flaky run never replaces real numbers with zeros."""
+    old = {}
+    if CACHE.exists():
+        try:
+            old = json.loads(CACHE.read_text())
+        except Exception:
+            old = {}
+    user = gh(f"/users/{USER}") or old.get("user") or {}
+    repos = gh(f"/users/{USER}/repos?per_page=100&type=owner") or old.get("repos") or []
+    repos = [dict(name=r["name"], fork=r.get("fork", False), language=r.get("language"), stars=r.get("stargazers_count", 0),
+                  forks=r.get("forks_count", 0), pushed=(r.get("pushed_at") or "")[:10]) if "stargazers_count" in r else r for r in repos]
+    info, releases = {}, []
     for p in PROJECTS:
         slug = p[0]
-        r = next((x for x in repos if x["name"] == slug), None) or gh(f"/repos/{USER}/{slug}") or {}
-        rel = gh(f"/repos/{USER}/{slug}/releases/latest") or {}
-        info[slug] = dict(stars=r.get("stargazers_count", 0), forks=r.get("forks_count", 0),
-                          lang=r.get("language") or "", tag=rel.get("tag_name", ""),
-                          date=(rel.get("published_at") or "")[:10])
+        r = next((x for x in repos if x["name"] == slug), None) or {}
+        rels = gh(f"/repos/{USER}/{slug}/releases?per_page=30")
+        prev = old.get("info", {}).get(slug, {})
+        if rels is None:
+            tag, date, n = prev.get("tag", ""), prev.get("date", ""), prev.get("releases", 0)
+            rl = prev.get("rel_list", [])
+        else:
+            rl = [(x["tag_name"], (x.get("published_at") or "")[:10]) for x in rels if not x.get("draft")]
+            tag, date, n = (rl[0] if rl else ("", "")) + (len(rl),)
+        info[slug] = dict(stars=r.get("stars", prev.get("stars", 0)), forks=r.get("forks", 0), lang=r.get("language") or prev.get("lang", ""),
+                          tag=tag, date=date, releases=n, rel_list=rl, pushed=r.get("pushed", ""))
+        releases += [(d, slug, t) for t, d in rl]
+    releases.sort(reverse=True)
     own = [r for r in repos if not r.get("fork")]
+    # languages by bytes across own public repos (excluding generated site output)
     langs = {}
+    got = False
     for r in own:
-        if r.get("language"):
-            langs[r["language"]] = langs.get(r["language"], 0) + 1
-    return dict(user=user, repos=repos, own=own, info=info, langs=langs)
+        if r["name"] in GENERATED_REPOS:
+            continue
+        l = gh(f"/repos/{USER}/{r['name']}/languages")
+        if l is not None:
+            got = True
+            for k, v in l.items():
+                langs[k] = langs.get(k, 0) + v
+    if not got:
+        langs = old.get("langs", {})
+    # latest commit message of the most recently pushed repos
+    recent, seen, failed = [], set(), 0
+    cand = sorted([r for r in own if r["name"] not in GENERATED_REPOS and r.get("pushed")], key=lambda r: r["pushed"], reverse=True)[:10]
+    for r in cand:
+        c = gh(f"/repos/{USER}/{r['name']}/commits?per_page=5")
+        if c is None:
+            failed += 1
+            continue
+        for item in c:
+            cm = item["commit"]
+            msg = cm["message"].splitlines()[0].strip()
+            if not msg or msg.lower().startswith(("chore: update", "merge ")) or msg in seen:
+                continue                     # skip bot noise and the same sweep commit repeated across repos
+            seen.add(msg)
+            recent.append(dict(repo=r["name"], msg=msg, date=cm["committer"]["date"][:10], ts=cm["committer"]["date"]))
+    recent = sorted(recent, key=lambda x: x["ts"], reverse=True)[:6]
+    if failed or not recent:
+        recent = old.get("recent", recent)
+    cal = calendar() or old.get("cal")
+    data = dict(user=user, repos=repos, own=own, info=info, langs=langs, releases=releases, recent=recent, cal=cal,
+                total_releases=sum(v["releases"] for v in info.values()), updated=dt.date.today().isoformat())
+    OUT.mkdir(parents=True, exist_ok=True)
+    CACHE.write_text(json.dumps({k: v for k, v in data.items()}, ensure_ascii=False, separators=(",", ":")))
+    return data
 
 
 # --------------------------------------------------------------------------- shared SVG frame
@@ -261,7 +387,7 @@ def frame(w, h, t, body, extra_css="", rx=22, glow=(0.75, 0.45)):
 
 
 # --------------------------------------------------------------------------- particle helpers
-def dots_paths(pts, t, rng, sizes, palette, ox, oy, sx, sy, cls_count=4):
+def dots_paths(pts, t, rng, sizes, palette, ox, oy, sx, sy, cls_count=4, wrap=False):
     """Batch dots into a few <path d="M x y h0"> elements (round caps) so the file stays tiny.
     Dots are split into `cls_count` drift groups with different gentle animations."""
     buckets: dict = {}
@@ -282,7 +408,8 @@ def dots_paths(pts, t, rng, sizes, palette, ox, oy, sx, sy, cls_count=4):
     for g in range(cls_count):
         inner = "".join(f'<path d="{"".join(v)}" stroke="{col}" stroke-width="{r*2:g}"/>'
                         for (gg, col, r), v in sorted(buckets.items()) if gg == g)
-        groups.append(f'<g class="d{g}" stroke-linecap="round" fill="none">{inner}</g>')
+        grp = f'<g class="d{g}" stroke-linecap="round" fill="none">{inner}</g>'
+        groups.append(f'<g class="i{g}">{grp}</g>' if wrap else grp)
     return "".join(groups)
 
 
@@ -293,17 +420,35 @@ DRIFT_CSS = (".d0{animation:a0 9s ease-in-out infinite alternate}.d1{animation:a
              "@media (prefers-reduced-motion:reduce){.d0,.d1,.d2,.d3{animation:none}}")
 
 
+BANNER_CSS = (
+    # four interleaved dot groups settle in from different directions (so the letters "condense"), then drift and twinkle
+    ".i0{animation:in0 2.8s cubic-bezier(.22,1,.36,1) backwards}.i1{animation:in1 3s cubic-bezier(.22,1,.36,1) .12s backwards}"
+    ".i2{animation:in2 3.2s cubic-bezier(.22,1,.36,1) .24s backwards}.i3{animation:in3 2.9s cubic-bezier(.22,1,.36,1) .36s backwards}"
+    "@keyframes in0{from{transform:translate(-30px,-16px);opacity:0}}@keyframes in1{from{transform:translate(26px,-20px);opacity:0}}"
+    "@keyframes in2{from{transform:translate(-20px,24px);opacity:0}}@keyframes in3{from{transform:translate(28px,18px);opacity:0}}"
+    ".d0{animation:a0 9s ease-in-out infinite alternate,k0 4.1s ease-in-out infinite alternate}"
+    ".d1{animation:a1 11s ease-in-out infinite alternate,k1 5.3s ease-in-out infinite alternate}"
+    ".d2{animation:a2 13s ease-in-out infinite alternate,k0 6.7s ease-in-out infinite alternate}"
+    ".d3{animation:a3 10s ease-in-out infinite alternate,k1 4.7s ease-in-out infinite alternate}"
+    "@keyframes a0{to{transform:translate(2.6px,-1.8px)}}@keyframes a1{to{transform:translate(-2.4px,2px)}}"
+    "@keyframes a2{to{transform:translate(1.8px,2.4px)}}@keyframes a3{to{transform:translate(-2px,-1.6px)}}"
+    "@keyframes k0{to{opacity:.72}}@keyframes k1{from{opacity:.78}}"
+    # embers rising behind the letters
+    ".e0{animation:rise 15s linear infinite}.e1{animation:rise 19s linear -7s infinite}.e2{animation:rise 23s linear -13s infinite}"
+    "@keyframes rise{0%{transform:translateY(24px);opacity:0}15%{opacity:1}80%{opacity:1}100%{transform:translateY(-150px);opacity:0}}"
+    "@media (prefers-reduced-motion:reduce){*{animation:none!important}}")
+
+
 def banner(t, theme):
-    """The particle M-R-Z, same layout as the site hero, as a static (gently drifting) dotted rendering."""
+    """The particle M-R-Z, same layout as the site hero: dots condense on load, drift/twinkle, embers rise."""
     rng = random.Random(1405)
     W, H = 1000, 350
     pts = PARTICLES["mrz"]
-    # faint stray dust like the site hero
-    dust_pts = [(rng.random(), rng.random()) for _ in range(60)]
-    dust = "".join(f'<circle cx="{x*W:.0f}" cy="{y*H:.0f}" r="{0.7+rng.random()*1.0:.1f}" fill="{t["text3"]}" fill-opacity="{0.12+rng.random()*0.22:.2f}"/>'
-                   for x, y in dust_pts)
-    letters = dots_paths(pts, t, rng, [1.8, 2.3, 2.9, 3.5], t["banner"], 0, -0.12 * 480, W, 480)
-    gdefs = "".join(f'<path id="{i}" d="{d}"/>' for i, d in GLYPHS.values())
+    embers = []
+    for g in range(3):
+        c = "".join(f'<circle cx="{rng.random()*W:.0f}" cy="{H*0.35 + rng.random()*H*0.7:.0f}" r="{0.8+rng.random()*1.3:.1f}"/>' for _ in range(16))
+        embers.append(f'<g class="e{g}" fill="{t["banner"][g % len(t["banner"])][0]}" fill-opacity="{0.35 + 0.1 * g:.2f}">{c}</g>')
+    letters = dots_paths(pts, t, rng, [1.8, 2.3, 2.9, 3.5], t["banner"], 0, -0.12 * 480, W, 480, wrap=True)
     cap = T("mono", "move along · it's particles all the way down", 11.5, W / 2, H - 14, t["text3"], "middle", 1.3)
     gdefs = "".join(f'<path id="{i}" d="{d}"/>' for i, d in GLYPHS.values())
     GLYPHS.clear()
@@ -314,12 +459,12 @@ def banner(t, theme):
 <clipPath id="clip"><rect width="{W}" height="{H}" rx="18"/></clipPath>
 {gdefs}
 </defs>
-<style>{DRIFT_CSS}</style>
+<style>{BANNER_CSS}</style>
 <g clip-path="url(#clip)">
 <rect width="{W}" height="{H}" fill="{t['bg']}"/>
 <rect width="{W}" height="{H}" fill="url(#grid)"/>
 <rect width="{W}" height="{H}" fill="url(#g)"/>
-{dust}
+{"".join(embers)}
 {letters}
 {cap}
 </g>
@@ -349,58 +494,20 @@ def emblem(spec, t, theme):
 </svg>'''
 
 
-# --------------------------------------------------------------------------- stats
-def stats(data, t, theme):
-    W, H = 1280, 250
-    a = t["accent"]
-    info, own, langs, user = data["info"], data["own"], data["langs"], data["user"]
-    fstars = sum(v["stars"] for v in info.values())
-    allstars = sum(r.get("stargazers_count", 0) for r in own)
-    rel = sum(1 for v in info.values() if v["tag"])
-    cells = [(str(fstars), "flagship stars", "ستاره‌ی پروژه‌های شاخص"),
-             (str(len(own)), "original repositories", "مخزن اصلی"),
-             (f"{rel}/{len(FLAGSHIPS)}", "with releases", "شاخص با نسخه"),
-             (str(allstars), "stars, all repos", "همه‌ی ستاره‌ها")]
-    body = [T("mono", "LIVE FROM GITHUB", 11, 48, 52, t["gold"], ls=1.6),
-            T("mono", f"updated {dt.date.today().isoformat()} · self-hosted SVG, built daily by a GitHub Action", 11, 196, 52, t["text3"], ls=.4),
-            T("fa", "به‌روزرسانی خودکار روزانه", 12, 1232, 52, t["text3"], "end")]
-    cw = (W - 96) / 4
-    for k, (v, en, fa) in enumerate(cells):
-        x = 48 + k * cw
-        body.append(f'<g class="fu" style="--d:{.1 + k*.12:.2f}s">'
-                    f'<rect x="{x:.0f}" y="74" width="{cw-16:.0f}" height="104" rx="14" fill="{t["dot"]}" fill-opacity=".03" stroke="{t["line"]}"/>'
-                    + T("inter6", v, 44, x + 20, 128, t["text"], ls=-1.5)
-                    + T("inter", en, 13, x + 20, 158, t["text2"])
-                    + T("fa", fa, 12, x + cw - 36, 158, t["text3"], "end") + "</g>")
-    # language bar
-    total = sum(langs.values()) or 1
-    x, y, bw = 48, 206, W - 96
-    items = sorted(langs.items(), key=lambda kv: -kv[1])[:6]
-    body.append(f'<rect x="{x}" y="{y}" width="{bw}" height="8" rx="4" fill="{t["line"]}"/>')
-    cx = x
-    for k, (lang, n) in enumerate(items):
-        w = bw * n / total
-        body.append(f'<rect x="{cx:.1f}" y="{y}" width="{max(w-3,2):.1f}" height="8" rx="4" fill="{LANG_COLORS.get(lang, a)}">'
-                    f'<animate attributeName="width" from="0" to="{max(w-3,2):.1f}" dur="1.2s" begin="{.3+k*.1:.1f}s" fill="freeze" calcMode="spline" keySplines=".22 1 .36 1"/></rect>')
-        cx += w
-    lx = x
-    for lang, n in items:
-        label = f"{lang} {round(100*n/total)}%"
-        body.append(f'<circle cx="{lx+4}" cy="{y+28}" r="4" fill="{LANG_COLORS.get(lang, a)}"/>' + T("mono", label, 11, lx + 14, y + 32, t["text2"]))
-        lx += F["mono"].width(label, 11) + 36
-    return frame(W, H, t, "\n".join(body), "", glow=(0.5, 0.0))
-
-
-
 # --------------------------------------------------------------------------- build
 def main():
+    import sys
+    sys.path.insert(0, str(HERE))
+    import profile_extra
     OUT.mkdir(parents=True, exist_ok=True)
+    for old in OUT.glob("stats-*.svg"):          # replaced by dashboard-*.svg
+        old.unlink()
     data = fetch()
     for theme, t in THEMES.items():
         (OUT / f"banner-{theme}.svg").write_text(banner(t, theme))
         for spec in PROJECTS:
             (OUT / f"emblem-{spec[0]}-{theme}.svg").write_text(emblem(spec, t, theme))
-        (OUT / f"stats-{theme}.svg").write_text(stats(data, t, theme))
+    profile_extra.build(sys.modules[__name__], data)
     print("wrote", sorted(p.name for p in OUT.iterdir()))
 
 

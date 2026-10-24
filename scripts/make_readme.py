@@ -30,6 +30,7 @@ def row(p):
     return (f'<tr>\n<td valign="top" width="88">'
             f'<a href="{repo}">{pic("emblem-" + slug, name + " particle emblem", " width=\"72\" height=\"72\"")}</a></td>\n'
             f'<td valign="top"><b><a href="{repo}">{title}</a></b> · <a href="{page}">site</a><br>\n'
+            f'{pic("meta-" + slug, name + ": stars, language and latest release", " width=\"320\"")}<br>\n'
             f'{html.escape(en, quote=False)}\n'
             f'<div dir="rtl">{html.escape(fap, quote=False)}</div></td>\n</tr>')
 
@@ -46,27 +47,65 @@ MORE = [
 more = "\n".join(f"- [**{n}**](https://github.com/mrzroot/{s}) · {d}" for n, s, d in MORE)
 more += "\n- [**PrintBridge**](https://github.com/mrzroot/printbridge) · fork of [AnouarSbia/printbridge](https://github.com/AnouarSbia/printbridge), a local agent for silent PDF and label printing."
 
+def link_pill(href, name, alt):
+    return f'<a href="{href}">{pic("pill-" + name, alt)}</a>'
+
+
+pills = "\n".join([
+    link_pill(f"{SITE}/", "portfolio", "Portfolio"),
+    link_pill(f"{SITE}/?lang=fa", "fa", "Persian portfolio"),
+    link_pill(f"{SITE}/resume/", "resume", "Resume"),
+    link_pill("https://t.me/mrzroot", "telegram", "Telegram"),
+    link_pill("https://linkedin.com/in/mrzroot", "linkedin", "LinkedIn"),
+])
+
 readme = f'''<p align="center">
 <a href="{SITE}/">{pic("banner", "M-R-Z drawn with warm particles: move along, it's particles all the way down", ' width="100%"')}</a>
 </p>
 
 <p align="center">
-<b>Mohammadreza Zare</b> · <b>محمدرضا زارع</b><br>
-Software that <i>explains why</i><br>
-نرم‌افزاری که می‌گوید <i>چرا</i>
+{pic("tagline", "mrzroot: Software Engineer, Python and TypeScript, AI coding agents, Persian-first tools", ' width="100%"')}
+</p>
+
+<h1 align="center">Mohammadreza Zare · محمدرضا زارع</h1>
+
+<p align="center">
+Software that <i>explains why</i> · نرم‌افزاری که می‌گوید <i>چرا</i>
 </p>
 
 <p align="center">
-<a href="{SITE}/"><b>Portfolio</b></a> ·
-<a href="{SITE}/?lang=fa"><b>فارسی</b></a> ·
-<a href="{SITE}/resume/"><b>Resume</b></a> ·
-<a href="https://t.me/mrzroot"><b>Telegram</b></a> ·
-<a href="https://linkedin.com/in/mrzroot"><b>LinkedIn</b></a>
+{pills}
 </p>
 
-I'm a software engineer in Mashhad, Iran (M.Sc. Computer Engineering). I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**: small, well-tested tools that tell you *why* something broke. Each has a release, docs and its own website.
+<p align="center">
+{pic("status", "Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · Khorasan Razavi Chamber of Commerce", ' width="100%"')}
+</p>
 
-<div dir="rtl">ابزارهای متن‌باز توسعه می‌دهم، بیشتر برای <b>ایجنت‌های کدنویسی هوش مصنوعی</b> و <b>برنامه‌نویس‌های ایرانی</b>؛ ابزارهای کوچک و تست‌شده که می‌گویند <b>چرا</b> چیزی خراب شده. هر کدام نسخهٔ منتشرشده، مستندات و وب‌سایت خودش را دارد.</div>
+I'm a software engineer in Mashhad, Iran. I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**: small, well-tested tools that tell you *why* something broke. Each one has a release, docs and its own website.
+
+<div dir="rtl">
+مهندس نرم‌افزارم و در مشهد زندگی می‌کنم. ابزارهای متن‌باز توسعه می‌دهم، بیشتر با پایتون و تایپ‌اسکریپت و برای <b>ایجنت‌های کدنویسی هوش مصنوعی</b> و <b>برنامه‌نویس‌های ایرانی</b>: ابزارهای کوچک و تست‌شده که می‌گویند <b>چرا</b> چیزی خراب شده. هر کدام نسخهٔ منتشرشده، مستندات و وب‌سایت خودش را دارد.
+</div>
+
+> [!TIP]
+> **Open to collaboration.** Every flagship below has issues labelled [`good first issue`](https://github.com/search?q=user%3Amrzroot+label%3A%22good+first+issue%22+state%3Aopen&type=issues), and a pull request is the fastest way to say hello.
+>
+> <div dir="rtl"><b>آمادهٔ همکاری‌ام.</b> هر پروژهٔ شاخص issue با برچسب <code>good first issue</code> دارد و ارسال pull request بهترین شروع آشناییست.</div>
+
+### Now · اکنون
+
+<table>
+<tr>
+<td valign="top" width="50%"><b>Building</b><br>
+<a href="https://github.com/mrzroot/whycached">whycached</a>, <a href="https://github.com/mrzroot/persianprobe">persianprobe</a> and <a href="https://github.com/mrzroot/whyenv">whyenv</a>: tools that explain stale caches, Persian text bugs and environment-variable surprises.
+<div dir="rtl"><b>در حال ساخت</b><br>
+whycached، persianprobe و whyenv: ابزارهایی که دلیل کهنه ماندن کش، خطاهای متن فارسی و غافلگیری‌های متغیر محیطی را نشان می‌دهند.</div></td>
+<td valign="top" width="50%"><b>Working at</b><br>
+Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="{SITE}/resume/">resume</a>).
+<div dir="rtl"><b>محل کار</b><br>
+برنامه‌نویس در اتاق بازرگانی خراسان رضوی، مشهد.</div></td>
+</tr>
+</table>
 
 ### Flagship projects · پروژه‌های شاخص
 
@@ -74,19 +113,43 @@ I'm a software engineer in Mashhad, Iran (M.Sc. Computer Engineering). I build *
 {chr(10).join(rows)}
 </table>
 
-<sub>Want to contribute? Every flagship has issues labelled <a href="https://github.com/search?q=user%3Amrzroot+label%3A%22good+first+issue%22+state%3Aopen&type=issues"><b>good first issue</b></a>.</sub>
+<sub>Stars, language and version beside each project are read from the GitHub API and refreshed daily.</sub>
 
-<div dir="rtl"><sub>می‌خواهید مشارکت کنید؟ هر پروژهٔ شاخص issue با برچسب <b>good first issue</b> دارد.</sub></div>
+### Stack · ابزارها
+
+<p align="center">
+{pic("stack", "Python, TypeScript, Go, FastAPI, Node.js, SQLite, Docker, GitHub Actions, pytest, WebGL, MCP, Git, Linux", ' width="100%"')}
+</p>
+
+### Live from GitHub · زنده از گیت‌هاب
+
+<p align="center">
+{pic("dashboard", "Live GitHub numbers for mrzroot: repositories, releases, contributions, pull requests, streaks, stars and language mix", ' width="100%"')}
+</p>
+
+<p align="center">
+{pic("heatmap", "Contribution heat map for the last 52 weeks", ' width="100%"')}
+</p>
+
+<p align="center">
+{pic("feed", "Latest releases and recent commits", ' width="100%"')}
+</p>
 
 ### More projects · پروژه‌های بیشتر
 
 {more}
 
-### Live from GitHub
+<p align="center">
+{link_pill(f"{SITE}/", "portfolio", "Portfolio")}
+{link_pill("https://t.me/mrzroot", "telegram", "Telegram")}
+{link_pill("https://linkedin.com/in/mrzroot", "linkedin", "LinkedIn")}
+</p>
 
-{pic("stats", "Live GitHub stats for mrzroot: flagship stars, repositories, releases and languages", ' width="100%"')}
+<p align="center">
+{pic("footer", "move along, it's particles all the way down", ' width="100%"')}
+</p>
 
-<sub>The banner, emblems and stats are small self-hosted SVGs in a warm palette, rebuilt daily by <a href="./.github/workflows/profile-cards.yml">a GitHub Action</a> from <a href="./scripts/build_profile.py">scripts/build_profile.py</a>; no external image service. Project text above is plain markdown.</sub>
+<sub>Every picture here is a small self-hosted SVG in one warm palette, with light and dark variants; there is no external image service or counter. Text is outlined from open fonts so Persian shapes correctly everywhere, and the motion switches off when your system asks for reduced motion. The numbers are rebuilt daily by <a href="./.github/workflows/profile-cards.yml">a GitHub Action</a> running <a href="./scripts/build_profile.py">scripts/build_profile.py</a>. Language shares are by bytes across my public non-fork repositories, excluding generated site output.</sub>
 '''
 (HERE.parent / "README.md").write_text(readme)
 print("README.md", len(readme), "bytes")

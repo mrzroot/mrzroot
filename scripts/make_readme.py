@@ -23,26 +23,18 @@ def pic(name, alt, extra=""):
             f'<img alt="{html.escape(alt)}" src="{G}/{name}-light.svg"{extra}></picture>')
 
 
-def cell(p):
+def row(p):
     slug, name, fa, en, fap, _ = p
     title = f"{name} · {fa}" if fa else name
     repo, page = f"https://github.com/mrzroot/{slug}", f"{SITE}/{slug}/"
-    return (f'<td valign="top" width="50%">\n'
-            f'<a href="{repo}">{pic("emblem-" + slug, name + " particle emblem", " width=\"64\" height=\"64\" align=\"left\" hspace=\"10\"")}</a>'
-            f'<b><a href="{repo}">{title}</a></b> · <a href="{page}">site</a><br>\n'
+    return (f'<tr>\n<td valign="top" width="88">'
+            f'<a href="{repo}">{pic("emblem-" + slug, name + " particle emblem", " width=\"72\" height=\"72\"")}</a></td>\n'
+            f'<td valign="top"><b><a href="{repo}">{title}</a></b> · <a href="{page}">site</a><br>\n'
             f'{html.escape(en, quote=False)}\n'
-            f'<div dir="rtl"><sub>{html.escape(fap, quote=False)}</sub></div>\n'
-            f'</td>')
+            f'<div dir="rtl"><sub>{html.escape(fap, quote=False)}</sub></div></td>\n</tr>')
 
 
-rows = []
-ps = bp.PROJECTS
-for i in range(0, len(ps), 2):
-    pair = ps[i:i + 2]
-    cells = "\n".join(cell(p) for p in pair)
-    if len(pair) == 1:
-        cells += '\n<td width="50%"></td>'
-    rows.append(f"<tr>\n{cells}\n</tr>")
+rows = [row(p) for p in bp.PROJECTS]
 
 MORE = [
     ("AgentForge", "agentforge", "one source of AI coding-agent rules, synced to Cursor, Claude Code, Windsurf, Copilot, Roo and Aider."),

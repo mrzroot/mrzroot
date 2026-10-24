@@ -4,7 +4,8 @@
 
 <p align="center">
 <b>Mohammadreza Zare</b> · <b>محمدرضا زارع</b><br>
-Software that <i>explains why</i> · نرم‌افزاری که می‌گوید <i>چرا</i>
+Software that <i>explains why</i><br>
+نرم‌افزاری که می‌گوید <i>چرا</i>
 </p>
 
 <p align="center">
@@ -26,91 +27,91 @@ I'm a software engineer in Mashhad, Iran (M.Sc. Computer Engineering). I build *
 <td valign="top" width="88"><a href="https://github.com/mrzroot/mihanstack"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-mihanstack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-mihanstack-light.svg"><img alt="MihanStack particle emblem" src="./assets/gen/emblem-mihanstack-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/mihanstack">MihanStack · میهن‌استک</a></b> · <a href="https://mrzroot.github.io/mihanstack/">site</a><br>
 Local cloud for Iranian payment and SMS APIs: Zarinpal, Zibal, Kavenegar and SMS.ir with failure scenarios, chaos mode and record/replay.
-<div dir="rtl"><sub>ابر محلی برای API های پرداخت و پیامک ایرانی: زرین‌پال، زیبال، کاوه‌نگار و SMS.ir، با سناریوی خطا، حالت آشوب و ضبط/بازپخش.</sub></div></td>
+<div dir="rtl">ابر محلی برای API های پرداخت و پیامک ایرانی: زرین‌پال، زیبال، کاوه‌نگار و SMS.ir، با سناریوی خطا، حالت آشوب و ضبط/بازپخش.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/dibs"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-dibs-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-dibs-light.svg"><img alt="dibs particle emblem" src="./assets/gen/emblem-dibs-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/dibs">dibs</a></b> · <a href="https://mrzroot.github.io/dibs/">site</a><br>
 Stops Claude Code, Codex, Cursor, Gemini CLI, Copilot and aider from reverting the edits you make by hand.
-<div dir="rtl"><sub>جلوی ایجنت‌های کدنویسی هوش مصنوعی را می‌گیرد تا ویرایش‌های دستی شما را برنگردانند.</sub></div></td>
+<div dir="rtl">جلوی ایجنت‌های کدنویسی هوش مصنوعی را می‌گیرد تا ویرایش‌های دستی شما را برنگردانند.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/hamyad"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-hamyad-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-hamyad-light.svg"><img alt="hamyad particle emblem" src="./assets/gen/emblem-hamyad-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/hamyad">hamyad · هم‌یاد</a></b> · <a href="https://mrzroot.github.io/hamyad/">site</a><br>
 One shared project brain for ChatGPT, Claude, Codex, Gemini, Grok, Cursor, Copilot and more: sessions, decisions and diffs, over MCP and REST.
-<div dir="rtl"><sub>یک مغز مشترک پروژه برای همهٔ ابزارهای هوش مصنوعی: نشست‌ها، تصمیم‌ها و تغییرات، از راه MCP و REST.</sub></div></td>
+<div dir="rtl">یک مغز مشترک پروژه برای همهٔ ابزارهای هوش مصنوعی: نشست‌ها، تصمیم‌ها و تغییرات، از راه MCP و REST.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/dokhaneh"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-dokhaneh-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-dokhaneh-light.svg"><img alt="dokhaneh particle emblem" src="./assets/gen/emblem-dokhaneh-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/dokhaneh">dokhaneh · دوخانه</a></b> · <a href="https://mrzroot.github.io/dokhaneh/">site</a><br>
 Publishes every release to GitHub and Iranian hosts with an Ed25519-signed manifest and a verifying fallback installer.
-<div dir="rtl"><sub>هر نسخه را هم روی گیت‌هاب و هم روی میزبان‌های ایرانی منتشر می‌کند، با مانیفست امضاشدهٔ Ed25519 و نصب‌کنندهٔ جایگزینِ اعتبارسنج.</sub></div></td>
+<div dir="rtl">هر نسخه را هم روی گیت‌هاب و هم روی میزبان‌های ایرانی منتشر می‌کند، با مانیفست امضاشدهٔ Ed25519 و نصب‌کنندهٔ جایگزینِ اعتبارسنج.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/paknevis"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-paknevis-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-paknevis-light.svg"><img alt="paknevis particle emblem" src="./assets/gen/emblem-paknevis-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/paknevis">paknevis · پاک‌نویس</a></b> · <a href="https://mrzroot.github.io/paknevis/">site</a><br>
 Persian text linter and auto-fixer: half-spaces, Arabic letters, punctuation, digits. CLI, pre-commit and GitHub Action.
-<div dir="rtl"><sub>اصلاح‌گر و لینتر متن فارسی: نیم‌فاصله، حروف عربی، نقطه‌گذاری و ارقام. خط فرمان، pre-commit و GitHub Action.</sub></div></td>
+<div dir="rtl">اصلاح‌گر و لینتر متن فارسی: نیم‌فاصله، حروف عربی، نقطه‌گذاری و ارقام. خط فرمان، pre-commit و GitHub Action.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/netdoctor-ir"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-netdoctor-ir-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-netdoctor-ir-light.svg"><img alt="netdoctor-ir particle emblem" src="./assets/gen/emblem-netdoctor-ir-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/netdoctor-ir">netdoctor-ir</a></b> · <a href="https://mrzroot.github.io/netdoctor-ir/">site</a><br>
 Connectivity doctor for developers in Iran: scans dev services, ranks DNS resolvers, switches pip, npm and Docker mirrors.
-<div dir="rtl"><sub>پزشک اتصال برای برنامه‌نویس‌های ایران: سرویس‌های توسعه را می‌سنجد، DNS ها را رتبه‌بندی می‌کند و آینه‌های pip و npm و Docker را عوض می‌کند.</sub></div></td>
+<div dir="rtl">پزشک اتصال برای برنامه‌نویس‌های ایران: سرویس‌های توسعه را می‌سنجد، DNS ها را رتبه‌بندی می‌کند و آینه‌های pip و npm و Docker را عوض می‌کند.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/flowpilot"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-flowpilot-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-flowpilot-light.svg"><img alt="flowpilot particle emblem" src="./assets/gen/emblem-flowpilot-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/flowpilot">flowpilot</a></b> · <a href="https://mrzroot.github.io/flowpilot/">site</a><br>
 Self-hosted, code-first workflow engine: YAML in Git, cron, webhook and RSS triggers, Telegram steps, Jalali dates.
-<div dir="rtl"><sub>موتور گردش‌کار خودمیزبان و کد-محور: YAML در Git، محرک‌های cron و webhook و RSS، گام‌های تلگرام و تاریخ جلالی.</sub></div></td>
+<div dir="rtl">موتور گردش‌کار خودمیزبان و کد-محور: YAML در Git، محرک‌های cron و webhook و RSS، گام‌های تلگرام و تاریخ جلالی.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/sabr"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-sabr-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-sabr-light.svg"><img alt="sabr particle emblem" src="./assets/gen/emblem-sabr-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/sabr">sabr · صبر</a></b> · <a href="https://mrzroot.github.io/sabr/">site</a><br>
 Resumable git clone, docker pull and downloads for links that keep dropping: a drop costs one step, not the whole transfer.
-<div dir="rtl"><sub>git clone و docker pull و دانلود ازسرگرفتنی برای اتصال‌های ناپایدار: قطع شدن فقط یک گام را از بین می‌برد، نه کل انتقال را.</sub></div></td>
+<div dir="rtl">git clone و docker pull و دانلود ازسرگرفتنی برای اتصال‌های ناپایدار: قطع شدن فقط یک گام را از بین می‌برد، نه کل انتقال را.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/marz"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-marz-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-marz-light.svg"><img alt="marz particle emblem" src="./assets/gen/emblem-marz-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/marz">marz · مرز</a></b> · <a href="https://mrzroot.github.io/marz/">site</a><br>
 Will your app work in Iran, China and Russia? Scans code for blocked and sanctioned services, with OONI data and fixes.
-<div dir="rtl"><sub>برنامه‌ات در ایران، چین و روسیه کار می‌کند؟ کد را از نظر سرویس‌های مسدود و تحریمی می‌سنجد، با داده‌های OONI و راه‌حل.</sub></div></td>
+<div dir="rtl">برنامه‌ات در ایران، چین و روسیه کار می‌کند؟ کد را از نظر سرویس‌های مسدود و تحریمی می‌سنجد، با داده‌های OONI و راه‌حل.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/whystuck"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-whystuck-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-whystuck-light.svg"><img alt="whystuck particle emblem" src="./assets/gen/emblem-whystuck-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/whystuck">whystuck</a></b> · <a href="https://mrzroot.github.io/whystuck/">site</a><br>
 Runs any command with an idle watchdog. When it hangs, says why (pager, editor, y/N prompt, password, lock) and prints the non-interactive fix.
-<div dir="rtl"><sub>هر فرمانی را با نگهبان بی‌کاری اجرا می‌کند. وقتی گیر کند می‌گوید چرا (pager، ویرایشگر، پرسش y/N، رمز عبور، قفل) و راه‌حل غیرتعاملی را چاپ می‌کند.</sub></div></td>
+<div dir="rtl">هر فرمانی را با نگهبان بی‌کاری اجرا می‌کند. وقتی گیر کند می‌گوید چرا (pager، ویرایشگر، پرسش y/N، رمز عبور، قفل) و راه‌حل غیرتعاملی را چاپ می‌کند.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/shellparity"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-shellparity-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-shellparity-light.svg"><img alt="shellparity particle emblem" src="./assets/gen/emblem-shellparity-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/shellparity">shellparity</a></b> · <a href="https://mrzroot.github.io/shellparity/">site</a><br>
 Diffs your terminal shell against an AI agent's shell (PATH, versions, proxies, UTF-8, SSH, git signing) and prints the rc-file fix.
-<div dir="rtl"><sub>شل ترمینال شما را با شل ایجنت هوش مصنوعی مقایسه می‌کند (PATH، نسخه‌ها، پروکسی، UTF-8، SSH، امضای git) و اصلاح فایل rc را چاپ می‌کند.</sub></div></td>
+<div dir="rtl">شل ترمینال شما را با شل ایجنت هوش مصنوعی مقایسه می‌کند (PATH، نسخه‌ها، پروکسی، UTF-8، SSH، امضای git) و اصلاح فایل rc را چاپ می‌کند.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/whystale"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-whystale-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-whystale-light.svg"><img alt="whystale particle emblem" src="./assets/gen/emblem-whystale-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/whystale">whystale</a></b> · <a href="https://mrzroot.github.io/whystale/">site</a><br>
 Changed the code but it behaves the old way? Finds servers started before .env changed, old builds, deps and generated code.
-<div dir="rtl"><sub>کد را عوض کردی ولی هنوز مثل قبل کار می‌کند؟ سرورهای شروع‌شده پیش از تغییر .env، بیلدها، وابستگی‌ها و کدهای تولیدشدهٔ کهنه را پیدا می‌کند.</sub></div></td>
+<div dir="rtl">کد را عوض کردی ولی هنوز مثل قبل کار می‌کند؟ سرورهای شروع‌شده پیش از تغییر .env، بیلدها، وابستگی‌ها و کدهای تولیدشدهٔ کهنه را پیدا می‌کند.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/whycached"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-whycached-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-whycached-light.svg"><img alt="whycached particle emblem" src="./assets/gen/emblem-whycached-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/whycached">whycached</a></b> · <a href="https://mrzroot.github.io/whycached/">site</a><br>
 Deployed but still seeing the old version? Finds which cache layer (CDN, browser, service worker, filename) serves it, with proof and the fix.
-<div dir="rtl"><sub>دیپلوی کردی ولی هنوز نسخهٔ قدیمی را می‌بینی؟ پیدا می‌کند کدام لایهٔ کش (CDN، مرورگر، service worker، نام فایل) آن را می‌دهد، با مدرک و راه‌حل.</sub></div></td>
+<div dir="rtl">دیپلوی کردی ولی هنوز نسخهٔ قدیمی را می‌بینی؟ پیدا می‌کند کدام لایهٔ کش (CDN، مرورگر، service worker، نام فایل) آن را می‌دهد، با مدرک و راه‌حل.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/persianprobe"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-persianprobe-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-persianprobe-light.svg"><img alt="persianprobe particle emblem" src="./assets/gen/emblem-persianprobe-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/persianprobe">persianprobe</a></b> · <a href="https://mrzroot.github.io/persianprobe/">site</a><br>
 Does your language handle Persian text the way you think? Runs the same probes through Python, Node, Perl, SQLite, Go and shows where they disagree.
-<div dir="rtl"><sub>زبان برنامه‌نویسی‌ات متن فارسی را همان‌طور که فکر می‌کنی پردازش می‌کند؟ همین آزمون‌ها را در Python و Node و Perl و SQLite و Go اجرا می‌کند و اختلاف‌ها را نشان می‌دهد.</sub></div></td>
+<div dir="rtl">زبان برنامه‌نویسی‌ات متن فارسی را همان‌طور که فکر می‌کنی پردازش می‌کند؟ همین آزمون‌ها را در Python و Node و Perl و SQLite و Go اجرا می‌کند و اختلاف‌ها را نشان می‌دهد.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/whyenv"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-whyenv-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-whyenv-light.svg"><img alt="whyenv particle emblem" src="./assets/gen/emblem-whyenv-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/whyenv">whyenv</a></b> · <a href="https://mrzroot.github.io/whyenv/">site</a><br>
 Changed the env variable and nothing changed? Shows which source (shell, .env files, compose) wins in Vite, Next, dotenv and Compose, and which edit is ignored.
-<div dir="rtl"><sub>متغیر محیطی را عوض کردی و چیزی عوض نشد؟ نشان می‌دهد کدام منبع (شل، فایل‌های .env، compose) در Vite و Next و dotenv و Compose برنده است و کدام ویرایش نادیده گرفته می‌شود.</sub></div></td>
+<div dir="rtl">متغیر محیطی را عوض کردی و چیزی عوض نشد؟ نشان می‌دهد کدام منبع (شل، فایل‌های .env، compose) در Vite و Next و dotenv و Compose برنده است و کدام ویرایش نادیده گرفته می‌شود.</div></td>
 </tr>
 </table>
 

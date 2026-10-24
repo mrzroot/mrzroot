@@ -31,7 +31,7 @@ def row(p):
             f'<a href="{repo}">{pic("emblem-" + slug, name + " particle emblem", " width=\"72\" height=\"72\"")}</a></td>\n'
             f'<td valign="top"><b><a href="{repo}">{title}</a></b> · <a href="{page}">site</a><br>\n'
             f'{html.escape(en, quote=False)}\n'
-            f'<div dir="rtl"><sub>{html.escape(fap, quote=False)}</sub></div></td>\n</tr>')
+            f'<div dir="rtl">{html.escape(fap, quote=False)}</div></td>\n</tr>')
 
 
 rows = [row(p) for p in bp.PROJECTS]
@@ -52,7 +52,8 @@ readme = f'''<p align="center">
 
 <p align="center">
 <b>Mohammadreza Zare</b> · <b>محمدرضا زارع</b><br>
-Software that <i>explains why</i> · نرم‌افزاری که می‌گوید <i>چرا</i>
+Software that <i>explains why</i><br>
+نرم‌افزاری که می‌گوید <i>چرا</i>
 </p>
 
 <p align="center">

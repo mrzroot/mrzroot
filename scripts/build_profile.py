@@ -93,6 +93,18 @@ PROJECTS = [
      "Changed the env variable and nothing changed? Shows which source (shell, .env files, compose) wins in Vite, Next, dotenv and Compose, and which edit is ignored.",
      "متغیر محیطی را عوض کردی و چیزی عوض نشد؟ نشان می‌دهد کدام منبع (شل، فایل‌های .env، compose) در Vite و Next و dotenv و Compose برنده است و کدام ویرایش نادیده گرفته می‌شود.",
      ("#cf7d0e", "#f2a93b")),
+    ("vazhgun", "vazhgun", "واژگون",
+     "Persian thesis in Word: finds paragraphs where typed order and drawn order differ (۲-۳ shown as ۳-۲, left-to-right tables) and writes an explicit fixed copy.",
+     "پایان‌نامهٔ فارسی در ورد: پاراگراف‌هایی را پیدا می‌کند که ترتیب تایپ‌شده و نمایش‌داده‌شده‌شان فرق دارد (۲-۳ که ۳-۲ دیده می‌شود، جدول چپ‌به‌راست) و نسخهٔ اصلاح‌شدهٔ صریح می‌نویسد.",
+     ("#b4432f", "#ea7d5e")),
+    ("payanlint", "payanlint", "پایان‌لینت",
+     "Lints a Persian Word thesis: half-spaces, Arabic ي/ك, digit sets, complex-script font and size, margins, captions, page numbers; safe --fix on a copy.",
+     "پایان‌نامهٔ فارسی در ورد را لینت می‌کند: نیم‌فاصله، «ي» و «ك» عربی، دستهٔ رقم، قلم و اندازهٔ complex-script، حاشیه، شرح شکل، شمارهٔ صفحه؛ --fix امن روی نسخه.",
+     ("#8f7712", "#dcc24c")),
+    ("arjaa", "arjaa", "ارجاع",
+     "Checks figure and table numbers and mentions, and in-text citations against the reference list, in a Persian .docx, with Jalali and Gregorian years.",
+     "شمارهٔ شکل و جدول و ارجاع به آن‌ها، و ارجاع‌های متنی را در برابر فهرست منابع در یک .docx فارسی بررسی می‌کند، با سال شمسی و میلادی.",
+     ("#a85a1a", "#ee9f55")),
 ]
 FLAGSHIPS = [(p[0],) for p in PROJECTS]
 

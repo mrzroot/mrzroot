@@ -101,9 +101,9 @@ I'm a software engineer in Mashhad, Iran. I build **open-source developer tools*
 <table>
 <tr>
 <td valign="top" width="50%"><b>Building</b><br>
-<a href="https://github.com/mrzroot/whycached">whycached</a>, <a href="https://github.com/mrzroot/persianprobe">persianprobe</a> and <a href="https://github.com/mrzroot/whyenv">whyenv</a>: tools that explain stale caches, Persian text bugs and environment-variable surprises.
+<a href="https://github.com/mrzroot/vazhgun">vazhgun</a>, <a href="https://github.com/mrzroot/payanlint">payanlint</a> and <a href="https://github.com/mrzroot/arjaa">arjaa</a>: offline tools for a Persian Word thesis (flipped numerals, typing and format lint, figure and citation cross-references).
 <div dir="rtl"><b>در حال ساخت</b><br>
-whycached، persianprobe و whyenv: ابزارهایی که دلیل کهنه ماندن کش، خطاهای متن فارسی و غافلگیری‌های متغیر محیطی را نشان می‌دهند.</div></td>
+vazhgun، payanlint و arjaa: ابزارهای آفلاین برای پایان‌نامهٔ فارسی در ورد (اعداد وارونه، لینت تایپ و قالب‌بندی، ارجاع شکل و منبع).</div></td>
 <td valign="top" width="50%"><b>Working at</b><br>
 Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="{SITE}/resume/">resume</a>).
 <div dir="rtl"><b>محل کار</b><br>

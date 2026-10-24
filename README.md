@@ -40,9 +40,9 @@ I'm a software engineer in Mashhad, Iran. I build **open-source developer tools*
 <table>
 <tr>
 <td valign="top" width="50%"><b>Building</b><br>
-<a href="https://github.com/mrzroot/whycached">whycached</a>, <a href="https://github.com/mrzroot/persianprobe">persianprobe</a> and <a href="https://github.com/mrzroot/whyenv">whyenv</a>: tools that explain stale caches, Persian text bugs and environment-variable surprises.
+<a href="https://github.com/mrzroot/vazhgun">vazhgun</a>, <a href="https://github.com/mrzroot/payanlint">payanlint</a> and <a href="https://github.com/mrzroot/arjaa">arjaa</a>: offline tools for a Persian Word thesis (flipped numerals, typing and format lint, figure and citation cross-references).
 <div dir="rtl"><b>در حال ساخت</b><br>
-whycached، persianprobe و whyenv: ابزارهایی که دلیل کهنه ماندن کش، خطاهای متن فارسی و غافلگیری‌های متغیر محیطی را نشان می‌دهند.</div></td>
+vazhgun، payanlint و arjaa: ابزارهای آفلاین برای پایان‌نامهٔ فارسی در ورد (اعداد وارونه، لینت تایپ و قالب‌بندی، ارجاع شکل و منبع).</div></td>
 <td valign="top" width="50%"><b>Working at</b><br>
 Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="https://mrzroot.github.io/resume/">resume</a>).
 <div dir="rtl"><b>محل کار</b><br>
@@ -157,6 +157,27 @@ Does your language handle Persian text the way you think? Runs the same probes t
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-whyenv-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-whyenv-light.svg"><img alt="whyenv: stars, language and latest release" src="./assets/gen/meta-whyenv-light.svg" width="320"></picture><br>
 Changed the env variable and nothing changed? Shows which source (shell, .env files, compose) wins in Vite, Next, dotenv and Compose, and which edit is ignored.
 <div dir="rtl">متغیر محیطی را عوض کردی و چیزی عوض نشد؟ نشان می‌دهد کدام منبع (شل، فایل‌های .env، compose) در Vite و Next و dotenv و Compose برنده است و کدام ویرایش نادیده گرفته می‌شود.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/vazhgun"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-vazhgun-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-vazhgun-light.svg"><img alt="vazhgun particle emblem" src="./assets/gen/emblem-vazhgun-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/vazhgun">vazhgun · واژگون</a></b> · <a href="https://mrzroot.github.io/vazhgun/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-vazhgun-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-vazhgun-light.svg"><img alt="vazhgun: stars, language and latest release" src="./assets/gen/meta-vazhgun-light.svg" width="320"></picture><br>
+Persian thesis in Word: finds paragraphs where typed order and drawn order differ (۲-۳ shown as ۳-۲, left-to-right tables) and writes an explicit fixed copy.
+<div dir="rtl">پایان‌نامهٔ فارسی در ورد: پاراگراف‌هایی را پیدا می‌کند که ترتیب تایپ‌شده و نمایش‌داده‌شده‌شان فرق دارد (۲-۳ که ۳-۲ دیده می‌شود، جدول چپ‌به‌راست) و نسخهٔ اصلاح‌شدهٔ صریح می‌نویسد.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/payanlint"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-payanlint-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-payanlint-light.svg"><img alt="payanlint particle emblem" src="./assets/gen/emblem-payanlint-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/payanlint">payanlint · پایان‌لینت</a></b> · <a href="https://mrzroot.github.io/payanlint/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-payanlint-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-payanlint-light.svg"><img alt="payanlint: stars, language and latest release" src="./assets/gen/meta-payanlint-light.svg" width="320"></picture><br>
+Lints a Persian Word thesis: half-spaces, Arabic ي/ك, digit sets, complex-script font and size, margins, captions, page numbers; safe --fix on a copy.
+<div dir="rtl">پایان‌نامهٔ فارسی در ورد را لینت می‌کند: نیم‌فاصله، «ي» و «ك» عربی، دستهٔ رقم، قلم و اندازهٔ complex-script، حاشیه، شرح شکل، شمارهٔ صفحه؛ --fix امن روی نسخه.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/arjaa"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-arjaa-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-arjaa-light.svg"><img alt="arjaa particle emblem" src="./assets/gen/emblem-arjaa-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/arjaa">arjaa · ارجاع</a></b> · <a href="https://mrzroot.github.io/arjaa/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-arjaa-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-arjaa-light.svg"><img alt="arjaa: stars, language and latest release" src="./assets/gen/meta-arjaa-light.svg" width="320"></picture><br>
+Checks figure and table numbers and mentions, and in-text citations against the reference list, in a Persian .docx, with Jalali and Gregorian years.
+<div dir="rtl">شمارهٔ شکل و جدول و ارجاع به آن‌ها، و ارجاع‌های متنی را در برابر فهرست منابع در یک .docx فارسی بررسی می‌کند، با سال شمسی و میلادی.</div></td>
 </tr>
 </table>
 

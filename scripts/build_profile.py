@@ -105,6 +105,10 @@ PROJECTS = [
      "Checks figure and table numbers and mentions, and in-text citations against the reference list, in a Persian .docx, with Jalali and Gregorian years.",
      "شمارهٔ شکل و جدول و ارجاع به آن‌ها، و ارجاع‌های متنی را در برابر فهرست منابع در یک .docx فارسی بررسی می‌کند، با سال شمسی و میلادی.",
      ("#a85a1a", "#ee9f55")),
+    ("neveshtar", "neveshtar", "نوشتار",
+     "Rewrites spoken Persian forms into the thesis register with a reason and a confidence tier for each, writes Word tracked changes, and checks thesis conventions; offline and rule-based, not an AI author.",
+     "شکل‌های گفتاری فارسی را به لحن پایان‌نامه بازنویسی می‌کند، با دلیل و سطح اطمینان برای هرکدام، تغییر ردیابی‌شدهٔ ورد می‌نویسد و قراردادهای پایان‌نامه را بررسی می‌کند؛ آفلاین و قاعده‌محور، نه نویسندهٔ هوش مصنوعی.",
+     ("#3a4fa8", "#f0c765")),
 ]
 FLAGSHIPS = [(p[0],) for p in PROJECTS]
 

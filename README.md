@@ -40,9 +40,9 @@ I'm a software engineer in Mashhad, Iran. I build **open-source developer tools*
 <table>
 <tr>
 <td valign="top" width="50%"><b>Building</b><br>
-<a href="https://github.com/mrzroot/vazhgun">vazhgun</a>, <a href="https://github.com/mrzroot/payanlint">payanlint</a> and <a href="https://github.com/mrzroot/arjaa">arjaa</a>: offline tools for a Persian Word thesis (flipped numerals, typing and format lint, figure and citation cross-references).
+<a href="https://github.com/mrzroot/vazhgun">vazhgun</a>, <a href="https://github.com/mrzroot/payanlint">payanlint</a>, <a href="https://github.com/mrzroot/arjaa">arjaa</a> and <a href="https://github.com/mrzroot/neveshtar">neveshtar</a>: offline tools for a Persian Word thesis (flipped numerals, typing and format lint, figure and citation cross-references, written register).
 <div dir="rtl"><b>در حال ساخت</b><br>
-vazhgun، payanlint و arjaa: ابزارهای آفلاین برای پایان‌نامهٔ فارسی در ورد (اعداد وارونه، لینت تایپ و قالب‌بندی، ارجاع شکل و منبع).</div></td>
+vazhgun، payanlint، arjaa و neveshtar: ابزارهای آفلاین برای پایان‌نامهٔ فارسی در ورد (اعداد وارونه، لینت تایپ و قالب‌بندی، ارجاع شکل و منبع، لحن نوشتاری).</div></td>
 <td valign="top" width="50%"><b>Working at</b><br>
 Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="https://mrzroot.github.io/resume/">resume</a>).
 <div dir="rtl"><b>محل کار</b><br>
@@ -178,6 +178,13 @@ Lints a Persian Word thesis: half-spaces, Arabic ي/ك, digit sets, complex-scri
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-arjaa-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-arjaa-light.svg"><img alt="arjaa: stars, language and latest release" src="./assets/gen/meta-arjaa-light.svg" width="320"></picture><br>
 Checks figure and table numbers and mentions, and in-text citations against the reference list, in a Persian .docx, with Jalali and Gregorian years.
 <div dir="rtl">شمارهٔ شکل و جدول و ارجاع به آن‌ها، و ارجاع‌های متنی را در برابر فهرست منابع در یک .docx فارسی بررسی می‌کند، با سال شمسی و میلادی.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/neveshtar"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-neveshtar-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-neveshtar-light.svg"><img alt="neveshtar particle emblem" src="./assets/gen/emblem-neveshtar-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/neveshtar">neveshtar · نوشتار</a></b> · <a href="https://mrzroot.github.io/neveshtar/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-neveshtar-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-neveshtar-light.svg"><img alt="neveshtar: stars, language and latest release" src="./assets/gen/meta-neveshtar-light.svg" width="320"></picture><br>
+Rewrites spoken Persian forms into the thesis register with a reason and a confidence tier for each, writes Word tracked changes, and checks thesis conventions; offline and rule-based, not an AI author.
+<div dir="rtl">شکل‌های گفتاری فارسی را به لحن پایان‌نامه بازنویسی می‌کند، با دلیل و سطح اطمینان برای هرکدام، تغییر ردیابی‌شدهٔ ورد می‌نویسد و قراردادهای پایان‌نامه را بررسی می‌کند؛ آفلاین و قاعده‌محور، نه نویسندهٔ هوش مصنوعی.</div></td>
 </tr>
 </table>
 

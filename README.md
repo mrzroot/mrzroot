@@ -183,8 +183,8 @@ Checks figure and table numbers and mentions, and in-text citations against the 
 <td valign="top" width="88"><a href="https://github.com/mrzroot/neveshtar"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-neveshtar-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-neveshtar-light.svg"><img alt="neveshtar particle emblem" src="./assets/gen/emblem-neveshtar-light.svg" width="72" height="72"></picture></a></td>
 <td valign="top"><b><a href="https://github.com/mrzroot/neveshtar">neveshtar · نوشتار</a></b> · <a href="https://mrzroot.github.io/neveshtar/">site</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-neveshtar-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-neveshtar-light.svg"><img alt="neveshtar: stars, language and latest release" src="./assets/gen/meta-neveshtar-light.svg" width="320"></picture><br>
-Rewrites spoken Persian forms into the thesis register with a reason and a confidence tier for each, writes Word tracked changes, and checks thesis conventions; offline and rule-based, not an AI author.
-<div dir="rtl">شکل‌های گفتاری فارسی را به لحن پایان‌نامه بازنویسی می‌کند، با دلیل و سطح اطمینان برای هرکدام، تغییر ردیابی‌شدهٔ ورد می‌نویسد و قراردادهای پایان‌نامه را بررسی می‌کند؛ آفلاین و قاعده‌محور، نه نویسندهٔ هوش مصنوعی.</div></td>
+Rewrites spoken Persian forms into the thesis register with a reason and a confidence tier for each, writes Word tracked changes, checks thesis conventions, and (v0.2.0) questions stock phrasing and flat rhythm for you to review; offline and rule-based, not an AI author.
+<div dir="rtl">شکل‌های گفتاری فارسی را به لحن پایان‌نامه بازنویسی می‌کند، با دلیل و سطح اطمینان برای هرکدام، تغییر ردیابی‌شدهٔ ورد می‌نویسد قراردادهای پایان‌نامه را بررسی می‌کند و (نسخهٔ ۰٫۲٫۰) عبارت‌های کلیشه‌ای و ریتم یکنواخت را برای بازبینی شما زیر سؤال می‌برد؛ آفلاین و قاعده‌محور، نه نویسندهٔ هوش مصنوعی.</div></td>
 </tr>
 </table>
 

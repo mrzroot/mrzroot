@@ -106,9 +106,17 @@ PROJECTS = [
      "شمارهٔ شکل و جدول و ارجاع به آن‌ها، و ارجاع‌های متنی را در برابر فهرست منابع در یک .docx فارسی بررسی می‌کند، با سال شمسی و میلادی.",
      ("#a85a1a", "#ee9f55")),
     ("neveshtar", "neveshtar", "نوشتار",
-     "Rewrites spoken Persian forms into the thesis register with a reason and a confidence tier for each, writes Word tracked changes, and checks thesis conventions; offline and rule-based, not an AI author.",
-     "شکل‌های گفتاری فارسی را به لحن پایان‌نامه بازنویسی می‌کند، با دلیل و سطح اطمینان برای هرکدام، تغییر ردیابی‌شدهٔ ورد می‌نویسد و قراردادهای پایان‌نامه را بررسی می‌کند؛ آفلاین و قاعده‌محور، نه نویسندهٔ هوش مصنوعی.",
+     "Rewrites spoken Persian forms into the thesis register with a reason and a confidence tier for each, writes Word tracked changes, checks thesis conventions, and (v0.2.0) questions stock phrasing and flat rhythm for you to review; offline and rule-based, not an AI author.",
+     "شکل‌های گفتاری فارسی را به لحن پایان‌نامه بازنویسی می‌کند، با دلیل و سطح اطمینان برای هرکدام، تغییر ردیابی‌شدهٔ ورد می‌نویسد قراردادهای پایان‌نامه را بررسی می‌کند و (نسخهٔ ۰٫۲٫۰) عبارت‌های کلیشه‌ای و ریتم یکنواخت را برای بازبینی شما زیر سؤال می‌برد؛ آفلاین و قاعده‌محور، نه نویسندهٔ هوش مصنوعی.",
      ("#3a4fa8", "#f0c765")),
+    ("ganjineh", "ganjineh", "گنجینه",
+     "A shared notebook your team's AI coding helpers write and read by themselves: when a chat ends a short note (secrets hidden) goes into a git repo you own, and the next AI reads it first. No server, no extra AI calls.",
+     "دفترچهٔ مشترکی که دستیارهای کدنویسی هوش مصنوعیِ تیم خودشان می‌نویسند و می‌خوانند: وقتی گفتگو تمام می‌شود یادداشتی کوتاه (با رمزهای پنهان‌شده) در مخزن git خودتان ذخیره می‌شود و AI بعدی اول آن را می‌خواند. بدون سرور و بدون فراخوانی AI اضافه.",
+     ("#8e3f4a", "#e8798a")),
+    ("gosast", "Gosast", "گسست",
+     "A calm browser extension for Chrome, Edge and Firefox: tear the page you are on into paper strips, sweep and glue them, then Esc puts the real page back untouched. No network, two permissions.",
+     "افزونهٔ آرام مرورگر برای کروم، اج و فایرفاکس: صفحهٔ جلوی خود را نوارنوار کنید، جارو و چسب بزنید و با Esc صفحهٔ واقعی دست‌نخورده برمی‌گردد. بدون شبکه، با دو دسترسی.",
+     ("#b3365f", "#ff7aa8")),
 ]
 FLAGSHIPS = [(p[0],) for p in PROJECTS]
 

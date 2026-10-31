@@ -44,8 +44,8 @@ rows = [row(p) for p in bp.PROJECTS]
 MORE = [
     ("AgentForge", "agentforge", "one source of AI coding-agent rules, synced to Cursor, Claude Code, Windsurf, Copilot, Roo and Aider."),
     ("Awesome Persian Developer Resources", "awesome-persian-developer-resources", "curated hub of tools Iranian developers rely on."),
-    ("Universal Video Downloader", "universal-video-downloader", "Chrome/Edge extension that saves HLS and MP4 streams, client-side."),
-    ("Page Smash", "page-smash", "jetpack physics toy that smashes any webpage."),
+    ("Universal Video Downloader", "universal-video-downloader", "Super Video Downloader, a Chromium (Chrome/Edge) extension that saves direct MP4 videos client-side; for HLS/DASH streams it saves the playlist, not the video."),
+    ("Page Smash", "page-smash", "jetpack physics toy that smashes any webpage; v1.0.0 for Chrome and Firefox."),
     ("Jenkins Pipeline Examples", "jenkins", "small, readable declarative pipelines."),
 ]
 more = "\n".join(f"- [**{n}**](https://github.com/mrzroot/{s}) · {d}" for n, s, d in MORE)

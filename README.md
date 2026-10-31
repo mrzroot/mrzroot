@@ -186,6 +186,20 @@ Checks figure and table numbers and mentions, and in-text citations against the 
 Rewrites spoken Persian forms into the thesis register with a reason and a confidence tier for each, writes Word tracked changes, checks thesis conventions, and (v0.2.0) questions stock phrasing and flat rhythm for you to review; offline and rule-based, not an AI author.
 <div dir="rtl">شکل‌های گفتاری فارسی را به لحن پایان‌نامه بازنویسی می‌کند، با دلیل و سطح اطمینان برای هرکدام، تغییر ردیابی‌شدهٔ ورد می‌نویسد قراردادهای پایان‌نامه را بررسی می‌کند و (نسخهٔ ۰٫۲٫۰) عبارت‌های کلیشه‌ای و ریتم یکنواخت را برای بازبینی شما زیر سؤال می‌برد؛ آفلاین و قاعده‌محور، نه نویسندهٔ هوش مصنوعی.</div></td>
 </tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/ganjineh"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-ganjineh-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-ganjineh-light.svg"><img alt="ganjineh particle emblem" src="./assets/gen/emblem-ganjineh-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/ganjineh">ganjineh · گنجینه</a></b> · <a href="https://mrzroot.github.io/ganjineh/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-ganjineh-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-ganjineh-light.svg"><img alt="ganjineh: stars, language and latest release" src="./assets/gen/meta-ganjineh-light.svg" width="320"></picture><br>
+A shared notebook your team's AI coding helpers write and read by themselves: when a chat ends a short note (secrets hidden) goes into a git repo you own, and the next AI reads it first. No server, no extra AI calls.
+<div dir="rtl">دفترچهٔ مشترکی که دستیارهای کدنویسی هوش مصنوعیِ تیم خودشان می‌نویسند و می‌خوانند: وقتی گفتگو تمام می‌شود یادداشتی کوتاه (با رمزهای پنهان‌شده) در مخزن git خودتان ذخیره می‌شود و AI بعدی اول آن را می‌خواند. بدون سرور و بدون فراخوانی AI اضافه.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/gosast"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-gosast-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-gosast-light.svg"><img alt="Gosast particle emblem" src="./assets/gen/emblem-gosast-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/gosast">Gosast · گسست</a></b> · <a href="https://mrzroot.github.io/gosast/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-gosast-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-gosast-light.svg"><img alt="Gosast: stars, language and latest release" src="./assets/gen/meta-gosast-light.svg" width="320"></picture><br>
+A calm browser extension for Chrome, Edge and Firefox: tear the page you are on into paper strips, sweep and glue them, then Esc puts the real page back untouched. No network, two permissions.
+<div dir="rtl">افزونهٔ آرام مرورگر برای کروم، اج و فایرفاکس: صفحهٔ جلوی خود را نوارنوار کنید، جارو و چسب بزنید و با Esc صفحهٔ واقعی دست‌نخورده برمی‌گردد. بدون شبکه، با دو دسترسی.</div></td>
+</tr>
 </table>
 
 <sub>Stars, language and version beside each project are read from the GitHub API and refreshed daily.</sub>
@@ -214,8 +228,8 @@ Rewrites spoken Persian forms into the thesis register with a reason and a confi
 
 - [**AgentForge**](https://github.com/mrzroot/agentforge) · one source of AI coding-agent rules, synced to Cursor, Claude Code, Windsurf, Copilot, Roo and Aider.
 - [**Awesome Persian Developer Resources**](https://github.com/mrzroot/awesome-persian-developer-resources) · curated hub of tools Iranian developers rely on.
-- [**Universal Video Downloader**](https://github.com/mrzroot/universal-video-downloader) · Chrome/Edge extension that saves HLS and MP4 streams, client-side.
-- [**Page Smash**](https://github.com/mrzroot/page-smash) · jetpack physics toy that smashes any webpage.
+- [**Universal Video Downloader**](https://github.com/mrzroot/universal-video-downloader) · Super Video Downloader, a Chromium (Chrome/Edge) extension that saves direct MP4 videos client-side; for HLS/DASH streams it saves the playlist, not the video.
+- [**Page Smash**](https://github.com/mrzroot/page-smash) · jetpack physics toy that smashes any webpage; v1.0.0 for Chrome and Firefox.
 - [**Jenkins Pipeline Examples**](https://github.com/mrzroot/jenkins) · small, readable declarative pipelines.
 - [**PrintBridge**](https://github.com/mrzroot/printbridge) · fork of [AnouarSbia/printbridge](https://github.com/AnouarSbia/printbridge), a local agent for silent PDF and label printing.
 

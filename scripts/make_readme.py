@@ -73,6 +73,15 @@ readme = f'''<p align="center">
 
 <h1 align="center">Mohammadreza Zare · محمدرضا زارع</h1>
 
+### Selected work · نمونه‌کارهای منتخب
+
+- **[Planroom](https://github.com/mrzroot/planroom)** · Financial planning workspace demo. React dashboard and questionnaire, FastAPI and PostgreSQL, session-based login, and a Docker Compose stack with GitHub Actions checks and a Linux staging runbook.
+- **[FlowPilot](https://github.com/mrzroot/flowpilot)** · Self-hosted Python workflow engine. FastAPI, SQLite, a dashboard with live run logs, Docker Compose, and GitHub Actions.
+
+<div dir="rtl">
+<p><b>پلن‌روم</b> از ورود مشتری و تکمیل پرسش‌نامه تا ذخیرهٔ برنامهٔ پس‌انداز را پوشش می‌دهد. <b>فلوپایلوت</b> اجرای گردش‌کارها و نمایش زندهٔ گزارش اجرای آن‌ها را در یک سرویس خودمیزبان نشان می‌دهد.</p>
+</div>
+
 <p align="center">
 Software that <i>explains why</i> · نرم‌افزاری که می‌گوید <i>چرا</i>
 </p>
@@ -155,5 +164,5 @@ Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="{SITE}/
 
 <sub>Every picture here is a small self-hosted SVG in one warm palette, with light and dark variants; there is no external image service or counter. Text is outlined from open fonts so Persian shapes correctly everywhere, and the motion switches off when your system asks for reduced motion. The numbers are rebuilt daily by <a href="./.github/workflows/profile-cards.yml">a GitHub Action</a> running <a href="./scripts/build_profile.py">scripts/build_profile.py</a>. Language shares are by bytes across my public non-fork repositories, excluding generated site output.</sub>
 '''
-(HERE.parent / "README.md").write_text(readme)
+(HERE.parent / "README.md").write_text(readme, encoding="utf-8")
 print("README.md", len(readme), "bytes")

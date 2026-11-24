@@ -8,6 +8,15 @@
 
 <h1 align="center">Mohammadreza Zare · محمدرضا زارع</h1>
 
+### Selected work · نمونه‌کارهای منتخب
+
+- **[Planroom](https://github.com/mrzroot/planroom)** · Financial planning workspace demo. React dashboard and questionnaire, FastAPI and PostgreSQL, session-based login, and a Docker Compose stack with GitHub Actions checks and a Linux staging runbook.
+- **[FlowPilot](https://github.com/mrzroot/flowpilot)** · Self-hosted Python workflow engine. FastAPI, SQLite, a dashboard with live run logs, Docker Compose, and GitHub Actions.
+
+<div dir="rtl">
+<p><b>پلن‌روم</b> از ورود مشتری و تکمیل پرسش‌نامه تا ذخیرهٔ برنامهٔ پس‌انداز را پوشش می‌دهد. <b>فلوپایلوت</b> اجرای گردش‌کارها و نمایش زندهٔ گزارش اجرای آن‌ها را در یک سرویس خودمیزبان نشان می‌دهد.</p>
+</div>
+
 <p align="center">
 Software that <i>explains why</i> · نرم‌افزاری که می‌گوید <i>چرا</i>
 </p>

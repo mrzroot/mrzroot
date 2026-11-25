@@ -44,6 +44,18 @@ I'm a software engineer in Mashhad, Iran. I build **open-source developer tools*
 >
 > <div dir="rtl"><b>آمادهٔ همکاری‌ام.</b> هر پروژهٔ شاخص issue با برچسب <code>good first issue</code> دارد و ارسال pull request بهترین شروع آشناییست.</div>
 
+### MRZROOT OS · ابزارهای خط فرمان
+
+A series of small Python utilities built with the standard library.
+
+- [OS 1 · Async Task Runner](https://github.com/mrzroot/mrzroot-os-1): simulate I/O jobs and see how a concurrency limit affects execution.
+- [OS 2 · Terminal Microbenchmark](https://github.com/mrzroot/mrzroot-os-2): inspect the Python runtime and time a repeatable local calculation.
+- [OS 3 · System Snapshot](https://github.com/mrzroot/mrzroot-os-3): inspect basic OS, CPU and Python details in one command.
+
+<div dir="rtl" lang="fa">
+<p>سه ابزار سبک پایتون برای اجرای هم‌زمان کارهای آزمایشی، اندازه‌گیری زمان یک محاسبه و مشاهدهٔ مشخصات سیستم.</p>
+</div>
+
 ### Now · اکنون
 
 <table>

@@ -13,8 +13,11 @@
 - **[Planroom](https://github.com/mrzroot/planroom)** · Financial planning workspace demo. React dashboard and questionnaire, FastAPI and PostgreSQL, session-based login, and a Docker Compose stack with GitHub Actions checks and a Linux staging runbook.
 - **[FlowPilot](https://github.com/mrzroot/flowpilot)** · Self-hosted Python workflow engine. FastAPI, SQLite, a dashboard with live run logs, Docker Compose, and GitHub Actions.
 
+- **[AgentForge](https://github.com/mrzroot/agentforge)** · One rules source for several AI coding agents, with a rules linter, an AST skeletonizer and a local web studio.
+- **[Payanlint](https://github.com/mrzroot/payanlint)** · An offline linter for Persian Word theses. Reports text and formatting issues and saves safe fixes to a separate copy.
+
 <div dir="rtl">
-<p><b>پلن‌روم</b> از ورود مشتری و تکمیل پرسش‌نامه تا ذخیرهٔ برنامهٔ پس‌انداز را پوشش می‌دهد. <b>فلوپایلوت</b> اجرای گردش‌کارها و نمایش زندهٔ گزارش اجرای آن‌ها را در یک سرویس خودمیزبان نشان می‌دهد.</p>
+<p><b>پلن‌روم</b> از ورود مشتری و تکمیل پرسش‌نامه تا ذخیرهٔ برنامهٔ پس‌انداز را پوشش می‌دهد. <b>فلوپایلوت</b> اجرای گردش‌کارها و نمایش زندهٔ گزارش اجرای آن‌ها را در یک سرویس خودمیزبان نشان می‌دهد. <b>ایجنت‌فورج</b> قواعد چند ایجنت کدنویسی را از یک فایل هماهنگ می‌کند. <b>پایان‌لینت</b> متن و قالب پایان‌نامهٔ فارسی را بدون نیاز به اینترنت بررسی می‌کند.</p>
 </div>
 
 <p align="center">

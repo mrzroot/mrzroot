@@ -33,10 +33,10 @@ Software that <i>explains why</i> · نرم‌افزاری که می‌گوید 
 <picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/status-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/status-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/status-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/status-light.svg"><img alt="Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · Khorasan Razavi Chamber of Commerce" src="./assets/gen/status-light.svg" width="100%"></picture>
 </p>
 
-I'm a software engineer in Mashhad, Iran. I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**: small, well-tested tools that tell you *why* something broke. Each one has a release, docs and its own website.
+I'm a software engineer in Mashhad, Iran. I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**: small, well-tested tools that tell you *why* something broke. The project links below point to their source, and to a website where one is available.
 
 <div dir="rtl">
-مهندس نرم‌افزارم و در مشهد زندگی می‌کنم. ابزارهای متن‌باز توسعه می‌دهم، بیشتر با پایتون و تایپ‌اسکریپت و برای <b>ایجنت‌های کدنویسی هوش مصنوعی</b> و <b>برنامه‌نویس‌های ایرانی</b>: ابزارهای کوچک و تست‌شده که می‌گویند <b>چرا</b> چیزی خراب شده. هر کدام نسخهٔ منتشرشده، مستندات و وب‌سایت خودش را دارد.
+مهندس نرم‌افزارم و در مشهد زندگی می‌کنم. ابزارهای متن‌باز توسعه می‌دهم، بیشتر با پایتون و تایپ‌اسکریپت و برای <b>ایجنت‌های کدنویسی هوش مصنوعی</b> و <b>برنامه‌نویس‌های ایرانی</b>: ابزارهای کوچک و تست‌شده که می‌گویند <b>چرا</b> چیزی خراب شده. پیوند هر پروژه به کد آن می‌رسد؛ اگر وب‌سایت جداگانه‌ای داشته باشد، پیوند آن هم آمده است.
 </div>
 
 > [!TIP]
@@ -58,6 +58,19 @@ Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="https:/
 برنامه‌نویس در اتاق بازرگانی خراسان رضوی، مشهد.</div></td>
 </tr>
 </table>
+
+### Start with a problem · از مسئله شروع کنید
+
+| If you want to… | Start here |
+| --- | --- |
+| See an end-to-end app | [Planroom](https://github.com/mrzroot/planroom) for a savings questionnaire and reusable plans; [FlowPilot](https://github.com/mrzroot/flowpilot) for self-hosted workflow runs and logs. |
+| Find why a task got stuck | [WhyStuck](https://github.com/mrzroot/whystuck) for a stalled command; [WhyEnv](https://github.com/mrzroot/whyenv) for environment configuration; [ShellParity](https://github.com/mrzroot/shellparity) when a command differs between shells. |
+| Review a Persian thesis | [Vazhgun](https://github.com/mrzroot/vazhgun) for flipped numerals; [Payanlint](https://github.com/mrzroot/payanlint) for formatting; [Arjaa](https://github.com/mrzroot/arjaa) for cross-references; [Neveshtar](https://github.com/mrzroot/neveshtar) for written register. |
+| Try small Python systems exercises | [OS 1](https://github.com/mrzroot/mrzroot-os-1) for async scheduling, [OS 2](https://github.com/mrzroot/mrzroot-os-2) for system information and a small benchmark, [OS 3](https://github.com/mrzroot/mrzroot-os-3) for a system snapshot. These are Python exercises, not operating systems. |
+
+<div dir="rtl">
+<p>برای دیدن یک برنامهٔ کامل از پلن‌روم یا فلوپایلوت شروع کنید. برای رفع اشکال ابزار مناسب را بر اساس علامت مشکل انتخاب کنید. چهار ابزار پایان‌نامه مکمل یکدیگرند؛ سه تمرین OS هم نمونه‌های آموزشی پایتون‌اند، نه سیستم‌عامل.</p>
+</div>
 
 ### Flagship projects · پروژه‌های شاخص
 

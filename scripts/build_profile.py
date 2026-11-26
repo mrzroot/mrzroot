@@ -145,6 +145,22 @@ PROJECTS = [
      "One source of AI coding-agent rules, compiled to Cursor, Claude Code, Windsurf, Copilot, Roo, Aider, Codex (AGENTS.md), and Gemini CLI (GEMINI.md) with doctor checks.",
      "یک منبع واحد برای قواعد ایجنت‌های کدنویسی با خروجی برای Cursor، Claude Code، Windsurf، Copilot، Codex و Gemini CLI.",
      ("#b45309", "#ff7a1a")),
+    ("promptbisect", "promptbisect", "پرامپت‌بایسکت",
+     "Deterministic O(log N) binary-search regression finder and unified diff tool for AI system prompts and AGENTS.md revisions.",
+     "یافتن کامیت یا نسخهٔ دقیقِ پرامپت یا AGENTS.md که رفتار مدل را شکسته در O(log N) گام و بدون مصرف توکن.",
+     ("#b85d0a", "#f2b84b")),
+    ("agentcontract", "agentcontract", "ایجنت‌کانترکت",
+     "AI agent tool-schema contract validator, boundary and adversarial fuzzer, and breaking-change diff CLI.",
+     "اعتبارسنج اسکیمای ابزارهای OpenAI/MCP، تولیدکنندهٔ ورودی فازی/خصمانه و گیت تشخیص تغییر شکننده در CI.",
+     ("#9a4a12", "#e89c3c")),
+    ("parsieval", "parsieval", "پارسی‌اِوَل",
+     "Offline Persian and bilingual LLM output evaluator for ZWNJ half-space fidelity, Arabic yeh/kaf leakage, bidi safety, and digit consistency.",
+     "ارزیاب آفلاین کیفیت خروجی فارسیِ مدل‌های هوش مصنوعی: نیم‌فاصله، حروف عربی ي/ك، کاراکترهای Bidi و یکدستی ارقام.",
+     ("#b8470a", "#f2b84b")),
+    ("skilltrace", "skilltrace", "اسکیل‌تریس",
+     "Static linter, contradiction detector, permission/secret auditor, and token-budget profiler for CLAUDE.md, AGENTS.md, GEMINI.md, Cursor rules, and SKILL.md.",
+     "لینتر ایستا، کشف تعارض دستورات، ممیزی رمز و مجوزهای ناامن و پروفایل بودجه توکن برای فایل‌های راهنمای ایجنت.",
+     ("#a64b17", "#d9822b")),
 ]
 FLAGSHIPS = [(p[0],) for p in PROJECTS]
 

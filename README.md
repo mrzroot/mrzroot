@@ -57,6 +57,34 @@ Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="https:/
 <div dir="rtl"><b>محل کار</b><br>
 برنامه‌نویس در اتاق بازرگانی خراسان رضوی، مشهد.</div></td>
 </tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/promptbisect"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-promptbisect-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-promptbisect-light.svg"><img alt="promptbisect particle emblem" src="./assets/gen/emblem-promptbisect-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/promptbisect">promptbisect · پرامپت‌بایسکت</a></b> · <a href="https://mrzroot.github.io/promptbisect/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-promptbisect-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-promptbisect-light.svg"><img alt="promptbisect: stars, language and latest release" src="./assets/gen/meta-promptbisect-light.svg" width="320"></picture><br>
+Deterministic O(log N) binary-search regression finder and unified diff tool for AI system prompts and AGENTS.md revisions.
+<div dir="rtl">یافتن کامیت یا نسخهٔ دقیقِ پرامپت یا AGENTS.md که رفتار مدل را شکسته در O(log N) گام و بدون مصرف توکن.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/agentcontract"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-agentcontract-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-agentcontract-light.svg"><img alt="agentcontract particle emblem" src="./assets/gen/emblem-agentcontract-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/agentcontract">agentcontract · ایجنت‌کانترکت</a></b> · <a href="https://mrzroot.github.io/agentcontract/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-agentcontract-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-agentcontract-light.svg"><img alt="agentcontract: stars, language and latest release" src="./assets/gen/meta-agentcontract-light.svg" width="320"></picture><br>
+AI agent tool-schema contract validator, boundary & adversarial fuzzer, and breaking-change diff CLI.
+<div dir="rtl">اعتبارسنج اسکیمای ابزارهای OpenAI/MCP، تولیدکنندهٔ ورودی فازی/خصمانه و گیت تشخیص تغییر شکننده در CI.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/parsieval"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-parsieval-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-parsieval-light.svg"><img alt="parsieval particle emblem" src="./assets/gen/emblem-parsieval-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/parsieval">parsieval · پارسی‌اِوَل</a></b> · <a href="https://mrzroot.github.io/parsieval/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-parsieval-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-parsieval-light.svg"><img alt="parsieval: stars, language and latest release" src="./assets/gen/meta-parsieval-light.svg" width="320"></picture><br>
+Offline Persian and bilingual LLM output evaluator for ZWNJ half-space fidelity, Arabic yeh/kaf leakage, bidi safety, and digit consistency.
+<div dir="rtl">ارزیاب آفلاین کیفیت خروجی فارسیِ مدل‌های هوش مصنوعی: نیم‌فاصله، حروف عربی ي/ك، کاراکترهای Bidi و یکدستی ارقام.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/skilltrace"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-skilltrace-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-skilltrace-light.svg"><img alt="skilltrace particle emblem" src="./assets/gen/emblem-skilltrace-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/skilltrace">skilltrace · اسکیل‌تریس</a></b> · <a href="https://mrzroot.github.io/skilltrace/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-skilltrace-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-skilltrace-light.svg"><img alt="skilltrace: stars, language and latest release" src="./assets/gen/meta-skilltrace-light.svg" width="320"></picture><br>
+Static linter, contradiction detector, permission/secret auditor, and token-budget profiler for CLAUDE.md, AGENTS.md, GEMINI.md, Cursor rules, and SKILL.md.
+<div dir="rtl">لینتر ایستا، کشف تعارض دستورات، ممیزی رمز و مجوزهای ناامن و پروفایل بودجه توکن برای فایل‌های راهنمای ایجنت.</div></td>
+</tr>
 </table>
 
 ### Flagship projects · پروژه‌های شاخص
@@ -281,16 +309,6 @@ One source of AI coding-agent rules, compiled to Cursor, Claude Code, Windsurf, 
 <p align="center">
 <picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/feed-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/feed-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/feed-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/feed-light.svg"><img alt="Latest releases and recent commits" src="./assets/gen/feed-light.svg" width="100%"></picture>
 </p>
-
-### AI Engineering Suite · ابزارهای جدید مهندسی هوش مصنوعی
-
-- [**mcptape**](https://github.com/mrzroot/mcptape) · [site](https://mrzroot.github.io/mcptape/) (`v1.0.0`, Node.js) — Deterministic VCR flight recorder, offline replay proxy, seeded chaos injector, and `tools/list` schema diff gate for MCP stdio servers.
-- [**tokenxray**](https://github.com/mrzroot/tokenxray) · [site](https://mrzroot.github.io/tokenxray/) (`v1.0.0`, Python) — Context-window profiler, waste analyzer (duplicate file reads, retry loops, bloated outputs), and context-rot detector for Claude Code, Codex, and Gemini CLI transcripts.
-- [**slopguard**](https://github.com/mrzroot/slopguard) · [site](https://mrzroot.github.io/slopguard/) (`v1.0.0`, Python) — Offline-first guard against slopsquatting, hallucinated packages, fake library symbols/attributes, and invented CLI flags in AI-generated code and `git diff --staged`.
-
-<div dir="rtl">
-<b>mcptape</b> ضبط‌کننده و بازپخش‌کنندهٔ آفلاین (VCR) و شبیه‌ساز خطای Chaos برای سرورهای MCP است؛ <b>tokenxray</b> لاگ سشن‌های ایجنت را برای کشف اتلاف توکن و Context Rot پروفایل می‌کند؛ و <b>slopguard</b> کدهای تولیدشده با هوش مصنوعی را از نظر پکیج‌های جعلی (Slopsquatting)، متدهای خیالی و فلگ‌های اشتباه CLI بررسی می‌کند.
-</div>
 
 ### More projects · پروژه‌های بیشتر
 

@@ -19,6 +19,11 @@
 
 ### Project lab · آزمایشگاه پروژه‌ها
 
+
+[**Open the Project Playground ↗**](https://mrzroot.github.io/playground/) · [**ورود به آزمایشگاه پروژه‌ها ↗**](https://mrzroot.github.io/playground/?lang=fa)
+
+Choose a short case, try two different actions, and compare the outcome. Start with [ShellParity](https://mrzroot.github.io/playground/?project=shellparity), [TokenXray](https://mrzroot.github.io/playground/?project=tokenxray), or [Parsieval](https://mrzroot.github.io/playground/?project=parsieval&lang=fa).
+
 Pick a preview to open the full interactive guide. The demos use sample data and run on the portfolio site.
 
 <div dir="rtl"><p>روی هر تصویر بزنید تا صفحهٔ معرفی و دموی تعاملی باز شود. مثال‌ها با دادهٔ نمونه اجرا می‌شوند.</p></div>

@@ -209,6 +209,55 @@ A shared notebook your team's AI coding helpers write and read by themselves: wh
 A calm browser extension for Chrome, Edge and Firefox: tear the page you are on into paper strips, sweep and glue them, then Esc puts the real page back untouched. No network, two permissions.
 <div dir="rtl">افزونهٔ آرام مرورگر برای کروم، اج و فایرفاکس: صفحهٔ جلوی خود را نوارنوار کنید، جارو و چسب بزنید و با Esc صفحهٔ واقعی دست‌نخورده برمی‌گردد. بدون شبکه، با دو دسترسی.</div></td>
 </tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/mcptape"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-mcptape-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-mcptape-light.svg"><img alt="mcptape particle emblem" src="./assets/gen/emblem-mcptape-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/mcptape">mcptape · ام‌سی‌پی‌تیپ</a></b> · <a href="https://mrzroot.github.io/mcptape/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-mcptape-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-mcptape-light.svg"><img alt="mcptape: stars, language and latest release" src="./assets/gen/meta-mcptape-light.svg" width="320"></picture><br>
+Deterministic VCR flight recorder, offline replay proxy, seeded chaos injector, and tools/list schema diff gate for MCP stdio servers.
+<div dir="rtl">ضبط‌کنندهٔ قطعی (VCR)، بازپخش آفلاین، تزریق خطای Chaos و تشخیص تغییر اسکیما برای سرورهای MCP.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/tokenxray"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-tokenxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-tokenxray-light.svg"><img alt="tokenxray particle emblem" src="./assets/gen/emblem-tokenxray-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/tokenxray">tokenxray · توکن‌اکس‌ری</a></b> · <a href="https://mrzroot.github.io/tokenxray/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-tokenxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-tokenxray-light.svg"><img alt="tokenxray: stars, language and latest release" src="./assets/gen/meta-tokenxray-light.svg" width="320"></picture><br>
+Context-window profiler, waste analyzer (duplicate file reads, retry loops, oversized outputs), and context-rot detector for AI agent transcripts.
+<div dir="rtl">پروفایلر پنجره کانتکست، تحلیل‌گر اتلاف توکن و تشخیص‌دهندهٔ Context Rot برای لاگ ایجنت‌های کدنویسی.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/slopguard"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-slopguard-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-slopguard-light.svg"><img alt="slopguard particle emblem" src="./assets/gen/emblem-slopguard-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/slopguard">slopguard · اسلاپ‌گارد</a></b> · <a href="https://mrzroot.github.io/slopguard/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-slopguard-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-slopguard-light.svg"><img alt="slopguard: stars, language and latest release" src="./assets/gen/meta-slopguard-light.svg" width="320"></picture><br>
+Offline-first guard against slopsquatting, hallucinated packages, fake library symbols/attributes, and invented CLI flags in Python, JS/TS, and staged diffs.
+<div dir="rtl">نگهبان آفلاین در برابر Slopsquatting، پکیج‌های جعلی، متدهای خیالی و فلگ‌های اشتباه CLI.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/agentfence"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-agentfence-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-agentfence-light.svg"><img alt="agentfence particle emblem" src="./assets/gen/emblem-agentfence-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/agentfence">agentfence · ایجنت‌فنس</a></b> · <a href="https://mrzroot.github.io/agentfence/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-agentfence-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-agentfence-light.svg"><img alt="agentfence: stars, language and latest release" src="./assets/gen/meta-agentfence-light.svg" width="320"></picture><br>
+Dry-run capability firewall, filesystem blast-radius simulator, and tamper-evident SHA-256 hash-chained audit ledger for AI coding agents.
+<div dir="rtl">فایروال دسترسی و شبیه‌ساز شعاع انفجار فایل برای ایجنت‌های کدنویسی با دفتر کل ضددستکاری SHA-256.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/ragxray"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-ragxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-ragxray-light.svg"><img alt="ragxray particle emblem" src="./assets/gen/emblem-ragxray-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/ragxray">ragxray · رگ‌ایکس‌ری</a></b> · <a href="https://mrzroot.github.io/ragxray/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-ragxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-ragxray-light.svg"><img alt="ragxray: stars, language and latest release" src="./assets/gen/meta-ragxray-light.svg" width="320"></picture><br>
+Zero-LLM chunk-boundary diagnostics, fracture detector, and BM25 vs character-trigram retrieval debugger for English and Persian RAG pipelines.
+<div dir="rtl">تشخیص شکست جدول، کد و جمله در چانک‌سازی RAG و دیباگ بازیابی BM25 در برابر تریگرام بدون LLM.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/routefall"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-routefall-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-routefall-light.svg"><img alt="routefall particle emblem" src="./assets/gen/emblem-routefall-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/routefall">routefall · روت‌فال</a></b> · <a href="https://mrzroot.github.io/routefall/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-routefall-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-routefall-light.svg"><img alt="routefall: stars, language and latest release" src="./assets/gen/meta-routefall-light.svg" width="320"></picture><br>
+Sanction- and outage-resilient OpenAI-compatible LLM failover router with per-provider circuit breakers, TTL cache, hard budget cap, and shadow eval.
+<div dir="rtl">روتر محلی سازگار با OpenAI مقاوم در برابر قطعی با مدارشکن، کش TTL، سقف بودجه قطعی و ارزیابی سایه‌ای.</div></td>
+</tr>
+<tr>
+<td valign="top" width="88"><a href="https://github.com/mrzroot/agentforge"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-agentforge-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-agentforge-light.svg"><img alt="AgentForge particle emblem" src="./assets/gen/emblem-agentforge-light.svg" width="72" height="72"></picture></a></td>
+<td valign="top"><b><a href="https://github.com/mrzroot/agentforge">AgentForge · ایجنت‌فورج</a></b> · <a href="https://mrzroot.github.io/agentforge/">site</a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-agentforge-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-agentforge-light.svg"><img alt="AgentForge: stars, language and latest release" src="./assets/gen/meta-agentforge-light.svg" width="320"></picture><br>
+One source of AI coding-agent rules, compiled to Cursor, Claude Code, Windsurf, Copilot, Roo, Aider, Codex (AGENTS.md), and Gemini CLI (GEMINI.md) with doctor checks.
+<div dir="rtl">یک منبع واحد برای قواعد ایجنت‌های کدنویسی با خروجی برای Cursor، Claude Code، Windsurf، Copilot، Codex و Gemini CLI.</div></td>
+</tr>
 </table>
 
 <sub>Stars, language and version beside each project are read from the GitHub API and refreshed daily.</sub>

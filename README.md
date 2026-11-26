@@ -10,12 +10,50 @@
 
 ### Selected work · نمونه‌کارهای منتخب
 
-- **[Planroom](https://github.com/mrzroot/planroom)** · Financial planning workspace demo. React dashboard and questionnaire, FastAPI and PostgreSQL, session-based login, and a Docker Compose stack with GitHub Actions checks and a Linux staging runbook.
+- **[Planroom](https://github.com/mrzroot/planroom)** · Financial planning workspace demo. React dashboard and questionnaire, FastAPI and PostgreSQL, session-based login, and a Docker Compose stack with GitHub Actions checks and a Linux staging runbook. [Try the browser demo](https://mrzroot.github.io/planroom/).
 - **[FlowPilot](https://github.com/mrzroot/flowpilot)** · Self-hosted Python workflow engine. FastAPI, SQLite, a dashboard with live run logs, Docker Compose, and GitHub Actions.
 
 <div dir="rtl">
 <p><b>پلن‌روم</b> از ورود مشتری و تکمیل پرسش‌نامه تا ذخیرهٔ برنامهٔ پس‌انداز را پوشش می‌دهد. <b>فلوپایلوت</b> اجرای گردش‌کارها و نمایش زندهٔ گزارش اجرای آن‌ها را در یک سرویس خودمیزبان نشان می‌دهد.</p>
 </div>
+
+### Project lab · آزمایشگاه پروژه‌ها
+
+Pick a preview to open the full interactive guide. The demos use sample data and run on the portfolio site.
+
+<div dir="rtl"><p>روی هر تصویر بزنید تا صفحهٔ معرفی و دموی تعاملی باز شود. مثال‌ها با دادهٔ نمونه اجرا می‌شوند.</p></div>
+
+<table>
+<tr><td valign="top" width="50%"><a href="https://mrzroot.github.io/showcase/mcptape/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-mcptape.webp" alt="Cassette controls for recording and replay" width="400"></a><br><b><a href="https://mrzroot.github.io/showcase/mcptape/">MCPTape</a></b><br>Follow messages from recording to repeatable playback.<p dir="rtl">مسیر پیام‌ها را از ضبط تا بازپخش تکرارپذیر دنبال کنید.</p></td>
+<td valign="top" width="50%"><a href="https://mrzroot.github.io/showcase/routefall/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-routefall.webp" alt="Routing console with primary and fallback paths" width="400"></a><br><b><a href="https://mrzroot.github.io/showcase/routefall/">RouteFall</a></b><br>Follow a fictional request when the primary route is unavailable.<p dir="rtl">مسیر یک درخواست فرضی را هنگام قطعی سرویس اصلی دنبال کنید.</p></td></tr>
+<tr><td valign="top" width="50%"><a href="https://mrzroot.github.io/showcase/parsieval/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-parsieval.webp" alt="Persian proofreading sheet with before and after examples" width="400"></a><br><b><a href="https://mrzroot.github.io/showcase/parsieval/">Parsieval</a></b><br>Compare examples of Persian half-spaces, letters, digits, and writing direction.<p dir="rtl">نمونه‌های نیم‌فاصله، نویسه‌ها، ارقام و جهت نوشتار فارسی را مقایسه کنید.</p></td>
+<td valign="top" width="50%"><a href="https://mrzroot.github.io/planroom/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-planroom.webp" alt="Savings forecast chart beside scenario controls" width="400"></a><br><b><a href="https://mrzroot.github.io/planroom/">Planroom</a></b><br>Try fictional savings goals and see how the timeline changes.<p dir="rtl">هدف‌های فرضی پس‌انداز را امتحان کنید و تغییر زمان رسیدن را ببینید.</p></td></tr>
+</table>
+
+<details>
+<summary><b>Agent tooling · ابزارهای ایجنت</b></summary>
+
+<table>
+<tr><td valign="top" width="176"><a href="https://mrzroot.github.io/showcase/tokenxray/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-tokenxray.webp" alt="Interactive context budget and token threshold" width="168"></a></td><td valign="top"><b><a href="https://mrzroot.github.io/showcase/tokenxray/">TokenXRay</a></b><br>See what fills a context window before the useful information gets crowded out.<p dir="rtl">ببینید چه چیزی پنجرهٔ زمینه را پر می‌کند و جا را برای اطلاعات مفید تنگ می‌کند.</p></td></tr>
+<tr><td valign="top" width="176"><a href="https://mrzroot.github.io/showcase/slopguard/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-slopguard.webp" alt="Local code-review evidence desk" width="168"></a></td><td valign="top"><b><a href="https://mrzroot.github.io/showcase/slopguard/">SlopGuard</a></b><br>Review suspicious package names and unsupported calls before accepting generated code.<p dir="rtl">پیش از پذیرش کد تولیدشده، نام بسته‌های مشکوک و فراخوان‌های نامعتبر را بررسی کنید.</p></td></tr>
+<tr><td valign="top" width="176"><a href="https://mrzroot.github.io/showcase/agentfence/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-agentfence.webp" alt="Policy gate showing an example blocked action" width="168"></a></td><td valign="top"><b><a href="https://mrzroot.github.io/showcase/agentfence/">AgentFence</a></b><br>See which hypothetical tool actions pass a policy check and which get stopped.<p dir="rtl">ببینید کدام اقدام فرضی از کنترل سیاست می‌گذرد و کدام متوقف می‌شود.</p></td></tr>
+<tr><td valign="top" width="176"><a href="https://mrzroot.github.io/showcase/promptbisect/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-promptbisect.webp" alt="Revision timeline with a shrinking search interval" width="168"></a></td><td valign="top"><b><a href="https://mrzroot.github.io/showcase/promptbisect/">PromptBisect</a></b><br>Narrow down which instruction revision introduced a regression.<p dir="rtl">نسخه‌ای از دستورالعمل را پیدا کنید که رفتار را تغییر داده است.</p></td></tr>
+<tr><td valign="top" width="176"><a href="https://mrzroot.github.io/showcase/agentcontract/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-agentcontract.webp" alt="Side-by-side tool schema comparison" width="168"></a></td><td valign="top"><b><a href="https://mrzroot.github.io/showcase/agentcontract/">AgentContract</a></b><br>Compare tool contracts and see which edits break existing calls.<p dir="rtl">قراردادهای ابزار را مقایسه کنید و ببینید کدام تغییر فراخوان‌های قبلی را می‌شکند.</p></td></tr>
+<tr><td valign="top" width="176"><a href="https://mrzroot.github.io/showcase/skilltrace/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-skilltrace.webp" alt="Instruction review queue with findings and status" width="168"></a></td><td valign="top"><b><a href="https://mrzroot.github.io/showcase/skilltrace/">Skilltrace</a></b><br>Spot conflicting agent instructions and review them one at a time.<p dir="rtl">تعارض دستورهای ایجنت را پیدا کنید و موردبه‌مورد بررسی کنید.</p></td></tr>
+</table>
+
+</details>
+
+<details>
+<summary><b>Document and retrieval diagnostics · عیب‌یابی متن و بازیابی</b></summary>
+
+<table>
+<tr><td valign="top" width="176"><a href="https://mrzroot.github.io/showcase/ragxray/"><img src="https://mrzroot.github.io/assets/thumbs/showcase-ragxray.webp" alt="Text segmentation and retrieval diagnostics" width="168"></a></td><td valign="top"><b><a href="https://mrzroot.github.io/showcase/ragxray/">RagXRay</a></b><br>See where chunking cuts a document and changes the search result.<p dir="rtl">ببینید قطعه‌بندی کجا سند را می‌بُرد و نتیجهٔ جست‌وجو را عوض می‌کند.</p></td></tr>
+</table>
+
+</details>
+
+[Open the interactive project map](https://mrzroot.github.io/#project-signal) · [نقشهٔ تعاملی پروژه‌ها](https://mrzroot.github.io/?lang=fa#project-signal) · [Browse all projects](https://mrzroot.github.io/projects/)
 
 <p align="center">
 Software that <i>explains why</i> · نرم‌افزاری که می‌گوید <i>چرا</i>
@@ -30,7 +68,7 @@ Software that <i>explains why</i> · نرم‌افزاری که می‌گوید 
 </p>
 
 <p align="center">
-<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/status-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/status-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/status-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/status-light.svg"><img alt="Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · Khorasan Razavi Chamber of Commerce" src="./assets/gen/status-light.svg" width="100%"></picture>
+<picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/status-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/status-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/status-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/status-light.svg"><img alt="Open to collaboration · Mashhad, Iran · M.Sc. Computer Engineering · University team project for the Khorasan Razavi Chamber of Commerce" src="./assets/gen/status-light.svg" width="100%"></picture>
 </p>
 
 I'm a software engineer in Mashhad, Iran. I build **open-source developer tools** in Python and TypeScript, mostly for **AI coding agents** and for **developers in Iran**: small, well-tested tools that tell you *why* something broke. Each one has a release, docs and its own website.
@@ -52,35 +90,35 @@ I'm a software engineer in Mashhad, Iran. I build **open-source developer tools*
 <a href="https://github.com/mrzroot/vazhgun">vazhgun</a>, <a href="https://github.com/mrzroot/payanlint">payanlint</a>, <a href="https://github.com/mrzroot/arjaa">arjaa</a> and <a href="https://github.com/mrzroot/neveshtar">neveshtar</a>: offline tools for a Persian Word thesis (flipped numerals, typing and format lint, figure and citation cross-references, written register).
 <div dir="rtl"><b>در حال ساخت</b><br>
 vazhgun، payanlint، arjaa و neveshtar: ابزارهای آفلاین برای پایان‌نامهٔ فارسی در ورد (اعداد وارونه، لینت تایپ و قالب‌بندی، ارجاع شکل و منبع، لحن نوشتاری).</div></td>
-<td valign="top" width="50%"><b>Working at</b><br>
-Programmer at the Khorasan Razavi Chamber of Commerce, Mashhad (<a href="https://mrzroot.github.io/resume/">resume</a>).
-<div dir="rtl"><b>محل کار</b><br>
-برنامه‌نویس در اتاق بازرگانی خراسان رضوی، مشهد.</div></td>
+<td valign="top" width="50%"><b>University team project</b><br>
+Contributed to a software project for the Khorasan Razavi Chamber of Commerce in Mashhad as part of a university team (<a href="https://mrzroot.github.io/resume/">résumé</a>).
+<div dir="rtl"><b>پروژهٔ تیمی دانشگاه</b><br>
+در قالب تیم دانشگاهی در یک پروژهٔ نرم‌افزاری برای اتاق بازرگانی خراسان رضوی در مشهد مشارکت داشتم.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/promptbisect"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-promptbisect-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-promptbisect-light.svg"><img alt="promptbisect particle emblem" src="./assets/gen/emblem-promptbisect-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/promptbisect">promptbisect · پرامپت‌بایسکت</a></b> · <a href="https://mrzroot.github.io/promptbisect/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/promptbisect">promptbisect · پرامپت‌بایسکت</a></b> · <a href="https://mrzroot.github.io/showcase/promptbisect/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-promptbisect-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-promptbisect-light.svg"><img alt="promptbisect: stars, language and latest release" src="./assets/gen/meta-promptbisect-light.svg" width="320"></picture><br>
 Deterministic O(log N) binary-search regression finder and unified diff tool for AI system prompts and AGENTS.md revisions.
 <div dir="rtl">یافتن کامیت یا نسخهٔ دقیقِ پرامپت یا AGENTS.md که رفتار مدل را شکسته در O(log N) گام و بدون مصرف توکن.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/agentcontract"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-agentcontract-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-agentcontract-light.svg"><img alt="agentcontract particle emblem" src="./assets/gen/emblem-agentcontract-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/agentcontract">agentcontract · ایجنت‌کانترکت</a></b> · <a href="https://mrzroot.github.io/agentcontract/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/agentcontract">agentcontract · ایجنت‌کانترکت</a></b> · <a href="https://mrzroot.github.io/showcase/agentcontract/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-agentcontract-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-agentcontract-light.svg"><img alt="agentcontract: stars, language and latest release" src="./assets/gen/meta-agentcontract-light.svg" width="320"></picture><br>
 AI agent tool-schema contract validator, boundary & adversarial fuzzer, and breaking-change diff CLI.
 <div dir="rtl">اعتبارسنج اسکیمای ابزارهای OpenAI/MCP، تولیدکنندهٔ ورودی فازی/خصمانه و گیت تشخیص تغییر شکننده در CI.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/parsieval"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-parsieval-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-parsieval-light.svg"><img alt="parsieval particle emblem" src="./assets/gen/emblem-parsieval-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/parsieval">parsieval · پارسی‌اِوَل</a></b> · <a href="https://mrzroot.github.io/parsieval/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/parsieval">parsieval · پارسی‌اِوَل</a></b> · <a href="https://mrzroot.github.io/showcase/parsieval/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-parsieval-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-parsieval-light.svg"><img alt="parsieval: stars, language and latest release" src="./assets/gen/meta-parsieval-light.svg" width="320"></picture><br>
 Offline Persian and bilingual LLM output evaluator for ZWNJ half-space fidelity, Arabic yeh/kaf leakage, bidi safety, and digit consistency.
 <div dir="rtl">ارزیاب آفلاین کیفیت خروجی فارسیِ مدل‌های هوش مصنوعی: نیم‌فاصله، حروف عربی ي/ك، کاراکترهای Bidi و یکدستی ارقام.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/skilltrace"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-skilltrace-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-skilltrace-light.svg"><img alt="skilltrace particle emblem" src="./assets/gen/emblem-skilltrace-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/skilltrace">skilltrace · اسکیل‌تریس</a></b> · <a href="https://mrzroot.github.io/skilltrace/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/skilltrace">skilltrace · اسکیل‌تریس</a></b> · <a href="https://mrzroot.github.io/showcase/skilltrace/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-skilltrace-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-skilltrace-light.svg"><img alt="skilltrace: stars, language and latest release" src="./assets/gen/meta-skilltrace-light.svg" width="320"></picture><br>
 Static linter, contradiction detector, permission/secret auditor, and token-budget profiler for CLAUDE.md, AGENTS.md, GEMINI.md, Cursor rules, and SKILL.md.
 <div dir="rtl">لینتر ایستا، کشف تعارض دستورات، ممیزی رمز و مجوزهای ناامن و پروفایل بودجه توکن برای فایل‌های راهنمای ایجنت.</div></td>
@@ -239,42 +277,42 @@ A calm browser extension for Chrome, Edge and Firefox: tear the page you are on 
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/mcptape"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-mcptape-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-mcptape-light.svg"><img alt="mcptape particle emblem" src="./assets/gen/emblem-mcptape-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/mcptape">mcptape · ام‌سی‌پی‌تیپ</a></b> · <a href="https://mrzroot.github.io/mcptape/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/mcptape">mcptape · ام‌سی‌پی‌تیپ</a></b> · <a href="https://mrzroot.github.io/showcase/mcptape/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-mcptape-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-mcptape-light.svg"><img alt="mcptape: stars, language and latest release" src="./assets/gen/meta-mcptape-light.svg" width="320"></picture><br>
 Deterministic VCR flight recorder, offline replay proxy, seeded chaos injector, and tools/list schema diff gate for MCP stdio servers.
 <div dir="rtl">ضبط‌کنندهٔ قطعی (VCR)، بازپخش آفلاین، تزریق خطای Chaos و تشخیص تغییر اسکیما برای سرورهای MCP.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/tokenxray"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-tokenxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-tokenxray-light.svg"><img alt="tokenxray particle emblem" src="./assets/gen/emblem-tokenxray-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/tokenxray">tokenxray · توکن‌اکس‌ری</a></b> · <a href="https://mrzroot.github.io/tokenxray/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/tokenxray">tokenxray · توکن‌اکس‌ری</a></b> · <a href="https://mrzroot.github.io/showcase/tokenxray/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-tokenxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-tokenxray-light.svg"><img alt="tokenxray: stars, language and latest release" src="./assets/gen/meta-tokenxray-light.svg" width="320"></picture><br>
 Context-window profiler, waste analyzer (duplicate file reads, retry loops, oversized outputs), and context-rot detector for AI agent transcripts.
 <div dir="rtl">پروفایلر پنجره کانتکست، تحلیل‌گر اتلاف توکن و تشخیص‌دهندهٔ Context Rot برای لاگ ایجنت‌های کدنویسی.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/slopguard"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-slopguard-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-slopguard-light.svg"><img alt="slopguard particle emblem" src="./assets/gen/emblem-slopguard-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/slopguard">slopguard · اسلاپ‌گارد</a></b> · <a href="https://mrzroot.github.io/slopguard/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/slopguard">slopguard · اسلاپ‌گارد</a></b> · <a href="https://mrzroot.github.io/showcase/slopguard/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-slopguard-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-slopguard-light.svg"><img alt="slopguard: stars, language and latest release" src="./assets/gen/meta-slopguard-light.svg" width="320"></picture><br>
 Offline-first guard against slopsquatting, hallucinated packages, fake library symbols/attributes, and invented CLI flags in Python, JS/TS, and staged diffs.
 <div dir="rtl">نگهبان آفلاین در برابر Slopsquatting، پکیج‌های جعلی، متدهای خیالی و فلگ‌های اشتباه CLI.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/agentfence"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-agentfence-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-agentfence-light.svg"><img alt="agentfence particle emblem" src="./assets/gen/emblem-agentfence-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/agentfence">agentfence · ایجنت‌فنس</a></b> · <a href="https://mrzroot.github.io/agentfence/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/agentfence">agentfence · ایجنت‌فنس</a></b> · <a href="https://mrzroot.github.io/showcase/agentfence/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-agentfence-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-agentfence-light.svg"><img alt="agentfence: stars, language and latest release" src="./assets/gen/meta-agentfence-light.svg" width="320"></picture><br>
 Dry-run capability firewall, filesystem blast-radius simulator, and tamper-evident SHA-256 hash-chained audit ledger for AI coding agents.
 <div dir="rtl">فایروال دسترسی و شبیه‌ساز شعاع انفجار فایل برای ایجنت‌های کدنویسی با دفتر کل ضددستکاری SHA-256.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/ragxray"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-ragxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-ragxray-light.svg"><img alt="ragxray particle emblem" src="./assets/gen/emblem-ragxray-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/ragxray">ragxray · رگ‌ایکس‌ری</a></b> · <a href="https://mrzroot.github.io/ragxray/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/ragxray">ragxray · رگ‌ایکس‌ری</a></b> · <a href="https://mrzroot.github.io/showcase/ragxray/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-ragxray-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-ragxray-light.svg"><img alt="ragxray: stars, language and latest release" src="./assets/gen/meta-ragxray-light.svg" width="320"></picture><br>
 Zero-LLM chunk-boundary diagnostics, fracture detector, and BM25 vs character-trigram retrieval debugger for English and Persian RAG pipelines.
 <div dir="rtl">تشخیص شکست جدول، کد و جمله در چانک‌سازی RAG و دیباگ بازیابی BM25 در برابر تریگرام بدون LLM.</div></td>
 </tr>
 <tr>
 <td valign="top" width="88"><a href="https://github.com/mrzroot/routefall"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/emblem-routefall-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/emblem-routefall-light.svg"><img alt="routefall particle emblem" src="./assets/gen/emblem-routefall-light.svg" width="72" height="72"></picture></a></td>
-<td valign="top"><b><a href="https://github.com/mrzroot/routefall">routefall · روت‌فال</a></b> · <a href="https://mrzroot.github.io/routefall/">site</a><br>
+<td valign="top"><b><a href="https://github.com/mrzroot/routefall">routefall · روت‌فال</a></b> · <a href="https://mrzroot.github.io/showcase/routefall/">showcase</a><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/meta-routefall-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/meta-routefall-light.svg"><img alt="routefall: stars, language and latest release" src="./assets/gen/meta-routefall-light.svg" width="320"></picture><br>
 Sanction- and outage-resilient OpenAI-compatible LLM failover router with per-provider circuit breakers, TTL cache, hard budget cap, and shadow eval.
 <div dir="rtl">روتر محلی سازگار با OpenAI مقاوم در برابر قطعی با مدارشکن، کش TTL، سقف بودجه قطعی و ارزیابی سایه‌ای.</div></td>
@@ -329,4 +367,4 @@ One source of AI coding-agent rules, compiled to Cursor, Claude Code, Windsurf, 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/footer-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/footer-light.svg"><img alt="move along, it&#x27;s particles all the way down" src="./assets/gen/footer-light.svg" width="100%"></picture>
 </p>
 
-<sub>Every picture here is a small self-hosted SVG in one warm palette, with light and dark variants; there is no external image service or counter. Text is outlined from open fonts so Persian shapes correctly everywhere, and the motion switches off when your system asks for reduced motion. The numbers are rebuilt daily by <a href="./.github/workflows/profile-cards.yml">a GitHub Action</a> running <a href="./scripts/build_profile.py">scripts/build_profile.py</a>. Language shares are by bytes across my public non-fork repositories, excluding generated site output.</sub>
+<sub>The project images are screenshots of the portfolio demos. The original profile artwork uses self-hosted SVGs with light and dark variants; its motion switches off when your system asks for reduced motion. The numbers are rebuilt daily by <a href="./.github/workflows/profile-cards.yml">a GitHub Action</a> running <a href="./scripts/build_profile.py">scripts/build_profile.py</a>. Language shares are by bytes across my public non-fork repositories, excluding generated site output.</sub>

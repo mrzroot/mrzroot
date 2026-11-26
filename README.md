@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://mrzroot.github.io/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/banner-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/banner-light.svg"><img alt="M-R-Z drawn with warm particles: move along, it&#x27;s particles all the way down" src="./assets/gen/banner-light.svg" width="100%"></picture></a>
+<a href="https://mrzroot.github.io/#project-playground"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/studio-banner-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/studio-banner-light.svg"><img alt="MRZ three-letter metal monogram" src="./assets/gen/studio-banner-light.svg" width="100%"></picture></a>
 </p>
 
 <p align="center">
@@ -20,9 +20,9 @@
 ### Project lab · آزمایشگاه پروژه‌ها
 
 
-[**Open the Project Playground ↗**](https://mrzroot.github.io/playground/) · [**ورود به آزمایشگاه پروژه‌ها ↗**](https://mrzroot.github.io/playground/?lang=fa)
+[**Explore the Project Atlas ↗**](https://mrzroot.github.io/#project-signal) · [**اطلس پروژه‌ها ↗**](https://mrzroot.github.io/?lang=fa#project-signal)
 
-Choose a short case, try two different actions, and compare the outcome. Start with [ShellParity](https://mrzroot.github.io/playground/?project=shellparity), [TokenXray](https://mrzroot.github.io/playground/?project=tokenxray), or [Parsieval](https://mrzroot.github.io/playground/?project=parsieval&lang=fa).
+Choose a short case, try two different actions, and compare the outcome. Start with [ShellParity](https://mrzroot.github.io/projects/guide/shellparity/#example), [TokenXray](https://mrzroot.github.io/projects/guide/tokenxray/#example), or [Parsieval](https://mrzroot.github.io/projects/guide/parsieval/?lang=fa#example).
 
 Pick a preview to open the full interactive guide. The demos use sample data and run on the portfolio site.
 

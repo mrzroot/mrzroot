@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 300" role="img" aria-label="MRZ metal monogram">
+  <defs>
+    <radialGradient id="back"><stop stop-color="#51331e"/><stop offset="1" stop-color="#1c140e"/></radialGradient>
+    <linearGradient id="surface" gradientUnits="userSpaceOnUse" x1="0" y1="25" x2="64" y2="47">
+      <stop stop-color="#e1a565"/><stop offset=".42" stop-color="#f9dcac"><animate attributeName="offset" values=".34;.58;.34" dur="8s" repeatCount="indefinite"/></stop><stop offset="1" stop-color="#e1a565"/>
+    </linearGradient>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M0 22V0H22" stroke="#976b40" fill="none" opacity=".24"/></pattern>
+    <path id="symbol" fill-rule="evenodd" d="M8 42V23h3l6 7 6-7h3v19h-4V30l-5 6-5-6v12Zm21 0V23h9l4 2 2 4-1 4-3 2 5 7h-5l-5-7h-2v7Zm4-15v4h5l2-1v-2l-2-1Zm13-4h13v4L51 38h8v4H46v-4l8-11h-8Z"/>
+  </defs>
+  <rect x="1" y="1" width="1038" height="298" rx="19" fill="url(#back)" stroke="#976b40" stroke-width="2"/>
+  <rect x="263" y="29" width="514" height="242" rx="120" fill="url(#grid)" opacity=".65"/>
+  <g fill="none" stroke="#976b40"><ellipse cx="520" cy="150" rx="299" ry="110" opacity=".8" transform="rotate(-6 520 150)"/><ellipse cx="520" cy="150" rx="323" ry="127" opacity=".54" transform="rotate(-6 520 150)"/></g>
+  <g transform="translate(262 -70) scale(7.3 6.5)">
+    <use href="#symbol" fill="#7e4b26" transform="translate(0 2.2)"/>
+    <use href="#symbol" fill="url(#surface)" stroke="#976b40" stroke-width=".16"/>
+  </g>
+</svg>

@@ -233,9 +233,19 @@ A calm browser extension for Chrome, Edge and Firefox: tear the page you are on 
 <picture><source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="./assets/gen/feed-m-dark.svg"><source media="(max-width: 700px)" srcset="./assets/gen/feed-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/gen/feed-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/gen/feed-light.svg"><img alt="Latest releases and recent commits" src="./assets/gen/feed-light.svg" width="100%"></picture>
 </p>
 
+### AI Engineering Suite · ابزارهای جدید مهندسی هوش مصنوعی
+
+- [**mcptape**](https://github.com/mrzroot/mcptape) · [site](https://mrzroot.github.io/mcptape/) (`v1.0.0`, Node.js) — Deterministic VCR flight recorder, offline replay proxy, seeded chaos injector, and `tools/list` schema diff gate for MCP stdio servers.
+- [**tokenxray**](https://github.com/mrzroot/tokenxray) · [site](https://mrzroot.github.io/tokenxray/) (`v1.0.0`, Python) — Context-window profiler, waste analyzer (duplicate file reads, retry loops, bloated outputs), and context-rot detector for Claude Code, Codex, and Gemini CLI transcripts.
+- [**slopguard**](https://github.com/mrzroot/slopguard) · [site](https://mrzroot.github.io/slopguard/) (`v1.0.0`, Python) — Offline-first guard against slopsquatting, hallucinated packages, fake library symbols/attributes, and invented CLI flags in AI-generated code and `git diff --staged`.
+
+<div dir="rtl">
+<b>mcptape</b> ضبط‌کننده و بازپخش‌کنندهٔ آفلاین (VCR) و شبیه‌ساز خطای Chaos برای سرورهای MCP است؛ <b>tokenxray</b> لاگ سشن‌های ایجنت را برای کشف اتلاف توکن و Context Rot پروفایل می‌کند؛ و <b>slopguard</b> کدهای تولیدشده با هوش مصنوعی را از نظر پکیج‌های جعلی (Slopsquatting)، متدهای خیالی و فلگ‌های اشتباه CLI بررسی می‌کند.
+</div>
+
 ### More projects · پروژه‌های بیشتر
 
-- [**AgentForge**](https://github.com/mrzroot/agentforge) · one source of AI coding-agent rules, synced to Cursor, Claude Code, Windsurf, Copilot, Roo and Aider.
+- [**AgentForge**](https://github.com/mrzroot/agentforge) (`v1.1.0`) · one source of AI coding-agent rules, synced to Cursor, Claude Code, Windsurf, Copilot, Roo, Aider, Codex (`AGENTS.md`) and Gemini CLI (`GEMINI.md`), with `agentforge doctor`.
 - [**Awesome Persian Developer Resources**](https://github.com/mrzroot/awesome-persian-developer-resources) · curated hub of tools Iranian developers rely on.
 - [**Universal Video Downloader**](https://github.com/mrzroot/universal-video-downloader) · Super Video Downloader, a Chromium (Chrome/Edge) extension that saves direct MP4 videos client-side; for HLS/DASH streams it saves the playlist, not the video.
 - [**Page Smash**](https://github.com/mrzroot/page-smash) · jetpack physics toy that smashes any webpage; v1.0.0 for Chrome and Firefox.
